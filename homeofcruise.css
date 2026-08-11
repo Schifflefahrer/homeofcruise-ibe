@@ -1,71 +1,100 @@
-/* =====================================================
-   HOME OF CRUISE – COMPASS / XTIBE CUSTOM DESIGN
-   ===================================================== */
+/* ==========================================================
+   HOME OF CRUISE
+   COMPASS / XTIBE CUSTOM DESIGN
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   1. HOME OF CRUISE FARBEN
+   ---------------------------------------------------------- */
 
 :root,
 [data-bs-theme="light"] {
-  --hoc-navy: #073447;
-  --hoc-cyan: #11b5d3;
-  --hoc-cyan-hover: #0d9fba;
-  --hoc-light: #f6f8f9;
-  --hoc-border: #dce4e8;
-  --hoc-text: #101820;
 
-  --bs-primary: #11b5d3;
-  --bs-primary-rgb: 17, 181, 211;
+    --hoc-navy: #073447;
+    --hoc-cyan: #11b5d3;
+    --hoc-cyan-hover: #0d9fba;
+    --hoc-light: #f5f7f8;
+    --hoc-border: #dce4e8;
+    --hoc-text: #101820;
 
-  --bs-dark: #073447;
-  --bs-dark-rgb: 7, 52, 71;
+    /* Bootstrap Farben der IBE überschreiben */
 
-  --bs-light: #f6f8f9;
-  --bs-light-rgb: 246, 248, 249;
+    --bs-primary: #11b5d3;
+    --bs-primary-rgb: 17, 181, 211;
 
-  --bs-body-bg: #ffffff;
-  --bs-body-color: #101820;
-  --bs-border-color: #dce4e8;
+    --bs-dark: #073447;
+    --bs-dark-rgb: 7, 52, 71;
+
+    --bs-light: #f5f7f8;
+    --bs-light-rgb: 245, 247, 248;
+
+    --bs-body-bg: #ffffff;
+    --bs-body-color: #101820;
+    --bs-border-color: #dce4e8;
 }
 
 
-/* =====================================================
-   GRUNDLAYOUT
-   ===================================================== */
+/* ----------------------------------------------------------
+   2. SEITEN-GRUNDLAYOUT
+   ---------------------------------------------------------- */
 
 html,
 body {
-  margin: 0 !important;
-  padding: 0 !important;
-  background: #ffffff !important;
-  color: #101820 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #101820 !important;
 }
 
 body {
-  padding-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
+
+
+/* IBE soll die komplette verfügbare Breite nutzen */
 
 body > .container-xxl,
 body > .container-fluid {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 
-/* =====================================================
-   LINKE KREUZFAHRTSUCHE
-   ===================================================== */
+/* ----------------------------------------------------------
+   3. KREUZFAHRTSUCHE LINKS
+   ---------------------------------------------------------- */
 
-#xt-cruisefinder-top {
-  background-color: #073447 !important;
-  color: #ffffff !important;
-  padding: 22px !important;
-}
+/*
+   COMPASS verwendet Bootstrap bg-primary.
+   Deshalb überschreiben wir sowohl das Element
+   als auch die Bootstrap-Klasse innerhalb der Suche.
+*/
 
 #xt-cruisefinder-top,
-#xt-cruisefinder-top * {
-  --bs-bg-opacity: 1 !important;
+#xt-cruisefinder-top.bg-primary,
+#xt-cruisefinder-collapse .bg-primary {
+    background: #073447 !important;
+    background-color: #073447 !important;
+
+    color: #ffffff !important;
 }
+
+
+/* Innenabstand der oberen Suche */
+
+#xt-cruisefinder-top {
+    padding: 20px !important;
+}
+
+
+/* Überschrift und Beschriftungen */
 
 #xt-cruisefinder-top h1,
 #xt-cruisefinder-top h2,
@@ -73,197 +102,406 @@ body > .container-fluid {
 #xt-cruisefinder-top h4,
 #xt-cruisefinder-top h5,
 #xt-cruisefinder-top label {
-  color: #ffffff !important;
+    color: #ffffff !important;
 }
 
 
-/* Erweiterte Suche */
+/* ----------------------------------------------------------
+   4. ERWEITERTE SUCHE
+   ---------------------------------------------------------- */
+
 #xt-cruisefinder-extended {
-  background: #f6f8f9 !important;
-  color: #101820 !important;
-  padding: 22px !important;
+    background: #f5f7f8 !important;
+    background-color: #f5f7f8 !important;
+
+    color: #101820 !important;
+
+    padding: 20px !important;
 }
 
 
-/* =====================================================
-   FORMULARE
-   ===================================================== */
+/* Texte der erweiterten Suche */
+
+#xt-cruisefinder-extended label,
+#xt-cruisefinder-extended h1,
+#xt-cruisefinder-extended h2,
+#xt-cruisefinder-extended h3,
+#xt-cruisefinder-extended h4 {
+    color: #101820 !important;
+}
+
+
+/* ----------------------------------------------------------
+   5. EINGABEFELDER UND DROPDOWNS
+   ---------------------------------------------------------- */
 
 #xt-cruisefinder-collapse .form-control,
 #xt-cruisefinder-collapse .form-select {
-  min-height: 44px !important;
-  background: #ffffff !important;
-  color: #101820 !important;
-  border: 1px solid #dce4e8 !important;
-  border-radius: 6px !important;
-  box-shadow: none !important;
+
+    min-height: 44px !important;
+
+    background-color: #ffffff !important;
+    color: #101820 !important;
+
+    border: 1px solid #dce4e8 !important;
+    border-radius: 5px !important;
+
+    box-shadow: none !important;
 }
+
+
+/* Fokus */
 
 #xt-cruisefinder-collapse .form-control:focus,
 #xt-cruisefinder-collapse .form-select:focus {
-  border-color: #11b5d3 !important;
-  box-shadow: 0 0 0 3px rgba(17,181,211,.12) !important;
+
+    border-color: #11b5d3 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(17, 181, 211, 0.12)
+        !important;
 }
 
 
-/* =====================================================
-   SUCHBUTTON
-   ===================================================== */
+/* ----------------------------------------------------------
+   6. SUCHBUTTON
+   ---------------------------------------------------------- */
 
 #xt-cruisefinder-collapse .btn-primary,
 #xt-cruisefinder-collapse button[type="submit"] {
-  min-height: 44px !important;
-  background: #11b5d3 !important;
-  border-color: #11b5d3 !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-  font-weight: 600 !important;
+
+    min-height: 44px !important;
+
+    background: #11b5d3 !important;
+    background-color: #11b5d3 !important;
+
+    border-color: #11b5d3 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 5px !important;
+
+    font-weight: 600 !important;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease !important;
 }
+
+
+/* Hover */
 
 #xt-cruisefinder-collapse .btn-primary:hover,
 #xt-cruisefinder-collapse button[type="submit"]:hover {
-  background: #0d9fba !important;
-  border-color: #0d9fba !important;
+
+    background: #0d9fba !important;
+    background-color: #0d9fba !important;
+
+    border-color: #0d9fba !important;
 }
 
 
-/* =====================================================
-   ERGEBNISBEREICH
-   ===================================================== */
+/* ----------------------------------------------------------
+   7. ERGEBNISBEREICH
+   ---------------------------------------------------------- */
 
 #xt-search-main {
-  background: #ffffff !important;
+    background: #ffffff !important;
 }
+
+
+/* Anzahl Schiffe / Routen / Termine */
 
 #xt-search-summary {
-  background: #f6f8f9 !important;
-  color: #101820 !important;
-  border-radius: 6px !important;
+
+    background: #f5f7f8 !important;
+    background-color: #f5f7f8 !important;
+
+    color: #101820 !important;
+
+    border: 0 !important;
+
+    padding: 15px !important;
 }
 
 
-/* =====================================================
-   ERGEBNISKARTEN
-   ===================================================== */
+/* ----------------------------------------------------------
+   8. SUCHKRITERIEN OBERHALB DER ERGEBNISSE
+   ---------------------------------------------------------- */
+
+#xt-search-criteria {
+
+    background: #ffffff !important;
+
+    color: #101820 !important;
+}
+
+
+/* ----------------------------------------------------------
+   9. ERGEBNISKARTEN
+   ---------------------------------------------------------- */
 
 #xt-search-result .list-group-item {
-  border: 1px solid #dce4e8 !important;
-  background: #ffffff !important;
-  margin-bottom: 14px !important;
-  border-radius: 8px !important;
-  overflow: hidden !important;
+
+    background: #ffffff !important;
+
+    border: 1px solid #dce4e8 !important;
+
+    margin-bottom: 14px !important;
+
+    border-radius: 6px !important;
+
+    overflow: hidden !important;
+
+    box-shadow:
+        0 2px 8px rgba(7, 52, 71, 0.04)
+        !important;
 }
 
+
+/* Titel der Kreuzfahrten */
+
+#xt-search-result .list-group-item h2,
 #xt-search-result .list-group-item h3,
 #xt-search-result .list-group-item h4 {
-  color: #073447 !important;
+
+    color: #073447 !important;
 }
 
 
-/* =====================================================
-   BUTTONS IM ERGEBNIS
-   ===================================================== */
+/* ----------------------------------------------------------
+   10. PREISE
+   ---------------------------------------------------------- */
+
+#xt-search-result strong {
+    color: #101820;
+}
+
+
+/* ----------------------------------------------------------
+   11. BUTTONS BEI DEN ANGEBOTEN
+   ---------------------------------------------------------- */
 
 #xt-search-result .btn-primary {
-  background: #11b5d3 !important;
-  border-color: #11b5d3 !important;
-  color: #ffffff !important;
-  border-radius: 6px !important;
-  font-weight: 600 !important;
+
+    background: #11b5d3 !important;
+    background-color: #11b5d3 !important;
+
+    border-color: #11b5d3 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 4px !important;
+
+    font-weight: 600 !important;
 }
+
 
 #xt-search-result .btn-primary:hover {
-  background: #0d9fba !important;
-  border-color: #0d9fba !important;
+
+    background: #0d9fba !important;
+    background-color: #0d9fba !important;
+
+    border-color: #0d9fba !important;
 }
 
 
-/* =====================================================
-   PAGINATION
-   ===================================================== */
+/* ----------------------------------------------------------
+   12. SEKUNDÄRE BUTTONS / REISEDETAILS
+   ---------------------------------------------------------- */
+
+#xt-search-result .btn-secondary {
+
+    background: #ffffff !important;
+
+    color: #073447 !important;
+
+    border-color: #dce4e8 !important;
+
+    border-radius: 4px !important;
+}
+
+
+#xt-search-result .btn-secondary:hover {
+
+    background: #f5f7f8 !important;
+
+    color: #073447 !important;
+}
+
+
+/* ----------------------------------------------------------
+   13. PAGINATION
+   ---------------------------------------------------------- */
 
 .pagination {
-  gap: 5px !important;
+    gap: 5px !important;
 }
+
 
 .pagination .page-link {
-  border: 0 !important;
-  background: transparent !important;
-  color: #53616a !important;
-  border-radius: 5px !important;
-  min-width: 36px;
-  min-height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: none !important;
+
+    min-width: 36px !important;
+    min-height: 36px !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    border: 0 !important;
+
+    background: transparent !important;
+
+    color: #53616a !important;
+
+    border-radius: 5px !important;
+
+    box-shadow: none !important;
 }
+
+
+/* Aktuelle Seite */
 
 .pagination .page-item.active .page-link {
-  background: #11b5d3 !important;
-  color: #ffffff !important;
-  font-weight: 600 !important;
+
+    background: #11b5d3 !important;
+
+    color: #ffffff !important;
+
+    font-weight: 600 !important;
 }
 
-.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
-  background: #eaf7fa !important;
-  color: #073447 !important;
+
+/* Hover */
+
+.pagination
+.page-item:not(.active):not(.disabled)
+.page-link:hover {
+
+    background: #eaf7fa !important;
+
+    color: #073447 !important;
 }
 
 
-/* =====================================================
-   SORTIERUNG
-   ===================================================== */
+/* ----------------------------------------------------------
+   14. SORTIERUNG
+   ---------------------------------------------------------- */
 
 #xt-sort,
 .bss > .form-select {
-  min-height: 42px !important;
-  border: 1px solid #dce4e8 !important;
-  border-radius: 6px !important;
-  background-color: #ffffff !important;
-  box-shadow: none !important;
+
+    min-height: 42px !important;
+
+    background-color: #ffffff !important;
+
+    color: #101820 !important;
+
+    border: 1px solid #dce4e8 !important;
+
+    border-radius: 5px !important;
+
+    box-shadow: none !important;
 }
+
 
 .bss > .form-select:focus {
-  border-color: #11b5d3 !important;
-  box-shadow: 0 0 0 3px rgba(17,181,211,.12) !important;
+
+    border-color: #11b5d3 !important;
+
+    box-shadow:
+        0 0 0 3px rgba(17, 181, 211, 0.12)
+        !important;
 }
 
 
-/* =====================================================
-   COMPASS FOOTER ENTFERNEN
-   ===================================================== */
+/* ----------------------------------------------------------
+   15. COMPASS FOOTER KOMPLETT ENTFERNEN
+   ---------------------------------------------------------- */
 
 #xt-ref-navbar,
 .xtc-general-navigation {
-  display: none !important;
+
+    display: none !important;
+
+    visibility: hidden !important;
+
+    height: 0 !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
 }
 
-body {
-  padding-bottom: 0 !important;
+
+/* COMPASS fügt wegen fixed Footer padding hinzu */
+
+body[style] {
+    padding-bottom: 0 !important;
 }
 
 
-/* =====================================================
-   SCROLL OFFSET FÜR WIX HEADER
-   ===================================================== */
+/* ----------------------------------------------------------
+   16. SCROLL POSITION
+   Wix Header berücksichtigen
+   ---------------------------------------------------------- */
 
 .x-scroll-offset {
-  scroll-margin-top: 90px !important;
+    scroll-margin-top: 100px !important;
 }
 
 
-/* =====================================================
-   MOBILE
-   ===================================================== */
+/* ----------------------------------------------------------
+   17. ALLGEMEINE LINKS
+   ---------------------------------------------------------- */
+
+a {
+    text-decoration-thickness: 1px;
+}
+
+
+/* ----------------------------------------------------------
+   18. MOBILE / TABLET
+   ---------------------------------------------------------- */
 
 @media (max-width: 991.98px) {
-  #xt-cruisefinder-top,
-  #xt-cruisefinder-extended {
-    padding: 16px !important;
-  }
 
-  #xt-search-result .list-group-item {
-    border-radius: 6px !important;
-  }
+    #xt-cruisefinder-top,
+    #xt-cruisefinder-extended {
+        padding: 16px !important;
+    }
+
+    #xt-search-result .list-group-item {
+        border-radius: 4px !important;
+    }
+
+}
+
+
+/* ----------------------------------------------------------
+   19. SMARTPHONE
+   ---------------------------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    #xt-cruisefinder-top {
+        padding: 15px !important;
+    }
+
+    #xt-cruisefinder-extended {
+        padding: 15px !important;
+    }
+
+    #xt-cruisefinder-collapse .form-control,
+    #xt-cruisefinder-collapse .form-select {
+        min-height: 46px !important;
+    }
+
+    #xt-cruisefinder-collapse button[type="submit"] {
+        min-height: 46px !important;
+    }
+
 }
