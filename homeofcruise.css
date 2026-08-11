@@ -1,0 +1,42 @@
+/* HOME OF CRUISE – COMPASS IBE TEST */
+
+:root,
+[data-bs-theme="light"] {
+  --bs-primary: #11b5d3;
+  --bs-primary-rgb: 17, 181, 211;
+  --bs-dark: #073447;
+  --bs-dark-rgb: 7, 52, 71;
+}
+
+/* Oberer Bereich der Kreuzfahrtsuche */
+#xt-cruisefinder-top {
+  background: #073447 !important;
+  color: #ffffff !important;
+}
+
+/* Texte und Beschriftungen darin */
+#xt-cruisefinder-top label,
+#xt-cruisefinder-top h1,
+#xt-cruisefinder-top h2,
+#xt-cruisefinder-top h3,
+#xt-cruisefinder-top h4 {
+  color: #ffffff !important;
+}
+
+/* Suchbutton */
+#xt-cruisefinder-collapse .btn-primary,
+#xt-cruisefinder-collapse button[type="submit"] {
+  background-color: #11b5d3 !important;
+  border-color: #11b5d3 !important;
+  color: #ffffff !important;
+}
+
+/* alten COMPASS Footer ausblenden */
+#xt-ref-navbar {
+  display: none !important;
+}
+
+/* Platz des alten Footers entfernen */
+body {
+  padding-bottom: 0 !important;
+}
