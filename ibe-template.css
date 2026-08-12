@@ -1,13 +1,28 @@
-/* =========================================================
-   HOME OF CRUISE – COMPASS IBE TEMPLATE
-   ========================================================= */
+```css
+/* ==========================================================
+   HOME OF CRUISE – COMPASS TEMPLATE V2
+   ========================================================== */
 
 :root {
-  --hoc-blue: #0b64c0;
-  --hoc-text: #121212;
-  --hoc-border: #e7e9ed;
-  --hoc-bg: #ffffff;
+  --hoc-blue: #1267b1;
+  --hoc-blue-dark: #0a4f91;
+  --hoc-green: #21a966;
+
+  --hoc-text: #172033;
+  --hoc-muted: #677386;
+
+  --hoc-bg: #f5f7fa;
+  --hoc-white: #ffffff;
+
+  --hoc-border: #dfe5ec;
+
+  --hoc-header-height: 82px;
 }
+
+
+/* ==========================================================
+   BASIS
+   ========================================================== */
 
 *,
 *::before,
@@ -15,72 +30,110 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   width: 100%;
+  min-height: 100%;
   margin: 0;
   padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: hidden;
+  overflow-y: visible;
+
   background: var(--hoc-bg);
   color: var(--hoc-text);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 
-/* =========================================================
+/* ==========================================================
    HEADER
-   ========================================================= */
+   ========================================================== */
 
 .hoc-header {
   width: 100%;
-  background: #fff;
+
+  background: var(--hoc-white);
   border-bottom: 1px solid var(--hoc-border);
+
   position: relative;
   z-index: 1000;
 }
 
 .hoc-header__inner {
   width: 100%;
-  min-height: 82px;
-  padding: 0 28px;
+  min-height: var(--hoc-header-height);
+
+  padding: 0 32px;
 
   display: flex;
   align-items: center;
-  gap: 38px;
+
+  gap: 34px;
 }
 
+
+/* LOGO */
+
 .hoc-logo {
-  display: flex;
   flex: 0 0 auto;
+
+  display: flex;
   align-items: center;
+
   text-decoration: none;
 }
 
 .hoc-logo img {
   display: block;
-  width: 230px;
+
+  width: 205px;
   height: auto;
-  max-height: 72px;
+  max-height: 68px;
+
   object-fit: contain;
 }
 
+
+/* NAVIGATION */
+
 .hoc-nav {
-  display: flex;
   flex: 1 1 auto;
+
+  display: flex;
   align-items: center;
-  gap: 30px;
+
+  gap: 28px;
+
   min-width: 0;
 }
 
 .hoc-nav a {
-  color: #111;
-  font-size: 16px;
+  color: #151515;
+
+  font-size: 15px;
   font-weight: 600;
+
   line-height: 1.2;
+
   text-decoration: none;
   white-space: nowrap;
+
+  transition:
+    color .15s ease;
 }
 
 .hoc-nav a:hover,
@@ -89,61 +142,122 @@ body {
   color: var(--hoc-blue);
 }
 
+
+/* KONTAKT */
+
 .hoc-contact {
-  display: flex;
   flex: 0 0 auto;
+
+  display: flex;
   align-items: center;
-  gap: 24px;
-  white-space: nowrap;
+
+  gap: 12px;
 }
 
 .hoc-contact a {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
 
-  color: #111;
-  font-size: 16px;
+  min-height: 40px;
+
+  padding: 9px 14px;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+  font-weight: 600;
+
   text-decoration: none;
+
+  white-space: nowrap;
 }
 
-.hoc-contact a:hover,
-.hoc-contact a:focus-visible {
-  color: var(--hoc-blue);
+.hoc-whatsapp {
+  color: #147344;
+
+  background: #edf9f3;
+  border: 1px solid #ccebdc;
 }
 
-.hoc-whatsapp .hoc-contact__icon {
-  color: #19bd62;
-  font-size: 22px;
+.hoc-whatsapp:hover {
+  background: #e3f6ec;
 }
 
-.hoc-phone .hoc-contact__icon {
-  color: #27a7d8;
-  font-size: 20px;
+.hoc-phone {
+  color: var(--hoc-blue-dark);
+
+  background: #eef5fb;
+  border: 1px solid #d1e3f3;
+}
+
+.hoc-phone:hover {
+  background: #e6f0f9;
 }
 
 
-/* =========================================================
-   COMPASS IBE
-   ========================================================= */
+/* ==========================================================
+   BUCHUNGSBEREICH
+   ========================================================== */
+
+.hoc-booking {
+  width: 100%;
+
+  margin: 0;
+  padding: 0 0 48px;
+
+  background: var(--hoc-bg);
+}
+
+
+/* kleine Überschrift wie bei Buchungsportalen */
+
+.hoc-booking__intro {
+  width: 100%;
+
+  padding:
+    22px
+    32px
+    6px;
+}
+
+.hoc-booking__intro h1 {
+  margin: 0;
+
+  color: var(--hoc-text);
+
+  font-size: 26px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+
+/* ==========================================================
+   COMPASS
+   ========================================================== */
 
 .hoc-ibe {
   width: 100%;
   max-width: none !important;
+
+  min-height: calc(100vh - var(--hoc-header-height));
+
   margin: 0 !important;
 
-  /*
-    Kleine Innenabstände wie bei großen Buchungsportalen,
-    aber kein schmaler zentrierter Website-Container.
-  */
-  padding: 20px 28px 60px !important;
+  padding:
+    14px
+    32px
+    48px !important;
+
+  overflow: visible !important;
 }
 
+
 /*
-  Nur direkte Bootstrap-Container innerhalb unseres IBE-Bereichs
-  auf volle Breite setzen. Das ist vorsichtiger, als pauschal
-  jedes verschachtelte .container-Element der IBE zu verändern.
+   Der äußere Bootstrap-Container darf die IBE
+   nicht auf klassische Bootstrap-Maximalbreiten begrenzen.
 */
+
 .hoc-ibe > .container,
 .hoc-ibe > .container-sm,
 .hoc-ibe > .container-md,
@@ -151,129 +265,229 @@ body {
 .hoc-ibe > .container-xl,
 .hoc-ibe > .container-xxl,
 .hoc-ibe > .container-fluid {
-  width: 100%;
+  width: 100% !important;
   max-width: none !important;
+
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
 
+
 /*
-  COMPASS-Dokumentation:
-  Scrollziele dürfen bei einer Navigation nicht verdeckt werden.
+   WICHTIG:
+   Keine feste Höhe.
+   Dadurch kann die Seite normal mitwachsen
+   und der Browser scrollt die gesamte Seite.
 */
+
+.hoc-ibe,
+.hoc-ibe > * {
+  height: auto !important;
+  max-height: none !important;
+}
+
+
+/*
+   Scrollziele bei später eventuell fixed/sticky
+   Header nicht verdecken.
+*/
+
 .x-scroll-offset {
   scroll-margin-top: 100px;
 }
 
 
-/* =========================================================
-   DESKTOP XL
-   ========================================================= */
+/* ==========================================================
+   ALLGEMEINE COMPASS-OPTIK
+   Diese Regeln sind bewusst moderat.
+   ========================================================== */
+
+.hoc-ibe .card {
+  border-color: var(--hoc-border);
+  border-radius: 8px;
+}
+
+.hoc-ibe .btn {
+  border-radius: 6px;
+}
+
+.hoc-ibe .btn-primary {
+  background-color: var(--hoc-blue);
+  border-color: var(--hoc-blue);
+}
+
+.hoc-ibe .btn-primary:hover {
+  background-color: var(--hoc-blue-dark);
+  border-color: var(--hoc-blue-dark);
+}
+
+.hoc-ibe a {
+  text-underline-offset: 2px;
+}
+
+
+/* ==========================================================
+   GROSSE DESKTOPS
+   ========================================================== */
 
 @media (min-width: 1600px) {
+
   .hoc-header__inner {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hoc-booking__intro {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .hoc-ibe {
-    padding-left: 36px !important;
-    padding-right: 36px !important;
+    padding-left: 40px !important;
+    padding-right: 40px !important;
   }
 }
 
 
-/* =========================================================
-   TABLET / KLEINER DESKTOP
-   ========================================================= */
+/* ==========================================================
+   KLEINER DESKTOP
+   ========================================================== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
+
   .hoc-header__inner {
+    padding-left: 20px;
+    padding-right: 20px;
+
     gap: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
   }
 
   .hoc-logo img {
-    width: 185px;
+    width: 175px;
   }
 
   .hoc-nav {
-    gap: 18px;
-  }
-
-  .hoc-contact {
-    gap: 14px;
-  }
-
-  .hoc-contact a {
-    font-size: 14px;
-  }
-
-  .hoc-ibe {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 900px) {
-  .hoc-header__inner {
-    min-height: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    flex-wrap: wrap;
-  }
-
-  .hoc-logo img {
-    width: 165px;
-    max-height: none;
-  }
-
-  .hoc-contact {
-    margin-left: auto;
-  }
-
-  .hoc-whatsapp {
-    display: none !important;
-  }
-
-  .hoc-nav {
-    order: 3;
-    width: 100%;
-    overflow-x: auto;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    scrollbar-width: thin;
+    gap: 17px;
   }
 
   .hoc-nav a {
     font-size: 14px;
   }
 
+  .hoc-contact a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .hoc-booking__intro {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .hoc-ibe {
-    padding: 12px 10px 40px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1024px) {
+
+  .hoc-header__inner {
+    min-height: auto;
+
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    flex-wrap: wrap;
+  }
+
+  .hoc-logo img {
+    width: 165px;
+  }
+
+  .hoc-contact {
+    margin-left: auto;
+  }
+
+  .hoc-nav {
+    order: 3;
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .hoc-booking__intro h1 {
+    font-size: 23px;
+  }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 700px) {
+
+  .hoc-header__inner {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .hoc-logo img {
+    width: 145px;
+  }
+
+  .hoc-whatsapp {
+    display: none;
+  }
+
+  .hoc-phone {
+    min-height: 36px !important;
+
+    padding: 7px 10px !important;
+
+    font-size: 13px !important;
+  }
+
+  .hoc-nav {
+    gap: 18px;
+  }
+
+  .hoc-nav a {
+    font-size: 13px;
+  }
+
+  .hoc-booking__intro {
+    padding:
+      16px
+      12px
+      4px;
+  }
+
+  .hoc-booking__intro h1 {
+    font-size: 21px;
+  }
+
+  .hoc-ibe {
+    min-height: auto;
+
+    padding:
+      10px
+      8px
+      30px !important;
   }
 
   .x-scroll-offset {
     scroll-margin-top: 130px;
   }
 }
-
-
-/* =========================================================
-   OPTIONAL:
-   Diese Regeln erst aktivieren, wenn wir nach dem ersten Test
-   konkrete COMPASS-Elemente angleichen.
-   ========================================================= */
-
-/*
-.btn-primary {
-  background-color: var(--hoc-blue);
-  border-color: var(--hoc-blue);
-}
-*/
+```
