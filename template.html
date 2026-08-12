@@ -1,279 +1,135 @@
-/* =========================================================
-   HOME OF CRUISE – COMPASS IBE TEMPLATE
-   ========================================================= */
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-:root {
-  --hoc-blue: #0b64c0;
-  --hoc-text: #121212;
-  --hoc-border: #e7e9ed;
-  --hoc-bg: #ffffff;
-}
+  <title>Kreuzfahrt buchen | Home of Cruise</title>
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+  <!-- Home of Cruise Styles -->
+  <link
+    rel="stylesheet"
+    href="https://schiffefahrer.github.io/homeofcruise-ibe/ibe-template.css">
 
-html,
-body {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
+  <!-- COMPASS fügt hier benötigte Head-Inhalte ein -->
+  <!-- ibe::head -->
+</head>
 
-body {
-  background: var(--hoc-bg);
-  color: var(--hoc-text);
-  font-family: Arial, Helvetica, sans-serif;
-}
+<body>
 
+  <!-- =========================================
+       HOME OF CRUISE HEADER
+       ========================================= -->
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+  <header class="hoc-header">
 
-.hoc-header {
-  width: 100%;
-  background: #fff;
-  border-bottom: 1px solid var(--hoc-border);
-  position: relative;
-  z-index: 1000;
-}
+    <div class="hoc-header__inner">
 
-.hoc-header__inner {
-  width: 100%;
-  min-height: 82px;
-  padding: 0 28px;
+      <!-- LOGO -->
+      <a
+        class="hoc-logo"
+        href="https://www.homeofcruise.de/"
+        aria-label="Home of Cruise Startseite">
 
-  display: flex;
-  align-items: center;
-  gap: 38px;
-}
+        <img
+          src="https://static.wixstatic.com/media/a1468d_69d8ac4c4c634666b17d5ee2d7026dec~mv2.png"
+          alt="Home of Cruise">
 
-.hoc-logo {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  text-decoration: none;
-}
-
-.hoc-logo img {
-  display: block;
-  width: 230px;
-  height: auto;
-  max-height: 72px;
-  object-fit: contain;
-}
-
-.hoc-nav {
-  display: flex;
-  flex: 1 1 auto;
-  align-items: center;
-  gap: 30px;
-  min-width: 0;
-}
-
-.hoc-nav a {
-  color: #111;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1.2;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.hoc-nav a:hover,
-.hoc-nav a:focus-visible,
-.hoc-nav a.active {
-  color: var(--hoc-blue);
-}
-
-.hoc-contact {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 24px;
-  white-space: nowrap;
-}
-
-.hoc-contact a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-
-  color: #111;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.hoc-contact a:hover,
-.hoc-contact a:focus-visible {
-  color: var(--hoc-blue);
-}
-
-.hoc-whatsapp .hoc-contact__icon {
-  color: #19bd62;
-  font-size: 22px;
-}
-
-.hoc-phone .hoc-contact__icon {
-  color: #27a7d8;
-  font-size: 20px;
-}
+      </a>
 
 
-/* =========================================================
-   COMPASS IBE
-   ========================================================= */
+      <!-- NAVIGATION -->
+      <nav class="hoc-nav" aria-label="Hauptnavigation">
 
-.hoc-ibe {
-  width: 100%;
-  max-width: none !important;
-  margin: 0 !important;
+        <a href="https://www.homeofcruise.de/">
+          Startseite
+        </a>
 
-  /*
-    Kleine Innenabstände wie bei großen Buchungsportalen,
-    aber kein schmaler zentrierter Website-Container.
-  */
-  padding: 20px 28px 60px !important;
-}
+        <a
+          href="https://buchen.homeofcruise.de/de"
+          class="active"
+          aria-current="page">
+          Kreuzfahrt buchen
+        </a>
 
-/*
-  Nur direkte Bootstrap-Container innerhalb unseres IBE-Bereichs
-  auf volle Breite setzen. Das ist vorsichtiger, als pauschal
-  jedes verschachtelte .container-Element der IBE zu verändern.
-*/
-.hoc-ibe > .container,
-.hoc-ibe > .container-sm,
-.hoc-ibe > .container-md,
-.hoc-ibe > .container-lg,
-.hoc-ibe > .container-xl,
-.hoc-ibe > .container-xxl,
-.hoc-ibe > .container-fluid {
-  width: 100%;
-  max-width: none !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
+        <a href="https://www.homeofcruise.de/reedereien">
+          Reedereien
+        </a>
 
-/*
-  COMPASS-Dokumentation:
-  Scrollziele dürfen bei einer Navigation nicht verdeckt werden.
-*/
-.x-scroll-offset {
-  scroll-margin-top: 100px;
-}
+        <a href="https://www.homeofcruise.de/angebote">
+          Angebote
+        </a>
+
+        <a href="https://www.homeofcruise.de/ueber-uns">
+          Über Uns
+        </a>
+
+      </nav>
 
 
-/* =========================================================
-   DESKTOP XL
-   ========================================================= */
+      <!-- KONTAKT -->
+      <div class="hoc-contact">
 
-@media (min-width: 1600px) {
-  .hoc-header__inner {
-    padding-left: 36px;
-    padding-right: 36px;
-  }
+        <a
+          class="hoc-whatsapp"
+          href="https://wa.me/4915567639507"
+          target="_blank"
+          rel="noopener noreferrer">
 
-  .hoc-ibe {
-    padding-left: 36px !important;
-    padding-right: 36px !important;
-  }
-}
+          <span
+            class="hoc-contact__icon"
+            aria-hidden="true">
+            ●
+          </span>
 
-
-/* =========================================================
-   TABLET / KLEINER DESKTOP
-   ========================================================= */
-
-@media (max-width: 1200px) {
-  .hoc-header__inner {
-    gap: 20px;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-
-  .hoc-logo img {
-    width: 185px;
-  }
-
-  .hoc-nav {
-    gap: 18px;
-  }
-
-  .hoc-contact {
-    gap: 14px;
-  }
-
-  .hoc-contact a {
-    font-size: 14px;
-  }
-
-  .hoc-ibe {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-}
+          Beratung per WhatsApp
+        </a>
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+        <a
+          class="hoc-phone"
+          href="tel:+4915567639507">
 
-@media (max-width: 900px) {
-  .hoc-header__inner {
-    min-height: auto;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    flex-wrap: wrap;
-  }
+          <span
+            class="hoc-contact__icon"
+            aria-hidden="true">
+            ☎
+          </span>
 
-  .hoc-logo img {
-    width: 165px;
-    max-height: none;
-  }
+          (+49) 015567639507
+        </a>
 
-  .hoc-contact {
-    margin-left: auto;
-  }
+      </div>
 
-  .hoc-whatsapp {
-    display: none !important;
-  }
+    </div>
 
-  .hoc-nav {
-    order: 3;
-    width: 100%;
-    overflow-x: auto;
-    padding-top: 6px;
-    padding-bottom: 4px;
-    scrollbar-width: thin;
-  }
-
-  .hoc-nav a {
-    font-size: 14px;
-  }
-
-  .hoc-ibe {
-    padding: 12px 10px 40px !important;
-  }
-
-  .x-scroll-offset {
-    scroll-margin-top: 130px;
-  }
-}
+  </header>
 
 
-/* =========================================================
-   OPTIONAL:
-   Diese Regeln erst aktivieren, wenn wir nach dem ersten Test
-   konkrete COMPASS-Elemente angleichen.
-   ========================================================= */
+  <!-- =========================================
+       COMPASS IBE
+       =========================================
 
-/*
-.btn-primary {
-  background-color: var(--hoc-blue);
-  border-color: var(--hoc-blue);
-}
-*/
+       WICHTIG:
+       Dieser Kommentar wird von COMPASS
+       durch die Kreuzfahrtsuche ersetzt.
+
+       container-fluid sorgt dafür, dass die
+       IBE die verfügbare Bildschirmbreite
+       nutzen kann.
+       ========================================= -->
+
+  <main class="hoc-ibe container-fluid">
+
+    <!-- ibe::body -->
+
+  </main>
+
+
+  <!--
+       Absichtlich KEIN Footer.
+       Die Buchungsstrecke endet mit der IBE.
+  -->
+
+</body>
+</html>
