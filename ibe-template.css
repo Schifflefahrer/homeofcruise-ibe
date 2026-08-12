@@ -1,0 +1,279 @@
+/* =========================================================
+   HOME OF CRUISE – COMPASS IBE TEMPLATE
+   ========================================================= */
+
+:root {
+  --hoc-blue: #0b64c0;
+  --hoc-text: #121212;
+  --hoc-border: #e7e9ed;
+  --hoc-bg: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--hoc-bg);
+  color: var(--hoc-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.hoc-header {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid var(--hoc-border);
+  position: relative;
+  z-index: 1000;
+}
+
+.hoc-header__inner {
+  width: 100%;
+  min-height: 82px;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  gap: 38px;
+}
+
+.hoc-logo {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  text-decoration: none;
+}
+
+.hoc-logo img {
+  display: block;
+  width: 230px;
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.hoc-nav {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  gap: 30px;
+  min-width: 0;
+}
+
+.hoc-nav a {
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hoc-nav a:hover,
+.hoc-nav a:focus-visible,
+.hoc-nav a.active {
+  color: var(--hoc-blue);
+}
+
+.hoc-contact {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 24px;
+  white-space: nowrap;
+}
+
+.hoc-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: #111;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hoc-contact a:hover,
+.hoc-contact a:focus-visible {
+  color: var(--hoc-blue);
+}
+
+.hoc-whatsapp .hoc-contact__icon {
+  color: #19bd62;
+  font-size: 22px;
+}
+
+.hoc-phone .hoc-contact__icon {
+  color: #27a7d8;
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   COMPASS IBE
+   ========================================================= */
+
+.hoc-ibe {
+  width: 100%;
+  max-width: none !important;
+  margin: 0 !important;
+
+  /*
+    Kleine Innenabstände wie bei großen Buchungsportalen,
+    aber kein schmaler zentrierter Website-Container.
+  */
+  padding: 20px 28px 60px !important;
+}
+
+/*
+  Nur direkte Bootstrap-Container innerhalb unseres IBE-Bereichs
+  auf volle Breite setzen. Das ist vorsichtiger, als pauschal
+  jedes verschachtelte .container-Element der IBE zu verändern.
+*/
+.hoc-ibe > .container,
+.hoc-ibe > .container-sm,
+.hoc-ibe > .container-md,
+.hoc-ibe > .container-lg,
+.hoc-ibe > .container-xl,
+.hoc-ibe > .container-xxl,
+.hoc-ibe > .container-fluid {
+  width: 100%;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/*
+  COMPASS-Dokumentation:
+  Scrollziele dürfen bei einer Navigation nicht verdeckt werden.
+*/
+.x-scroll-offset {
+  scroll-margin-top: 100px;
+}
+
+
+/* =========================================================
+   DESKTOP XL
+   ========================================================= */
+
+@media (min-width: 1600px) {
+  .hoc-header__inner {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  .hoc-ibe {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+}
+
+
+/* =========================================================
+   TABLET / KLEINER DESKTOP
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .hoc-header__inner {
+    gap: 20px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hoc-logo img {
+    width: 185px;
+  }
+
+  .hoc-nav {
+    gap: 18px;
+  }
+
+  .hoc-contact {
+    gap: 14px;
+  }
+
+  .hoc-contact a {
+    font-size: 14px;
+  }
+
+  .hoc-ibe {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .hoc-header__inner {
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .hoc-logo img {
+    width: 165px;
+    max-height: none;
+  }
+
+  .hoc-contact {
+    margin-left: auto;
+  }
+
+  .hoc-whatsapp {
+    display: none !important;
+  }
+
+  .hoc-nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+
+  .hoc-nav a {
+    font-size: 14px;
+  }
+
+  .hoc-ibe {
+    padding: 12px 10px 40px !important;
+  }
+
+  .x-scroll-offset {
+    scroll-margin-top: 130px;
+  }
+}
+
+
+/* =========================================================
+   OPTIONAL:
+   Diese Regeln erst aktivieren, wenn wir nach dem ersten Test
+   konkrete COMPASS-Elemente angleichen.
+   ========================================================= */
+
+/*
+.btn-primary {
+  background-color: var(--hoc-blue);
+  border-color: var(--hoc-blue);
+}
+*/
