@@ -1,11 +1,7 @@
 /* ==========================================================
-   HOME OF CRUISE
-   COMPASS / XTIBE CUSTOM DESIGN
+   HOME OF CRUISE – SAFE TEST
+   Nur Darstellung, keine Funktionslogik
    ========================================================== */
-
-/* ----------------------------------------------------------
-   1. FARBEN
-   ---------------------------------------------------------- */
 
 :root,
 [data-bs-theme="light"] {
@@ -15,332 +11,136 @@
   --hoc-light: #f5f7f8;
   --hoc-border: #dce4e8;
   --hoc-text: #101820;
-
-  --bs-primary: #11b5d3;
-  --bs-primary-rgb: 17, 181, 211;
-
-  --bs-dark: #073447;
-  --bs-dark-rgb: 7, 52, 71;
-
-  --bs-light: #f5f7f8;
-  --bs-light-rgb: 245, 247, 248;
-
-  --bs-body-bg: #ffffff;
-  --bs-body-color: #101820;
-  --bs-border-color: #dce4e8;
 }
 
-
-/* ----------------------------------------------------------
-   2. GRUNDLAYOUT
-   ---------------------------------------------------------- */
-
+/* Grundfläche */
 html,
 body {
   margin: 0 !important;
-  padding: 0 !important;
   background: #ffffff !important;
-  color: #101820 !important;
+  color: var(--hoc-text) !important;
 }
 
-body {
-  padding-bottom: 0 !important;
-}
-
-body > .container-xxl,
-body > .container-fluid {
-  width: 100% !important;
-  max-width: none !important;
-  margin: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-
-/* ----------------------------------------------------------
-   3. LINKE KREUZFAHRTSUCHE
-   ---------------------------------------------------------- */
-
+/* obere Kreuzfahrtsuche */
 #xt-cruisefinder-top,
-#xt-cruisefinder-top.text-bg-primary,
-#xt-cruisefinder-top.bg-primary,
-#xt-cruisefinder-top.bg-opacity-75,
 .xtc-search-cruisefinder {
   --bs-bg-opacity: 1 !important;
   --bs-primary-rgb: 7, 52, 71 !important;
-
-  background: #073447 !important;
-  background-color: #073447 !important;
-
+  background: var(--hoc-navy) !important;
+  background-color: var(--hoc-navy) !important;
   color: #ffffff !important;
 }
 
-#xt-cruisefinder-top {
-  padding: 20px !important;
-}
-
+/* Texte im oberen Suchbereich */
 #xt-cruisefinder-top h1,
 #xt-cruisefinder-top h2,
 #xt-cruisefinder-top h3,
 #xt-cruisefinder-top h4,
-#xt-cruisefinder-top h5,
 #xt-cruisefinder-top p,
 #xt-cruisefinder-top label {
   color: #ffffff !important;
 }
 
-
-/* ----------------------------------------------------------
-   4. ERWEITERTE SUCHE
-   ---------------------------------------------------------- */
-
+/* erweiterte Suche */
 #xt-cruisefinder-extended,
 .xtc-search-cruisefinder-extended {
-  background: #f5f7f8 !important;
-  background-color: #f5f7f8 !important;
-  color: #101820 !important;
-  padding: 20px !important;
+  background: var(--hoc-light) !important;
+  color: var(--hoc-text) !important;
 }
 
-#xt-cruisefinder-extended label,
-#xt-cruisefinder-extended h1,
-#xt-cruisefinder-extended h2,
-#xt-cruisefinder-extended h3,
-#xt-cruisefinder-extended h4 {
-  color: #101820 !important;
-}
-
-
-/* ----------------------------------------------------------
-   5. EINGABEFELDER
-   ---------------------------------------------------------- */
-
+/* Eingabefelder – nur Optik */
 #xt-cruisefinder-collapse .form-control,
 #xt-cruisefinder-collapse .form-select {
-  min-height: 44px !important;
   background: #ffffff !important;
-  color: #101820 !important;
-  border: 1px solid #dce4e8 !important;
-  border-radius: 5px !important;
+  border: 1px solid var(--hoc-border) !important;
+  border-radius: 6px !important;
   box-shadow: none !important;
 }
 
+/* Fokus – nur Optik */
 #xt-cruisefinder-collapse .form-control:focus,
 #xt-cruisefinder-collapse .form-select:focus {
-  border-color: #11b5d3 !important;
-  box-shadow: 0 0 0 3px rgba(17, 181, 211, 0.12) !important;
+  border-color: var(--hoc-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(17,181,211,.12) !important;
 }
 
-
-/* ----------------------------------------------------------
-   6. SUCHBUTTON
-   ---------------------------------------------------------- */
-
+/* Suchbutton */
 #xt-cruisefinder-collapse .btn-primary,
 #xt-cruisefinder-collapse button[type="submit"] {
-  min-height: 44px !important;
-
-  background: #11b5d3 !important;
-  background-color: #11b5d3 !important;
-
-  border-color: #11b5d3 !important;
+  background: var(--hoc-cyan) !important;
+  border-color: var(--hoc-cyan) !important;
   color: #ffffff !important;
-
-  border-radius: 5px !important;
-  font-weight: 600 !important;
+  border-radius: 6px !important;
 }
 
+/* Suchbutton Hover */
 #xt-cruisefinder-collapse .btn-primary:hover,
 #xt-cruisefinder-collapse button[type="submit"]:hover {
-  background: #0d9fba !important;
-  background-color: #0d9fba !important;
-  border-color: #0d9fba !important;
+  background: var(--hoc-cyan-hover) !important;
+  border-color: var(--hoc-cyan-hover) !important;
 }
 
-
-/* ----------------------------------------------------------
-   7. ERGEBNISBEREICH
-   ---------------------------------------------------------- */
-
+/* Ergebnisbereich */
 #xt-search-main {
   background: #ffffff !important;
 }
 
+/* Ergebnis-Zusammenfassung */
 #xt-search-summary {
-  background: #f5f7f8 !important;
-  color: #101820 !important;
-  border: 0 !important;
-  padding: 15px !important;
+  background: var(--hoc-light) !important;
+  color: var(--hoc-text) !important;
 }
 
-
-/* ----------------------------------------------------------
-   8. ERGEBNISKARTEN
-   ---------------------------------------------------------- */
-
+/* Ergebnis-Karten */
 #xt-search-result .list-group-item {
   background: #ffffff !important;
-  border: 1px solid #dce4e8 !important;
-
-  margin-bottom: 14px !important;
-
-  border-radius: 6px !important;
-  overflow: hidden !important;
-
-  box-shadow: 0 2px 8px rgba(7, 52, 71, 0.04) !important;
+  border: 1px solid var(--hoc-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgba(7,52,71,.04) !important;
 }
 
+/* Titel */
 #xt-search-result .list-group-item h2,
 #xt-search-result .list-group-item h3,
 #xt-search-result .list-group-item h4 {
-  color: #073447 !important;
+  color: var(--hoc-navy) !important;
 }
 
-
-/* ----------------------------------------------------------
-   9. ANGEBOT-BUTTONS
-   ---------------------------------------------------------- */
-
+/* Angebotsbuttons */
 #xt-search-result .btn-primary {
-  background: #11b5d3 !important;
-  background-color: #11b5d3 !important;
-
-  border-color: #11b5d3 !important;
+  background: var(--hoc-cyan) !important;
+  border-color: var(--hoc-cyan) !important;
   color: #ffffff !important;
-
-  border-radius: 4px !important;
-  font-weight: 600 !important;
-}
-
-#xt-search-result .btn-primary:hover {
-  background: #0d9fba !important;
-  background-color: #0d9fba !important;
-  border-color: #0d9fba !important;
-}
-
-
-/* ----------------------------------------------------------
-   10. REISEDETAILS-BUTTON
-   ---------------------------------------------------------- */
-
-#xt-search-result .btn-secondary {
-  background: #ffffff !important;
-  color: #073447 !important;
-
-  border-color: #dce4e8 !important;
-  border-radius: 4px !important;
-}
-
-#xt-search-result .btn-secondary:hover {
-  background: #f5f7f8 !important;
-}
-
-
-/* ----------------------------------------------------------
-   11. PAGINATION
-   ---------------------------------------------------------- */
-
-.pagination {
-  gap: 5px !important;
-}
-
-.pagination .page-link {
-  min-width: 36px !important;
-  min-height: 36px !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  border: 0 !important;
-
-  background: transparent !important;
-  color: #53616a !important;
-
   border-radius: 5px !important;
-  box-shadow: none !important;
 }
 
+/* Pagination */
 .pagination .page-item.active .page-link {
-  background: #11b5d3 !important;
+  background: var(--hoc-cyan) !important;
+  border-color: var(--hoc-cyan) !important;
   color: #ffffff !important;
-  font-weight: 600 !important;
 }
 
-.pagination .page-item:not(.active):not(.disabled) .page-link:hover {
-  background: #eaf7fa !important;
-  color: #073447 !important;
-}
-
-
-/* ----------------------------------------------------------
-   12. SORTIERUNG
-   ---------------------------------------------------------- */
-
+/* Sortierung */
 #xt-sort,
 .bss > .form-select {
-  min-height: 42px !important;
-
+  border: 1px solid var(--hoc-border) !important;
+  border-radius: 6px !important;
   background: #ffffff !important;
-  color: #101820 !important;
-
-  border: 1px solid #dce4e8 !important;
-  border-radius: 5px !important;
-
-  box-shadow: none !important;
 }
 
-.bss > .form-select:focus {
-  border-color: #11b5d3 !important;
-  box-shadow: 0 0 0 3px rgba(17, 181, 211, 0.12) !important;
-}
-
-
-/* ----------------------------------------------------------
-   13. COMPASS FOOTER ENTFERNEN
-   ---------------------------------------------------------- */
-
+/* alter COMPASS Footer weg */
 #xt-ref-navbar,
 .xtc-general-navigation {
   display: none !important;
-  visibility: hidden !important;
-
-  height: 0 !important;
-  min-height: 0 !important;
-
-  margin: 0 !important;
-  padding: 0 !important;
 }
 
+/* kein Platz für alten Footer */
 body[style] {
   padding-bottom: 0 !important;
 }
 
-
-/* ----------------------------------------------------------
-   14. WIX HEADER / SCROLL
-   ---------------------------------------------------------- */
-
+/* Scrollziel unter Wix-Header */
 .x-scroll-offset {
   scroll-margin-top: 100px !important;
-}
-
-
-/* ----------------------------------------------------------
-   15. MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 991.98px) {
-  #xt-cruisefinder-top,
-  #xt-cruisefinder-extended {
-    padding: 16px !important;
-  }
-}
-
-@media (max-width: 767.98px) {
-  #xt-cruisefinder-collapse .form-control,
-  #xt-cruisefinder-collapse .form-select,
-  #xt-cruisefinder-collapse button[type="submit"] {
-    min-height: 46px !important;
-  }
 }
