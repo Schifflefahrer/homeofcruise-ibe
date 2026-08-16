@@ -59,3 +59,41 @@ a {
         padding: 8px;
     }
 }
+/* ==========================================
+   Home of Cruise – Rundungen
+   ========================================== */
+
+/* Eingabefelder und Auswahlfelder */
+.form-control,
+.form-select,
+select,
+input {
+    border-radius: 10px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+}
+
+/* Karten / Panels */
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Bilder innerhalb von Karten */
+.card img {
+    border-radius: 10px;
+}
+
+/* Dropdown-Menüs */
+.dropdown-menu {
+    border-radius: 10px;
+}
+
+/* Pagination */
+.pagination .page-link {
+    border-radius: 10px;
+    margin: 0 2px;
+}
