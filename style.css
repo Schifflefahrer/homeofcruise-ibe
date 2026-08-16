@@ -200,3 +200,44 @@ div.list-group-item.px-2.pb-0.pt-2 img {
 #xt-cruisefinder-extended .mb-3 {
     margin-bottom: 14px !important;
 }
+/* ==========================================
+   Home of Cruise – Ergebnislisten
+   ========================================== */
+
+/* Ganze Angebotskarte */
+#xt-search-result .list-group-item {
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin-bottom: 14px !important;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Bilder in den Angeboten */
+#xt-search-result .list-group-item img {
+    border-radius: 10px !important;
+}
+
+/* Graue Leiste unten bei Reisedetails / Angebot prüfen */
+#xt-search-result .list-group-item .bg-light,
+#xt-search-result .list-group-item .text-bg-light {
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* Buttons */
+#xt-search-result .btn {
+    border-radius: 10px !important;
+}
+
+/* Primärbutton */
+#xt-search-result .btn-primary {
+    background-color: #0094A9 !important;
+    border-color: #0094A9 !important;
+}
+
+/* Hover */
+#xt-search-result .btn-primary:hover {
+    background-color: #007f91 !important;
+    border-color: #007f91 !important;
+}
