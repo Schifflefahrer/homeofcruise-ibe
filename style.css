@@ -118,3 +118,34 @@ div.list-group-item.px-2.pb-0.pt-2 {
 div.list-group-item.px-2.pb-0.pt-2 img {
     border-radius: 10px;
 }
+/* ==========================================
+   Home of Cruise – Suchbereich
+   ========================================== */
+
+/* Oberer türkiser Suchbereich */
+#xt-cruisefinder-top {
+    background-color: #0094A9 !important;
+    border-radius: 10px !important;
+    padding: 18px !important;
+    margin-bottom: 16px;
+}
+
+/* Eingabefelder im Suchbereich */
+#xt-cruisefinder-top .form-control,
+#xt-cruisefinder-top .form-select,
+#xt-cruisefinder-top select,
+#xt-cruisefinder-top input {
+    border-radius: 10px !important;
+    border: 0;
+}
+
+/* Buttons im Suchbereich */
+#xt-cruisefinder-top .btn {
+    border-radius: 10px !important;
+}
+
+/* Suchbutton etwas ruhiger gestalten */
+#xt-cruisefinder-top .btn-primary {
+    background-color: #007f91 !important;
+    border-color: #007f91 !important;
+}
