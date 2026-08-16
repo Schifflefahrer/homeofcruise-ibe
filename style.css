@@ -97,3 +97,24 @@ input {
     border-radius: 10px;
     margin: 0 2px;
 }
+/* ==========================================
+   Home of Cruise – Angebotskarten
+   ========================================== */
+
+/* Komplette Reise-Angebotskarte */
+div.list-group-item.px-2.pb-0.pt-2 {
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+/* Leichter moderner Karten-Look */
+div.list-group-item.px-2.pb-0.pt-2 {
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Bilder innerhalb der Angebotskarten */
+div.list-group-item.px-2.pb-0.pt-2 img {
+    border-radius: 10px;
+}
