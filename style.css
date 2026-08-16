@@ -1,0 +1,61 @@
+/* ==========================================
+   Home of Cruise – IBE Design
+   ========================================== */
+
+/* Grundfarben */
+:root {
+    --hoc-background: #EEF0F1;
+    --hoc-primary: #0094A9;
+    --hoc-text: #20282B;
+    --hoc-white: #FFFFFF;
+}
+
+/* Gesamte Seite */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--hoc-background);
+    color: var(--hoc-text);
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+/* IBE-Container */
+.ibe-page {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: var(--hoc-background);
+}
+
+/* Bootstrap Hauptbuttons */
+.btn-primary {
+    background-color: var(--hoc-primary);
+    border-color: var(--hoc-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #007f91;
+    border-color: #007f91;
+}
+
+/* Links */
+a {
+    color: var(--hoc-primary);
+}
+
+/* Scroll-Korrektur für die IBE */
+.x-scroll-offset {
+    scroll-margin-top: 100px;
+}
+
+/* Smartphone */
+@media (max-width: 767px) {
+    .ibe-page {
+        padding: 8px;
+    }
+}
