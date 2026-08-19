@@ -1,281 +1,244 @@
 /* ==========================================
-   Home of Cruise – IBE Design
+   HOME OF CRUISE HEADER
    ========================================== */
 
-/* Grundfarben */
-:root {
-    --hoc-background: #EEF0F1;
-    --hoc-primary: #0094A9;
-    --hoc-text: #20282B;
-    --hoc-white: #FFFFFF;
+.hoc-header {
+    width: 100%;
+    background: #ffffff;
 }
 
-/* Gesamte Seite */
-html,
-body {
-    margin: 0;
-    padding: 0;
+.hoc-header-inner {
     width: 100%;
-    background-color: var(--hoc-background);
-    color: var(--hoc-text);
-    font-family: "Montserrat", Arial, sans-serif;
+    min-height: 95px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 30px;
+    gap: 45px;
 }
 
-/* IBE-Container */
-.ibe-page {
-    width: 100%;
+.hoc-header-brand {
+    flex: 0 0 auto;
+}
+
+.hoc-header-logo {
+    display: block;
+    width: 250px;
     max-width: 100%;
-    margin: 0;
-    padding: 16px;
-    box-sizing: border-box;
-    background-color: var(--hoc-background);
+    height: auto;
 }
 
-/* Bootstrap Hauptbuttons */
-.btn-primary {
-    background-color: var(--hoc-primary);
-    border-color: var(--hoc-primary);
+.hoc-navigation {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-right: auto;
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: #007f91;
-    border-color: #007f91;
+.hoc-navigation a {
+    color: #111111;
+    text-decoration: none;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
 }
 
-/* Links */
-a {
-    color: var(--hoc-primary);
+.hoc-navigation a:hover,
+.hoc-navigation a.active {
+    color: #175cff;
 }
 
-/* Scroll-Korrektur für die IBE */
-.x-scroll-offset {
-    scroll-margin-top: 100px;
+.hoc-header-contact {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    font-size: 18px;
 }
 
-/* Smartphone */
-@media (max-width: 767px) {
-    .ibe-page {
-        padding: 8px;
+.hoc-header-contact a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.hoc-header-contact a:hover {
+    color: #0094A9;
+}
+
+
+
+/* ==========================================
+   HOME OF CRUISE FOOTER
+   ========================================== */
+
+.hoc-footer {
+    width: 100%;
+
+    background-color: #053247;
+    color: #ffffff;
+
+    padding: 38px 60px;
+}
+
+.hoc-footer-inner {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        1.25fr
+        1fr
+        0.9fr
+        0.8fr
+        1fr;
+
+    align-items: start;
+    gap: 55px;
+}
+
+.hoc-footer-logo {
+    display: block;
+
+    width: 330px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hoc-footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hoc-footer-column h3 {
+    margin: 0 0 8px;
+
+    color: #ffffff;
+
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hoc-footer-column a {
+    color: #ffffff;
+    text-decoration: underline;
+
+    font-size: 16px;
+}
+
+.hoc-footer-column a:hover {
+    opacity: 0.8;
+}
+
+.hoc-legal {
+    padding-top: 40px;
+}
+
+.hoc-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+
+
+/* ==========================================
+   TABLET
+   ========================================== */
+
+@media (max-width: 1100px) {
+
+    .hoc-header-inner {
+        flex-wrap: wrap;
+        gap: 20px 30px;
+    }
+
+    .hoc-header-logo {
+        width: 210px;
+    }
+
+    .hoc-navigation {
+        margin-right: 0;
+    }
+
+    .hoc-header-contact {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .hoc-footer-inner {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 35px;
+    }
+
+    .hoc-legal {
+        padding-top: 0;
     }
 }
+
+
+
 /* ==========================================
-   Home of Cruise – Rundungen
+   MOBILE
    ========================================== */
 
-/* Eingabefelder und Auswahlfelder */
-.form-control,
-.form-select,
-select,
-input {
-    border-radius: 10px;
-}
+@media (max-width: 767px) {
 
-/* Buttons */
-.btn {
-    border-radius: 10px;
-}
+    .hoc-header-inner {
+        padding: 15px 18px;
 
-/* Karten / Panels */
-.card {
-    border-radius: 10px;
-    overflow: hidden;
-}
+        flex-direction: column;
+        align-items: flex-start;
 
-/* Bilder innerhalb von Karten */
-.card img {
-    border-radius: 10px;
-}
+        gap: 16px;
+    }
 
-/* Dropdown-Menüs */
-.dropdown-menu {
-    border-radius: 10px;
-}
+    .hoc-header-logo {
+        width: 210px;
+    }
 
-/* Pagination */
-.pagination .page-link {
-    border-radius: 10px;
-    margin: 0 2px;
-}
-/* ==========================================
-   Home of Cruise – Angebotskarten
-   ========================================== */
+    .hoc-navigation {
+        width: 100%;
 
-/* Komplette Reise-Angebotskarte */
-div.list-group-item.px-2.pb-0.pt-2 {
-    border-radius: 10px !important;
-    overflow: hidden;
-    margin-bottom: 14px;
-}
+        flex-wrap: wrap;
 
-/* Leichter moderner Karten-Look */
-div.list-group-item.px-2.pb-0.pt-2 {
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
+        gap: 12px 22px;
+    }
 
-/* Bilder innerhalb der Angebotskarten */
-div.list-group-item.px-2.pb-0.pt-2 img {
-    border-radius: 10px;
-}
-/* ==========================================
-   Home of Cruise – Suchbereich
-   ========================================== */
+    .hoc-header-contact {
+        width: 100%;
 
-/* Oberer türkiser Suchbereich */
-#xt-cruisefinder-top {
-    background-color: #0094A9 !important;
-    border-radius: 10px !important;
-    padding: 18px !important;
-    margin-bottom: 16px;
-}
+        flex-direction: column;
+        align-items: flex-start;
 
-/* Eingabefelder im Suchbereich */
-#xt-cruisefinder-top .form-control,
-#xt-cruisefinder-top .form-select,
-#xt-cruisefinder-top select,
-#xt-cruisefinder-top input {
-    border-radius: 10px !important;
-    border: 0;
-}
+        gap: 8px;
 
-/* Buttons im Suchbereich */
-#xt-cruisefinder-top .btn {
-    border-radius: 10px !important;
-}
+        font-size: 15px;
+    }
 
-/* Suchbutton etwas ruhiger gestalten */
-#xt-cruisefinder-top .btn-primary {
-    background-color: #007f91 !important;
-    border-color: #007f91 !important;
-}
-/* ==========================================
-   Home of Cruise – Linke Filterspalte
-   ========================================== */
 
-/* Oberer Suchbereich */
-#xt-cruisefinder-top {
-    background-color: #0094A9 !important;
-    border-radius: 10px !important;
-    padding: 18px !important;
-    margin: 0 0 12px 0 !important;
-    overflow: hidden;
-}
+    .hoc-footer {
+        padding: 32px 20px;
+    }
 
-/* Erweiterte Suche */
-#xt-cruisefinder-extended {
-    background-color: #ffffff !important;
-    border-radius: 10px !important;
-    padding: 18px !important;
-    margin: 0 !important;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
+    .hoc-footer-inner {
+        grid-template-columns: 1fr;
 
-/* Überschrift Erweiterte Suche */
-#xt-cruisefinder-extended .xtc-search-cruisefinder-extended-title {
-    margin-bottom: 18px;
-}
+        gap: 30px;
+    }
 
-/* Felder in beiden Suchbereichen */
-#xt-cruisefinder-top input,
-#xt-cruisefinder-top select,
-#xt-cruisefinder-top .form-control,
-#xt-cruisefinder-top .form-select,
-#xt-cruisefinder-extended input,
-#xt-cruisefinder-extended select,
-#xt-cruisefinder-extended .form-control,
-#xt-cruisefinder-extended .form-select {
-    border-radius: 10px !important;
-}
+    .hoc-footer-logo {
+        width: 280px;
+    }
 
-/* Accordion-Bereiche wie Reisende / Schiff / Route */
-#xt-cruisefinder-extended .accordion-item,
-#xt-cruisefinder-extended .accordion-button {
-    border-radius: 10px !important;
-}
-
-/* Abstände zwischen den Filtergruppen */
-#xt-cruisefinder-extended .mb-2,
-#xt-cruisefinder-extended .mb-3 {
-    margin-bottom: 14px !important;
-}
-/* ==========================================
-   Home of Cruise – Ergebnislisten
-   ========================================== */
-
-/* Ganze Angebotskarte */
-#xt-search-result .list-group-item {
-    border-radius: 10px !important;
-    overflow: hidden;
-    margin-bottom: 14px !important;
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.08) !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* Bilder in den Angeboten */
-#xt-search-result .list-group-item img {
-    border-radius: 10px !important;
-}
-
-/* Graue Leiste unten bei Reisedetails / Angebot prüfen */
-#xt-search-result .list-group-item .bg-light,
-#xt-search-result .list-group-item .text-bg-light {
-    border-radius: 0 0 10px 10px !important;
-}
-
-/* Buttons */
-#xt-search-result .btn {
-    border-radius: 10px !important;
-}
-
-/* Primärbutton */
-#xt-search-result .btn-primary {
-    background-color: #0094A9 !important;
-    border-color: #0094A9 !important;
-}
-
-/* Hover */
-#xt-search-result .btn-primary:hover {
-    background-color: #007f91 !important;
-    border-color: #007f91 !important;
-}
-/* ==========================================
-   Home of Cruise – Filterkarte final
-   ========================================== */
-
-/* Erweiterte Suche als weiße Karte */
-#xt-cruisefinder-extended {
-    background: #ffffff !important;
-    border-radius: 10px !important;
-    margin: 0 10px 16px 10px !important;
-    padding: 16px !important;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-/* Überschrift */
-#xt-cruisefinder-extended .xtc-search-cruisefinder-extended-title {
-    margin-top: 0 !important;
-    margin-bottom: 18px !important;
-}
-
-/* Eingabefelder */
-#xt-cruisefinder-extended .form-control,
-#xt-cruisefinder-extended .form-select {
-    background-color: #ffffff;
-    border: 1px solid #dfe3e5;
-    border-radius: 10px !important;
-}
-
-/* Aufklappbereiche: Reisende, Schiff, Route usw. */
-#xt-cruisefinder-extended .accordion-item {
-    border: 1px solid #dfe3e5 !important;
-    border-radius: 10px !important;
-    overflow: hidden;
-}
-
-/* Etwas Luft zwischen den Bereichen */
-#xt-cruisefinder-extended .accordion-item + .accordion-item {
-    margin-top: 10px;
+    .hoc-legal {
+        padding-top: 0;
+    }
 }
