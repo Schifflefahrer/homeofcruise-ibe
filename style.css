@@ -1,362 +1,193 @@
-/* =========================================================
-   HOME OF CRUISE – HEADER
-   ========================================================= */
+/* ==========================================================
+   HOME OF CRUISE / COMPASS IBE
+   FINAL STYLE
+   ========================================================== */
 
-.hoc-header {
-    width: 100%;
-    background: #ffffff;
-    border-bottom: 1px solid #eef0f1;
+:root {
+    --hoc-primary: #0094A9;
+    --hoc-primary-dark: #007f91;
+
+    --hoc-background: #EEF0F1;
+    --hoc-white: #ffffff;
+
+    --hoc-text: #111111;
+    --hoc-muted: #5f666b;
+
+    --hoc-border: #dfe3e5;
+
+    --hoc-radius: 10px;
+
+    --hoc-footer: #073447;
 }
 
-.hoc-header-inner {
+
+/* ==========================================================
+   GRUNDEINSTELLUNGEN
+   ========================================================== */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
     width: 100%;
-    max-width: 1920px;
-    min-height: 96px;
 
-    margin: 0 auto;
-    padding: 14px 28px;
+    background: var(--hoc-background);
 
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
+    font-family: "Montserrat", Arial, sans-serif;
 
-    gap: 48px;
+    color: var(--hoc-text);
 
     box-sizing: border-box;
 }
 
-.hoc-header-brand {
-    display: block;
-    flex-shrink: 0;
-}
-
-.hoc-header-logo {
-    display: block;
-    width: 230px;
-    max-width: 100%;
-    height: auto;
-}
-
-.hoc-navigation {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.hoc-navigation a {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-
-    color: #111111;
-    text-decoration: none;
-
-    transition: color 0.2s ease;
-}
-
-.hoc-navigation a:hover,
-.hoc-navigation a.active {
-    color: #0094A9;
-}
-
-.hoc-header-contact {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    gap: 28px;
-
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 17px;
-
-    white-space: nowrap;
-}
-
-.hoc-header-contact a {
-    color: #111111;
-    text-decoration: none;
-
-    transition: color 0.2s ease;
-}
-
-.hoc-header-contact a:hover {
-    color: #0094A9;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 
-/* =========================================================
-   HOME OF CRUISE – FOOTER
-   ========================================================= */
+/* ==========================================================
+   COMPASS / IBE HAUPTBEREICH
+   ========================================================== */
 
-.hoc-footer {
+.ibe-page {
     width: 100%;
 
-    background: #073447;
-    color: #ffffff;
+    margin: 0;
 
-    padding: 42px 48px;
+    padding: 20px;
+
+    background: var(--hoc-background);
+}
+
+
+/* Bootstrap Container auf volle Breite */
+
+.container,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl,
+.container-xxl,
+.container-fluid {
+    width: 100%;
+
+    max-width: none;
 
     box-sizing: border-box;
 }
 
-.hoc-footer-inner {
-    width: 100%;
-    max-width: 1800px;
 
-    margin: 0 auto;
+/* ==========================================================
+   SCHRIFT
+   ========================================================== */
 
-    display: grid;
-    grid-template-columns:
-        minmax(220px, 1.25fr)
-        minmax(180px, 1fr)
-        minmax(160px, 0.9fr)
-        minmax(140px, 0.8fr)
-        minmax(190px, 1fr);
-
-    gap: 48px;
-
-    align-items: start;
-}
-
-.hoc-footer-brand {
-    display: flex;
-    align-items: flex-start;
-}
-
-.hoc-footer-logo {
-    display: block;
-    width: 310px;
-    max-width: 100%;
-    height: auto;
-}
-
-.hoc-footer-column {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-
+body,
+button,
+input,
+select,
+textarea,
+.form-control,
+.form-select,
+.btn {
     font-family: "Montserrat", Arial, sans-serif;
 }
 
-.hoc-footer-column h3 {
-    margin: 0 0 10px;
 
-    font-size: 20px;
-    line-height: 1.2;
-    font-weight: 700;
+/* Überschriften */
 
-    color: #ffffff;
-}
-
-.hoc-footer-column a {
-    color: #ffffff;
-    text-decoration: underline;
-
-    font-size: 15px;
-    line-height: 1.45;
-}
-
-.hoc-footer-column a:hover {
-    opacity: 0.8;
-}
-
-.hoc-legal {
-    padding-top: 39px;
-}
-
-.hoc-social {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 16px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* ==========================================================
+   FARBGEBUNG COMPASS
+   ========================================================== */
 
-@media (max-width: 1100px) {
+.bg-primary,
+.text-bg-primary {
+    background-color: var(--hoc-primary) !important;
+}
 
-    .hoc-header-inner {
-        grid-template-columns: auto 1fr;
-        gap: 18px 28px;
+.text-primary {
+    color: var(--hoc-primary) !important;
+}
 
-        padding: 14px 22px;
-    }
-
-    .hoc-header-logo {
-        width: 200px;
-    }
-
-    .hoc-navigation {
-        justify-content: flex-end;
-    }
-
-    .hoc-header-contact {
-        grid-column: 1 / -1;
-
-        justify-content: flex-end;
-
-        gap: 22px;
-
-        padding-top: 4px;
-
-        font-size: 15px;
-    }
-
-
-    .hoc-footer {
-        padding: 38px 30px;
-    }
-
-    .hoc-footer-inner {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 34px 45px;
-    }
-
-    .hoc-footer-logo {
-        width: 270px;
-    }
-
-    .hoc-legal {
-        padding-top: 0;
-    }
+.border-primary {
+    border-color: var(--hoc-primary) !important;
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+/* ==========================================================
+   SUCHBOX LINKS
+   ========================================================== */
 
-@media (max-width: 767px) {
-
-    .hoc-header-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-
-        min-height: auto;
-
-        padding: 14px 16px;
-
-        gap: 14px;
-    }
-
-    .hoc-header-brand {
-        display: flex;
-        justify-content: center;
-    }
-
-    .hoc-header-logo {
-        width: 190px;
-    }
-
-    .hoc-navigation {
-        width: 100%;
-
-        justify-content: center;
-        flex-wrap: wrap;
-
-        gap: 10px 20px;
-
-        padding-top: 2px;
-    }
-
-    .hoc-navigation a {
-        font-size: 14px;
-    }
-
-    .hoc-header-contact {
-        width: 100%;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        gap: 6px;
-
-        padding-top: 4px;
-
-        font-size: 14px;
-
-        white-space: normal;
-        text-align: center;
-    }
-
-
-    .hoc-footer {
-        padding: 30px 20px;
-    }
-
-    .hoc-footer-inner {
-        grid-template-columns: 1fr;
-
-        gap: 28px;
-    }
-
-    .hoc-footer-brand {
-        justify-content: center;
-    }
-
-    .hoc-footer-logo {
-        width: 250px;
-    }
-
-    .hoc-footer-column {
-        align-items: center;
-        text-align: center;
-    }
-
-    .hoc-footer-column h3 {
-        font-size: 18px;
-    }
-
-    .hoc-footer-column a {
-        font-size: 14px;
-    }
-
-    .hoc-legal {
-        padding-top: 0;
-    }
-
-    .hoc-social {
-        justify-content: center;
-    }
+#home-cruisefinder,
+#xt-cruisefinder-collapse,
+.xtc-search-cruisefinder,
+.xtc-search-cruisefinder-top,
+.xtc-search-cruisefinder-extended {
+    border-radius: var(--hoc-radius);
 }
 
 
-/* =========================================================
-   KLEINE HANDYS
-   ========================================================= */
+/* Haupt-Suchbereich */
 
-@media (max-width: 420px) {
+#home-cruisefinder,
+.xtc-search-cruisefinder-top {
+    overflow: hidden;
 
-    .hoc-header-logo {
-        width: 170px;
-    }
+    border-radius: var(--hoc-radius);
 
-    .hoc-navigation {
-        gap: 8px 14px;
-    }
-
-    .hoc-navigation a {
-        font-size: 13px;
-    }
-
-    .hoc-header-contact {
-        font-size: 13px;
-    }
-
-    .hoc-footer {
-        padding: 26px 16px;
-    }
-
-    .hoc-footer-logo {
-        width: 220px;
-    }
+    background: var(--hoc-primary);
 }
+
+
+/* Erweiterte Suche */
+
+.xtc-search-cruisefinder-extended {
+    background: var(--hoc-white);
+
+    border-radius: var(--hoc-radius);
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   FORMULARE
+   ========================================================== */
+
+.form-control,
+.form-select,
+select,
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="email"],
+input[type="tel"] {
+    border-radius: var(--hoc-radius) !important;
+
+    border: 1px solid var(--hoc-border);
+
+    background: var(--hoc-white);
+
+    box-shadow: none;
+}
+
+
+/* Focus
