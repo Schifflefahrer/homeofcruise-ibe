@@ -1,6 +1,6 @@
-/* ==========================================
-   HOME OF CRUISE HEADER
-   ========================================== */
+/* =========================================================
+   HOME OF CRUISE – HEADER
+   ========================================================= */
 
 .hoc-header {
     width: 100%;
@@ -9,17 +9,20 @@
 
 .hoc-header-inner {
     width: 100%;
-    min-height: 95px;
+    min-height: 82px;
 
     display: flex;
     align-items: center;
 
-    padding: 10px 30px;
-    gap: 45px;
+    padding: 8px 24px;
+    gap: 44px;
+
+    box-sizing: border-box;
 }
 
 .hoc-header-brand {
     flex: 0 0 auto;
+    display: block;
 }
 
 .hoc-header-logo {
@@ -32,19 +35,19 @@
 .hoc-navigation {
     display: flex;
     align-items: center;
-    gap: 36px;
+    gap: 34px;
+
     margin-right: auto;
 }
 
 .hoc-navigation a {
-    color: #111111;
-    text-decoration: none;
-
     font-family: "Montserrat", Arial, sans-serif;
     font-size: 15px;
     font-weight: 700;
+    letter-spacing: 0.04em;
 
-    letter-spacing: 0.03em;
+    color: #111111;
+    text-decoration: none;
 }
 
 .hoc-navigation a:hover,
@@ -55,8 +58,9 @@
 .hoc-header-contact {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 30px;
 
+    font-family: "Montserrat", Arial, sans-serif;
     font-size: 18px;
 }
 
@@ -70,18 +74,18 @@
 }
 
 
-
-/* ==========================================
-   HOME OF CRUISE FOOTER
-   ========================================== */
+/* =========================================================
+   HOME OF CRUISE – FOOTER
+   ========================================================= */
 
 .hoc-footer {
     width: 100%;
-
-    background-color: #053247;
+    background: #073447;
     color: #ffffff;
 
-    padding: 38px 60px;
+    padding: 34px 48px;
+
+    box-sizing: border-box;
 }
 
 .hoc-footer-inner {
@@ -96,14 +100,18 @@
         0.8fr
         1fr;
 
+    gap: 52px;
     align-items: start;
-    gap: 55px;
+}
+
+.hoc-footer-brand {
+    display: flex;
+    align-items: flex-start;
 }
 
 .hoc-footer-logo {
     display: block;
-
-    width: 330px;
+    width: 315px;
     max-width: 100%;
     height: auto;
 }
@@ -112,16 +120,17 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 .hoc-footer-column h3 {
     margin: 0 0 8px;
 
-    color: #ffffff;
-
-    font-family: "Montserrat", Arial, sans-serif;
     font-size: 20px;
     font-weight: 700;
+
+    color: #ffffff;
 }
 
 .hoc-footer-column a {
@@ -136,7 +145,7 @@
 }
 
 .hoc-legal {
-    padding-top: 40px;
+    padding-top: 39px;
 }
 
 .hoc-social {
@@ -146,16 +155,26 @@
 }
 
 
+/* =========================================================
+   IBE ABSTÄNDE
+   ========================================================= */
 
-/* ==========================================
+.ibe-page {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================
    TABLET
-   ========================================== */
+   ========================================================= */
 
 @media (max-width: 1100px) {
 
     .hoc-header-inner {
         flex-wrap: wrap;
-        gap: 20px 30px;
+
+        gap: 18px 28px;
     }
 
     .hoc-header-logo {
@@ -169,76 +188,6 @@
     .hoc-header-contact {
         width: 100%;
         justify-content: flex-end;
-    }
 
-    .hoc-footer-inner {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
-        gap: 35px;
-    }
-
-    .hoc-legal {
-        padding-top: 0;
-    }
-}
-
-
-
-/* ==========================================
-   MOBILE
-   ========================================== */
-
-@media (max-width: 767px) {
-
-    .hoc-header-inner {
-        padding: 15px 18px;
-
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 16px;
-    }
-
-    .hoc-header-logo {
-        width: 210px;
-    }
-
-    .hoc-navigation {
-        width: 100%;
-
-        flex-wrap: wrap;
-
-        gap: 12px 22px;
-    }
-
-    .hoc-header-contact {
-        width: 100%;
-
-        flex-direction: column;
-        align-items: flex-start;
-
-        gap: 8px;
-
-        font-size: 15px;
-    }
-
-
-    .hoc-footer {
-        padding: 32px 20px;
-    }
-
-    .hoc-footer-inner {
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-    }
-
-    .hoc-footer-logo {
-        width: 280px;
-    }
-
-    .hoc-legal {
-        padding-top: 0;
-    }
-}
+        font-size: 16px;
+   
