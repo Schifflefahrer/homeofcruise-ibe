@@ -190,4 +190,683 @@ input[type="tel"] {
 }
 
 
-/* Focus
+/* Focus */
+
+.form-control:focus,
+.form-select:focus,
+select:focus,
+input:focus {
+    border-color: var(--hoc-primary);
+
+    box-shadow: 0 0 0 2px rgba(0, 148, 169, 0.12);
+}
+
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
+.btn,
+button,
+input[type="submit"],
+input[type="button"] {
+    border-radius: var(--hoc-radius);
+
+    font-family: "Montserrat", Arial, sans-serif;
+}
+
+
+/* Primary Buttons */
+
+.btn-primary,
+.bg-primary.btn,
+button.bg-primary {
+    background-color: var(--hoc-primary) !important;
+
+    border-color: var(--hoc-primary) !important;
+
+    color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--hoc-primary-dark) !important;
+
+    border-color: var(--hoc-primary-dark) !important;
+}
+
+
+/* Suchbutton */
+
+.xtc-search-cruisefinder button,
+#home-cruisefinder button {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* ==========================================================
+   ANGEBOTSKARTEN / SUCHERGEBNISSE
+   ========================================================== */
+
+#xt-page-search .list-group-item,
+.xt-search-result .list-group-item,
+.list-group-item {
+    border-radius: var(--hoc-radius) !important;
+
+    overflow: hidden;
+
+    background: var(--hoc-white);
+
+    border: 1px solid var(--hoc-border);
+
+    margin-bottom: 14px;
+}
+
+
+/* Ergebnis-Container */
+
+#xt-page-search .list-group,
+.xt-search-result.list-group {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* Angebots-Zeilen */
+
+#xt-page-search .row,
+.xt-search-result .row {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* Bilder in Ergebnislisten */
+
+#xt-page-search img,
+.xt-search-result img,
+.carousel-item img {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* ==========================================================
+   TITEL UND KOPFBEREICHE DER ANGEBOTE
+   ========================================================== */
+
+.xtc-search-cruisefinder-title,
+.xtc-search-cruisefinder-extended-title {
+    border-radius:
+        var(--hoc-radius)
+        var(--hoc-radius)
+        0
+        0;
+}
+
+
+/* ==========================================================
+   PREIS / ANGEBOT PRÜFEN
+   ========================================================== */
+
+a.btn-primary,
+.btn-primary {
+    border-radius: var(--hoc-radius) !important;
+}
+
+
+/* ==========================================================
+   PAGINATION
+   ========================================================== */
+
+.pagination {
+    gap: 4px;
+}
+
+.page-link {
+    border-radius: var(--hoc-radius) !important;
+
+    color: var(--hoc-primary);
+}
+
+.page-item.active .page-link {
+    background: var(--hoc-primary);
+
+    border-color: var(--hoc-primary);
+
+    color: #ffffff;
+}
+
+
+/* ==========================================================
+   DROPDOWNS / ACCORDIONS
+   ========================================================== */
+
+.accordion-item,
+.accordion-button,
+.dropdown-menu {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* ==========================================================
+   CAROUSEL / DATUMSAUSWAHL
+   ========================================================== */
+
+.carousel,
+.carousel-inner,
+.carousel-item {
+    border-radius: var(--hoc-radius);
+}
+
+.xt-date {
+    border-radius: 6px;
+}
+
+
+/* ==========================================================
+   TABELLEN / KARTEN / BOXEN
+   ========================================================== */
+
+.card {
+    border-radius: var(--hoc-radius);
+
+    overflow: hidden;
+}
+
+.modal-content {
+    border-radius: var(--hoc-radius);
+}
+
+
+/* ==========================================================
+   HOME OF CRUISE HEADER
+   ========================================================== */
+
+.hoc-header {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid var(--hoc-background);
+}
+
+.hoc-header-inner {
+    max-width: 1900px;
+
+    min-height: 92px;
+
+    margin: 0 auto;
+
+    padding: 12px 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        1fr
+        auto;
+
+    align-items: center;
+
+    gap: 46px;
+}
+
+
+/* Logo */
+
+.hoc-header-brand {
+    display: block;
+
+    text-decoration: none;
+}
+
+.hoc-header-logo {
+    display: block;
+
+    width: 230px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* Navigation */
+
+.hoc-navigation {
+    display: flex;
+
+    align-items: center;
+
+    gap: 32px;
+}
+
+.hoc-navigation a {
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.03em;
+}
+
+.hoc-navigation a:hover,
+.hoc-navigation a.active {
+    color: var(--hoc-primary);
+}
+
+
+/* Header Kontakt */
+
+.hoc-header-contact {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 28px;
+
+    white-space: nowrap;
+
+    font-size: 17px;
+}
+
+.hoc-header-contact a {
+    color: #111111;
+
+    text-decoration: none;
+}
+
+.hoc-header-contact a:hover {
+    color: var(--hoc-primary);
+}
+
+
+/* ==========================================================
+   HOME OF CRUISE FOOTER
+   ========================================================== */
+
+.hoc-footer {
+    width: 100%;
+
+    background: var(--hoc-footer);
+
+    color: #ffffff;
+
+    padding: 42px 48px;
+}
+
+.hoc-footer-inner {
+    max-width: 1800px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(250px, 1.3fr)
+        minmax(260px, 1fr)
+        minmax(180px, 0.7fr)
+        minmax(220px, 0.9fr);
+
+    gap: 58px;
+
+    align-items: start;
+}
+
+
+/* Footer Logo */
+
+.hoc-footer-brand {
+    display: flex;
+
+    align-items: flex-start;
+}
+
+.hoc-footer-logo {
+    display: block;
+
+    width: 320px;
+
+    max-width: 100%;
+
+    height: auto;
+}
+
+
+/* Footer Überschriften */
+
+.hoc-footer h3 {
+    margin: 0 0 16px;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   FOOTER KONTAKT
+   ========================================================== */
+
+.hoc-footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.hoc-footer-contact a {
+    display: grid;
+
+    grid-template-columns:
+        85px
+        1fr;
+
+    gap: 10px;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    line-height: 1.4;
+}
+
+.hoc-contact-label {
+    font-weight: 700;
+
+    opacity: 0.8;
+}
+
+.hoc-footer-contact a:hover {
+    color: #7ddce8;
+}
+
+
+/* ==========================================================
+   FOOTER RECHTLICHES
+   ========================================================== */
+
+.hoc-footer-legal {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.hoc-footer-legal a {
+    color: #ffffff;
+
+    text-decoration: underline;
+
+    font-size: 15px;
+}
+
+.hoc-footer-legal a:hover {
+    color: #7ddce8;
+}
+
+
+/* ==========================================================
+   FOOTER SOCIAL
+   ========================================================== */
+
+.hoc-footer-social {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.hoc-social {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+}
+
+.hoc-social a {
+    color: #ffffff;
+
+    text-decoration: underline;
+
+    font-size: 15px;
+}
+
+.hoc-social a:hover {
+    color: #7ddce8;
+}
+
+
+/* ==========================================================
+   TABLET
+   ========================================================== */
+
+@media (max-width: 1100px) {
+
+    .ibe-page {
+        padding: 14px;
+    }
+
+
+    /* HEADER */
+
+    .hoc-header-inner {
+        grid-template-columns:
+            auto
+            1fr;
+
+        gap: 18px 26px;
+
+        padding: 12px 20px;
+    }
+
+    .hoc-header-logo {
+        width: 205px;
+    }
+
+    .hoc-navigation {
+        justify-content: flex-end;
+    }
+
+    .hoc-header-contact {
+        grid-column: 1 / -1;
+
+        justify-content: flex-end;
+
+        font-size: 15px;
+    }
+
+
+    /* FOOTER */
+
+    .hoc-footer {
+        padding: 38px 30px;
+    }
+
+    .hoc-footer-inner {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 38px 46px;
+    }
+
+    .hoc-footer-logo {
+        width: 275px;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    /* -----------------------------------------
+       IBE
+       ----------------------------------------- */
+
+    .ibe-page {
+        padding: 8px;
+    }
+
+
+    /* Ergebnisboxen weiterhin rund */
+
+    #xt-page-search .list-group-item,
+    .xt-search-result .list-group-item,
+    .list-group-item {
+        border-radius: var(--hoc-radius) !important;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* -----------------------------------------
+       HEADER
+       Auf Handy NUR Logo
+       ----------------------------------------- */
+
+    .hoc-header-inner {
+        display: flex;
+
+        justify-content: center;
+
+        align-items: center;
+
+        min-height: 76px;
+
+        padding: 10px 14px;
+    }
+
+    .hoc-header-brand {
+        display: flex;
+
+        justify-content: center;
+    }
+
+    .hoc-header-logo {
+        width: 190px;
+
+        margin: 0 auto;
+    }
+
+    .hoc-navigation,
+    .hoc-header-contact {
+        display: none;
+    }
+
+
+    /* -----------------------------------------
+       FOOTER
+       ----------------------------------------- */
+
+    .hoc-footer {
+        padding: 30px 18px;
+    }
+
+    .hoc-footer-inner {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .hoc-footer-brand {
+        justify-content: center;
+    }
+
+    .hoc-footer-logo {
+        width: 250px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Kontakt zentrieren */
+
+    .hoc-footer-contact,
+    .hoc-footer-legal,
+    .hoc-footer-social {
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .hoc-footer-contact a {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 2px;
+
+        text-align: center;
+    }
+
+    .hoc-contact-label {
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 0.06em;
+    }
+
+
+    /* Rechtliches */
+
+    .hoc-footer-legal a {
+        text-align: center;
+    }
+
+
+    /* Social */
+
+    .hoc-social {
+        justify-content: center;
+    }
+
+
+    /* Footer Überschriften */
+
+    .hoc-footer h3 {
+        font-size: 18px;
+    }
+}
+
+
+/* ==========================================================
+   KLEINE HANDYS
+   ========================================================== */
+
+@media (max-width: 420px) {
+
+    .hoc-header-logo {
+        width: 170px;
+    }
+
+    .hoc-footer {
+        padding: 26px 14px;
+    }
+
+    .hoc-footer-logo {
+        width: 220px;
+    }
+
+    .hoc-footer-contact a,
+    .hoc-footer-legal a,
+    .hoc-social a {
+        font-size: 14px;
+    }
+}
