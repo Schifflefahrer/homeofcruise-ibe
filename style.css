@@ -951,3 +951,41 @@ a.btn-primary,
 .carousel-inner {
     overflow: hidden;
 }
+/* ==========================================
+   Home of Cruise – Filterkarte final
+   ========================================== */
+
+/* Erweiterte Suche als weiße Karte */
+#xt-cruisefinder-extended {
+    background: #ffffff !important;
+    border-radius: 10px !important;
+    margin: 0 10px 16px 10px !important;
+    padding: 16px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Überschrift */
+#xt-cruisefinder-extended .xtc-search-cruisefinder-extended-title {
+    margin-top: 0 !important;
+    margin-bottom: 18px !important;
+}
+
+/* Eingabefelder */
+#xt-cruisefinder-extended .form-control,
+#xt-cruisefinder-extended .form-select {
+    background-color: #ffffff;
+    border: 1px solid #dfe3e5;
+    border-radius: 10px !important;
+}
+
+/* Aufklappbereiche: Reisende, Schiff, Route usw. */
+#xt-cruisefinder-extended .accordion-item {
+    border: 1px solid #dfe3e5 !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+/* Etwas Luft zwischen den Bereichen */
+#xt-cruisefinder-extended .accordion-item + .accordion-item {
+    margin-top: 10px;
+}
