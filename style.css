@@ -5,29 +5,34 @@
 .hoc-header {
     width: 100%;
     background: #ffffff;
+    border-bottom: 1px solid #eef0f1;
 }
 
 .hoc-header-inner {
     width: 100%;
-    min-height: 82px;
+    max-width: 1920px;
+    min-height: 96px;
 
-    display: flex;
+    margin: 0 auto;
+    padding: 14px 28px;
+
+    display: grid;
+    grid-template-columns: auto 1fr auto;
     align-items: center;
 
-    padding: 8px 24px;
-    gap: 44px;
+    gap: 48px;
 
     box-sizing: border-box;
 }
 
 .hoc-header-brand {
-    flex: 0 0 auto;
     display: block;
+    flex-shrink: 0;
 }
 
 .hoc-header-logo {
     display: block;
-    width: 250px;
+    width: 230px;
     max-width: 100%;
     height: auto;
 }
@@ -35,9 +40,7 @@
 .hoc-navigation {
     display: flex;
     align-items: center;
-    gap: 34px;
-
-    margin-right: auto;
+    gap: 32px;
 }
 
 .hoc-navigation a {
@@ -48,25 +51,33 @@
 
     color: #111111;
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .hoc-navigation a:hover,
 .hoc-navigation a.active {
-    color: #175cff;
+    color: #0094A9;
 }
 
 .hoc-header-contact {
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: flex-end;
+
+    gap: 28px;
 
     font-family: "Montserrat", Arial, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
+
+    white-space: nowrap;
 }
 
 .hoc-header-contact a {
     color: #111111;
     text-decoration: none;
+
+    transition: color 0.2s ease;
 }
 
 .hoc-header-contact a:hover {
@@ -80,27 +91,31 @@
 
 .hoc-footer {
     width: 100%;
+
     background: #073447;
     color: #ffffff;
 
-    padding: 34px 48px;
+    padding: 42px 48px;
 
     box-sizing: border-box;
 }
 
 .hoc-footer-inner {
     width: 100%;
+    max-width: 1800px;
+
+    margin: 0 auto;
 
     display: grid;
-
     grid-template-columns:
-        1.25fr
-        1fr
-        0.9fr
-        0.8fr
-        1fr;
+        minmax(220px, 1.25fr)
+        minmax(180px, 1fr)
+        minmax(160px, 0.9fr)
+        minmax(140px, 0.8fr)
+        minmax(190px, 1fr);
 
-    gap: 52px;
+    gap: 48px;
+
     align-items: start;
 }
 
@@ -111,7 +126,7 @@
 
 .hoc-footer-logo {
     display: block;
-    width: 315px;
+    width: 310px;
     max-width: 100%;
     height: auto;
 }
@@ -119,15 +134,17 @@
 .hoc-footer-column {
     display: flex;
     flex-direction: column;
+
     gap: 10px;
 
     font-family: "Montserrat", Arial, sans-serif;
 }
 
 .hoc-footer-column h3 {
-    margin: 0 0 8px;
+    margin: 0 0 10px;
 
     font-size: 20px;
+    line-height: 1.2;
     font-weight: 700;
 
     color: #ffffff;
@@ -137,7 +154,8 @@
     color: #ffffff;
     text-decoration: underline;
 
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.45;
 }
 
 .hoc-footer-column a:hover {
@@ -151,17 +169,8 @@
 .hoc-social {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
-}
 
-
-/* =========================================================
-   IBE ABSTÄNDE
-   ========================================================= */
-
-.ibe-page {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    gap: 16px;
 }
 
 
@@ -172,22 +181,182 @@
 @media (max-width: 1100px) {
 
     .hoc-header-inner {
-        flex-wrap: wrap;
-
+        grid-template-columns: auto 1fr;
         gap: 18px 28px;
+
+        padding: 14px 22px;
     }
 
     .hoc-header-logo {
-        width: 210px;
+        width: 200px;
     }
 
     .hoc-navigation {
-        margin-right: 0;
+        justify-content: flex-end;
+    }
+
+    .hoc-header-contact {
+        grid-column: 1 / -1;
+
+        justify-content: flex-end;
+
+        gap: 22px;
+
+        padding-top: 4px;
+
+        font-size: 15px;
+    }
+
+
+    .hoc-footer {
+        padding: 38px 30px;
+    }
+
+    .hoc-footer-inner {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 34px 45px;
+    }
+
+    .hoc-footer-logo {
+        width: 270px;
+    }
+
+    .hoc-legal {
+        padding-top: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    .hoc-header-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        min-height: auto;
+
+        padding: 14px 16px;
+
+        gap: 14px;
+    }
+
+    .hoc-header-brand {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hoc-header-logo {
+        width: 190px;
+    }
+
+    .hoc-navigation {
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 10px 20px;
+
+        padding-top: 2px;
+    }
+
+    .hoc-navigation a {
+        font-size: 14px;
     }
 
     .hoc-header-contact {
         width: 100%;
-        justify-content: flex-end;
 
-        font-size: 16px;
-   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 6px;
+
+        padding-top: 4px;
+
+        font-size: 14px;
+
+        white-space: normal;
+        text-align: center;
+    }
+
+
+    .hoc-footer {
+        padding: 30px 20px;
+    }
+
+    .hoc-footer-inner {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .hoc-footer-brand {
+        justify-content: center;
+    }
+
+    .hoc-footer-logo {
+        width: 250px;
+    }
+
+    .hoc-footer-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hoc-footer-column h3 {
+        font-size: 18px;
+    }
+
+    .hoc-footer-column a {
+        font-size: 14px;
+    }
+
+    .hoc-legal {
+        padding-top: 0;
+    }
+
+    .hoc-social {
+        justify-content: center;
+    }
+}
+
+
+/* =========================================================
+   KLEINE HANDYS
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .hoc-header-logo {
+        width: 170px;
+    }
+
+    .hoc-navigation {
+        gap: 8px 14px;
+    }
+
+    .hoc-navigation a {
+        font-size: 13px;
+    }
+
+    .hoc-header-contact {
+        font-size: 13px;
+    }
+
+    .hoc-footer {
+        padding: 26px 16px;
+    }
+
+    .hoc-footer-logo {
+        width: 220px;
+    }
+}
