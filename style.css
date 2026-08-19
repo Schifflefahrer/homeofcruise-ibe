@@ -931,3 +931,23 @@ a.btn-primary,
         height: auto !important;
     }
 }
+/* ==========================================================
+   SCHIFFSBILDER / ANGEBOTSBILDER ABRUNDEN
+   ========================================================== */
+
+#xt-page-search img,
+.xt-search-result img,
+.list-group-item img,
+.card img,
+.carousel-item img {
+    border-radius: 10px !important;
+}
+
+/* Verhindert, dass das Bild über die Rundung hinausragt */
+#xt-page-search .card,
+.xt-search-result .card,
+.list-group-item,
+.carousel,
+.carousel-inner {
+    overflow: hidden;
+}
