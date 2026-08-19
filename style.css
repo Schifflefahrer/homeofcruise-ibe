@@ -870,3 +870,64 @@ a.btn-primary,
         font-size: 14px;
     }
 }
+/* ==========================================================
+   DESKTOP OVERRIDE
+   ========================================================== */
+
+@media (min-width: 1101px) {
+
+    .hoc-header-inner {
+        max-width: 1900px !important;
+        min-height: 92px !important;
+        margin: 0 auto !important;
+        padding: 12px 28px !important;
+
+        display: grid !important;
+        grid-template-columns: auto 1fr auto !important;
+        align-items: center !important;
+        gap: 46px !important;
+    }
+
+    .hoc-header-logo {
+        width: 230px !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .hoc-navigation {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 32px !important;
+    }
+
+    .hoc-header-contact {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        gap: 28px !important;
+        white-space: nowrap !important;
+        font-size: 17px !important;
+    }
+
+    .hoc-footer-inner {
+        max-width: 1800px !important;
+        margin: 0 auto !important;
+
+        display: grid !important;
+        grid-template-columns:
+            minmax(250px, 1.3fr)
+            minmax(260px, 1fr)
+            minmax(180px, 0.7fr)
+            minmax(220px, 0.9fr) !important;
+
+        gap: 58px !important;
+        align-items: start !important;
+    }
+
+    .hoc-footer-logo {
+        width: 320px !important;
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
