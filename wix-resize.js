@@ -3,38 +3,23 @@
     var previousHeight = 0;
 
     function getContentElement() {
-
         return (
             document.querySelector("#xt-page-search") ||
             document.querySelector(".ibe-page")
         );
     }
 
-    function getHeight() {
+    function sendHeight() {
 
         var content = getContentElement();
 
         if (!content) {
-            return 0;
+            return;
         }
 
-        var rect = content.getBoundingClientRect();
-
         var height = Math.ceil(
-            rect.height
+            content.getBoundingClientRect().height
         );
-
-        console.log(
-            "XTIBE Content-Höhe:",
-            height
-        );
-
-        return height;
-    }
-
-    function sendHeight() {
-
-        var height = getHeight();
 
         if (
             !Number.isFinite(height) ||
@@ -45,11 +30,6 @@
         }
 
         previousHeight = height;
-
-        console.log(
-            "XTIBE Template sendet echte Inhaltshöhe:",
-            height
-        );
 
         window.parent.postMessage(
             {
@@ -66,24 +46,12 @@
         content &&
         typeof ResizeObserver !== "undefined"
     ) {
-
-        var observer =
-            new ResizeObserver(function () {
-                sendHeight();
-            });
-
-        observer.observe(content);
+        new ResizeObserver(sendHeight)
+            .observe(content);
     }
 
-    window.addEventListener(
-        "load",
-        sendHeight
-    );
-
-    window.addEventListener(
-        "resize",
-        sendHeight
-    );
+    window.addEventListener("load", sendHeight);
+    window.addEventListener("resize", sendHeight);
 
     setTimeout(sendHeight, 100);
     setTimeout(sendHeight, 500);
