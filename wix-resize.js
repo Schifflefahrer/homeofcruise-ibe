@@ -4,11 +4,41 @@
 
     function getHeight() {
 
+        var htmlScroll =
+            document.documentElement.scrollHeight;
+
+        var htmlOffset =
+            document.documentElement.offsetHeight;
+
+        var bodyScroll =
+            document.body
+                ? document.body.scrollHeight
+                : 0;
+
+        var bodyOffset =
+            document.body
+                ? document.body.offsetHeight
+                : 0;
+
+        var viewport =
+            window.innerHeight;
+
+        console.log(
+            "XTIBE Höhen-Debug:",
+            {
+                htmlScrollHeight: htmlScroll,
+                htmlOffsetHeight: htmlOffset,
+                bodyScrollHeight: bodyScroll,
+                bodyOffsetHeight: bodyOffset,
+                viewportHeight: viewport
+            }
+        );
+
         return Math.max(
-            document.documentElement.scrollHeight,
-            document.documentElement.offsetHeight,
-            document.body ? document.body.scrollHeight : 0,
-            document.body ? document.body.offsetHeight : 0
+            htmlScroll,
+            htmlOffset,
+            bodyScroll,
+            bodyOffset
         );
     }
 
@@ -40,33 +70,25 @@
         );
     }
 
+    var observer =
+        new ResizeObserver(function () {
+            sendHeight();
+        });
 
-    /* Änderungen der Seitenhöhe beobachten */
-    var observer = new ResizeObserver(function () {
-        sendHeight();
-    });
+    observer.observe(
+        document.documentElement
+    );
 
-    observer.observe(document.documentElement);
-
-
-    /* Beim Laden */
     window.addEventListener(
         "load",
         sendHeight
     );
 
-
-    /* Bei Änderung der Fenstergröße */
     window.addEventListener(
         "resize",
         sendHeight
     );
 
-
-    /*
-     * Zusätzliche Messungen:
-     * wichtig für Bilder und dynamische COMPASS-Inhalte
-     */
     setTimeout(sendHeight, 100);
     setTimeout(sendHeight, 500);
     setTimeout(sendHeight, 1000);
