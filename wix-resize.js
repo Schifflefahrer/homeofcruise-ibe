@@ -2,49 +2,39 @@
 
     var previousHeight = 0;
 
+    function getContentElement() {
+
+        return (
+            document.querySelector("#xt-page-search") ||
+            document.querySelector(".ibe-page")
+        );
+    }
+
     function getHeight() {
 
-        var htmlScroll =
-            document.documentElement.scrollHeight;
+        var content = getContentElement();
 
-        var htmlOffset =
-            document.documentElement.offsetHeight;
+        if (!content) {
+            return 0;
+        }
 
-        var bodyScroll =
-            document.body
-                ? document.body.scrollHeight
-                : 0;
+        var rect = content.getBoundingClientRect();
 
-        var bodyOffset =
-            document.body
-                ? document.body.offsetHeight
-                : 0;
-
-        var viewport =
-            window.innerHeight;
+        var height = Math.ceil(
+            rect.height
+        );
 
         console.log(
-            "XTIBE Höhen-Debug:",
-            {
-                htmlScrollHeight: htmlScroll,
-                htmlOffsetHeight: htmlOffset,
-                bodyScrollHeight: bodyScroll,
-                bodyOffsetHeight: bodyOffset,
-                viewportHeight: viewport
-            }
+            "XTIBE Content-Höhe:",
+            height
         );
 
-        return Math.max(
-            htmlScroll,
-            htmlOffset,
-            bodyScroll,
-            bodyOffset
-        );
+        return height;
     }
 
     function sendHeight() {
 
-        var height = Math.ceil(getHeight());
+        var height = getHeight();
 
         if (
             !Number.isFinite(height) ||
@@ -57,7 +47,7 @@
         previousHeight = height;
 
         console.log(
-            "XTIBE Template sendet Höhe:",
+            "XTIBE Template sendet echte Inhaltshöhe:",
             height
         );
 
@@ -70,14 +60,20 @@
         );
     }
 
-    var observer =
-        new ResizeObserver(function () {
-            sendHeight();
-        });
+    var content = getContentElement();
 
-    observer.observe(
-        document.documentElement
-    );
+    if (
+        content &&
+        typeof ResizeObserver !== "undefined"
+    ) {
+
+        var observer =
+            new ResizeObserver(function () {
+                sendHeight();
+            });
+
+        observer.observe(content);
+    }
 
     window.addEventListener(
         "load",
