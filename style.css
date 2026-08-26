@@ -24,12 +24,11 @@ body {
 
 
 /* ==========================================================
-   HEADER – KOMPAKTER
+   HEADER – KOMPAKT
    ========================================================== */
 
 .hoc-header {
     width: 100%;
-
     background: #ffffff;
 
     border-bottom: 1px solid #e5eaec;
@@ -40,7 +39,6 @@ body {
     position: relative;
     z-index: 20;
 }
-
 
 .hoc-header-inner {
     width: 100%;
@@ -69,7 +67,6 @@ body {
     text-decoration: none;
 }
 
-
 .hoc-header-logo {
     display: block;
 
@@ -93,7 +90,6 @@ body {
     gap: 22px;
 }
 
-
 .hoc-contact-item {
     display: flex;
     align-items: center;
@@ -110,25 +106,20 @@ body {
     white-space: nowrap;
 }
 
-
 .hoc-contact-item:hover {
     color: #0094A9;
 }
-
 
 .hoc-contact-symbol {
     color: #0094A9;
 
     font-size: 18px;
-
     line-height: 1;
 }
-
 
 .hoc-whatsapp .hoc-contact-symbol {
     color: #00b84a;
 }
-
 
 .hoc-header-divider {
     width: 1px;
@@ -140,7 +131,7 @@ body {
 }
 
 
-/* Startseite */
+/* Startseite Button */
 
 .hoc-home-button {
     min-height: 44px;
@@ -170,7 +161,6 @@ body {
         transform 0.2s ease;
 }
 
-
 .hoc-home-button:hover {
     background: #007f91;
 
@@ -187,9 +177,9 @@ body {
 
     margin: 0;
 
-    padding: 26px 28px;
+    padding: 22px;
 
-    background: #F4F6F7;
+    background: #EEF0F1;
 }
 
 
@@ -205,6 +195,11 @@ body {
     border-color: #0094A9 !important;
 }
 
+
+/* ==========================================================
+   BUTTONS
+   ========================================================== */
+
 .btn-primary {
     background-color: #0094A9 !important;
 
@@ -212,9 +207,7 @@ body {
 
     color: #ffffff !important;
 
-    border-radius: 9px !important;
-
-    font-weight: 600;
+    border-radius: 10px !important;
 }
 
 .btn-primary:hover,
@@ -227,6 +220,7 @@ body {
 
 /* ==========================================================
    FORMULARFELDER
+   WICHTIG: keine feste Mindesthöhe
    ========================================================== */
 
 .form-control,
@@ -235,11 +229,8 @@ body {
 
     border: 1px solid #d6e0e3;
 
-    border-radius: 9px !important;
-
-    min-height: 42px;
+    border-radius: 10px !important;
 }
-
 
 .form-control:focus,
 .form-select:focus {
@@ -254,18 +245,9 @@ body {
    KREUZFAHRTSUCHE LINKS
    ========================================================== */
 
-/*
-   Beide Boxen erhalten denselben Home-of-Cruise Look.
-*/
-
 #xt-cruisefinder-top,
 #xt-cruisefinder-extended {
-    background:
-        linear-gradient(
-            135deg,
-            #EFFBFC 0%,
-            #E5F6F8 100%
-        ) !important;
+    background: #EAF7F8 !important;
 
     border:
         1px solid rgba(0, 148, 169, 0.16) !important;
@@ -275,31 +257,38 @@ body {
     box-shadow:
         0 3px 10px rgba(0, 0, 0, 0.045);
 
-    overflow: hidden;
+    /*
+       SEHR WICHTIG:
+       Kalender darf aus dem Container herausragen
+    */
+    overflow: visible !important;
 }
 
 
 /* obere Kreuzfahrtsuche */
 
 #xt-cruisefinder-top {
-    padding: 18px !important;
+    padding: 16px !important;
 
     margin-bottom: 14px !important;
+
+    position: relative;
+
+    z-index: 10;
 }
 
 
 /* Erweiterte Suche */
 
 #xt-cruisefinder-extended {
-    margin:
-        0 0 16px 0 !important;
+    margin: 0 0 16px 0 !important;
 
-    padding: 18px !important;
+    padding: 16px !important;
 }
 
 
 /* ==========================================================
-   SUCHBEREICH ÜBERSCHRIFTEN
+   FILTER ÜBERSCHRIFTEN
    ========================================================== */
 
 #xt-cruisefinder-top h1,
@@ -314,15 +303,8 @@ body {
 }
 
 
-/* falls COMPASS die Überschrift weiß erzwingt */
-
-#xt-cruisefinder-top * {
-    text-shadow: none !important;
-}
-
-
 /* ==========================================================
-   FELDER INNERHALB DER SUCHE
+   FILTER FELDER
    ========================================================== */
 
 #xt-cruisefinder-top .form-control,
@@ -333,42 +315,20 @@ body {
 
     border: 1px solid #d2e2e5 !important;
 
-    border-radius: 9px !important;
+    border-radius: 10px !important;
 }
 
 
-/* Labels */
+/* Filter Labels */
 
 #xt-cruisefinder-top label,
 #xt-cruisefinder-extended label {
     color: #16323e !important;
-
-    font-weight: 500;
 }
 
 
 /* ==========================================================
-   SUCHBUTTON
-   ========================================================== */
-
-#xt-cruisefinder-top .btn-primary,
-#xt-cruisefinder-extended .btn-primary {
-    width: 100%;
-
-    background: #0094A9 !important;
-
-    border-color: #0094A9 !important;
-
-    color: #ffffff !important;
-
-    border-radius: 9px !important;
-
-    min-height: 42px;
-}
-
-
-/* ==========================================================
-   ACCORDION FILTER
+   FILTER ACCORDIONS
    ========================================================== */
 
 #xt-cruisefinder-extended .accordion-item {
@@ -377,11 +337,10 @@ body {
     border:
         1px solid #d2e2e5 !important;
 
-    border-radius: 9px !important;
+    border-radius: 10px !important;
 
     overflow: hidden;
 }
-
 
 #xt-cruisefinder-extended
 .accordion-item + .accordion-item {
@@ -390,32 +349,35 @@ body {
 
 
 /* ==========================================================
-   PAGINATION / SORTIERUNG
+   KALENDER / DROPDOWNS
+   darf NICHT abgeschnitten werden
    ========================================================== */
 
-.page-link {
-    color: #0094A9 !important;
-
-    border-radius: 9px !important;
+.datepicker,
+.dropdown-menu,
+.flatpickr-calendar,
+.daterangepicker {
+    z-index: 9999 !important;
 }
 
 
-.page-item.active .page-link {
-    background: #0094A9 !important;
+/*
+   Falls COMPASS eigene Datepicker-Container verwendet,
+   verhindern wir auch dort Clipping.
+*/
 
-    border-color: #0094A9 !important;
+#xt-cruisefinder-top .dropdown-menu,
+#xt-cruisefinder-top .datepicker,
+#xt-cruisefinder-top .daterangepicker {
+    overflow: visible !important;
 
-    color: #ffffff !important;
-}
-
-
-select.form-select {
-    border-radius: 9px !important;
+    z-index: 9999 !important;
 }
 
 
 /* ==========================================================
    ANGEBOTSKARTEN
+   nur optisch verbessern
    ========================================================== */
 
 .list-group-item {
@@ -431,23 +393,11 @@ select.form-select {
     margin-bottom: 14px !important;
 
     box-shadow:
-        0 3px 12px rgba(0, 0, 0, 0.055);
-
-    transition:
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+        0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
 
-.list-group-item:hover {
-    box-shadow:
-        0 7px 20px rgba(0, 0, 0, 0.075);
-}
-
-
-/* ==========================================================
-   TITEL DER ANGEBOTE
-   ========================================================== */
+/* Titel */
 
 .list-group-item h1,
 .list-group-item h2,
@@ -460,7 +410,7 @@ select.form-select {
 
 
 /* ==========================================================
-   SCHIFFSBILD
+   SCHIFFSBILDER
    ========================================================== */
 
 .list-group-item img,
@@ -474,69 +424,8 @@ select.form-select {
 
 
 /* ==========================================================
-   REISEDATEN / ROUTEN
+   ANGEBOT BUTTON
    ========================================================== */
-
-.list-group-item {
-    color: #17242c;
-}
-
-
-.list-group-item small {
-    color: #53636b;
-}
-
-
-/* ==========================================================
-   PREISE
-   ========================================================== */
-
-.list-group-item strong {
-    color: #102C3A;
-
-    font-weight: 700;
-}
-
-
-/*
-   Türkise Preiswerte
-*/
-
-.list-group-item .text-primary {
-    color: #008AA0 !important;
-
-    font-weight: 700 !important;
-}
-
-
-/* ==========================================================
-   UNTERER BUTTONBEREICH
-   ========================================================== */
-
-.list-group-item .btn-outline-primary {
-    background: #ffffff !important;
-
-    border:
-        1px solid #b9dbe0 !important;
-
-    color: #007f91 !important;
-
-    border-radius: 9px !important;
-
-    min-height: 42px;
-
-    font-weight: 600;
-}
-
-
-.list-group-item .btn-outline-primary:hover {
-    background: #EAF7F8 !important;
-
-    border-color: #0094A9 !important;
-}
-
-
-/* Angebot prüfen */
 
 .xtc-search-offer-button,
 a.xtc-search-offer-button {
@@ -547,24 +436,40 @@ a.xtc-search-offer-button {
 
     color: #ffffff !important;
 
-    border-radius: 9px !important;
+    border-radius: 10px !important;
 
-    min-height: 42px;
-
-    font-weight: 700;
+    font-weight: 600;
 
     text-decoration: none !important;
-
-    box-shadow:
-        0 2px 6px rgba(0, 148, 169, 0.16);
 }
-
 
 .xtc-search-offer-button:hover,
 a.xtc-search-offer-button:hover {
     background: #007f91 !important;
 
     border-color: #007f91 !important;
+}
+
+
+/* ==========================================================
+   REISEDETAILS BUTTON
+   ========================================================== */
+
+.list-group-item .btn-outline-primary {
+    background: #ffffff !important;
+
+    border:
+        1px solid #b9dbe0 !important;
+
+    color: #007f91 !important;
+
+    border-radius: 10px !important;
+}
+
+.list-group-item .btn-outline-primary:hover {
+    background: #EAF7F8 !important;
+
+    border-color: #0094A9 !important;
 }
 
 
@@ -576,6 +481,25 @@ a.xtc-search-offer-button:hover {
 .accordion-item,
 .modal-content {
     border-radius: 10px !important;
+}
+
+
+/* ==========================================================
+   PAGINATION
+   ========================================================== */
+
+.page-link {
+    color: #0094A9 !important;
+
+    border-radius: 10px !important;
+}
+
+.page-item.active .page-link {
+    background: #0094A9 !important;
+
+    border-color: #0094A9 !important;
+
+    color: #ffffff !important;
 }
 
 
@@ -592,7 +516,6 @@ a.xtc-search-offer-button:hover {
 
     padding: 46px 30px;
 }
-
 
 .hoc-footer-inner {
     width: 100%;
@@ -622,11 +545,9 @@ a.xtc-search-offer-button:hover {
     align-items: flex-start;
 }
 
-
 .hoc-footer-brand a {
     display: block;
 }
-
 
 .hoc-footer-logo {
     display: block;
@@ -650,7 +571,6 @@ a.xtc-search-offer-button:hover {
     gap: 10px;
 }
 
-
 .hoc-footer-column h3 {
     margin:
         0 0 9px;
@@ -661,7 +581,6 @@ a.xtc-search-offer-button:hover {
 
     font-weight: 700;
 }
-
 
 .hoc-footer-column a {
     color: #ffffff;
@@ -674,7 +593,6 @@ a.xtc-search-offer-button:hover {
 
     opacity: 0.95;
 }
-
 
 .hoc-footer-column a:hover {
     color: #29BCD0;
@@ -696,28 +614,23 @@ a.xtc-search-offer-button:hover {
             10px 20px;
     }
 
-
     .hoc-header-logo {
         height: 60px;
 
         max-width: 260px;
     }
 
-
     .hoc-header-contact {
         gap: 13px;
     }
-
 
     .hoc-contact-item {
         font-size: 13px;
     }
 
-
     .hoc-header-divider {
         display: none;
     }
-
 
     .hoc-footer-inner {
         grid-template-columns:
@@ -751,11 +664,9 @@ a.xtc-search-offer-button:hover {
         gap: 12px;
     }
 
-
     .hoc-logo-link {
         justify-content: center;
     }
-
 
     .hoc-header-logo {
         width: auto;
@@ -765,7 +676,6 @@ a.xtc-search-offer-button:hover {
 
         margin: 0 auto;
     }
-
 
     .hoc-header-contact {
         width: 100%;
@@ -778,16 +688,13 @@ a.xtc-search-offer-button:hover {
             9px 14px;
     }
 
-
     .hoc-contact-item {
         font-size: 13px;
     }
 
-
     .hoc-header-divider {
         display: none;
     }
-
 
     .hoc-home-button {
         width: 100%;
@@ -799,7 +706,7 @@ a.xtc-search-offer-button:hover {
     /* COMPASS */
 
     .ibe-page {
-        padding: 10px;
+        padding: 8px;
     }
 
 
@@ -810,7 +717,6 @@ a.xtc-search-offer-button:hover {
         margin-left: 0 !important;
         margin-right: 0 !important;
     }
-
 
     #xt-cruisefinder-top,
     #xt-cruisefinder-extended {
@@ -834,7 +740,6 @@ a.xtc-search-offer-button:hover {
             34px 20px;
     }
 
-
     .hoc-footer-inner {
         grid-template-columns:
             1fr;
@@ -844,11 +749,9 @@ a.xtc-search-offer-button:hover {
         text-align: center;
     }
 
-
     .hoc-footer-brand {
         justify-content: center;
     }
-
 
     .hoc-footer-logo {
         height: 88px;
@@ -857,7 +760,6 @@ a.xtc-search-offer-button:hover {
 
         margin: 0 auto;
     }
-
 
     .hoc-footer-column {
         align-items: center;
@@ -877,21 +779,17 @@ a.xtc-search-offer-button:hover {
         max-width: 210px;
     }
 
-
     .hoc-header-contact {
         flex-direction: column;
     }
-
 
     .hoc-contact-item {
         justify-content: center;
     }
 
-
     .hoc-home-button {
         max-width: 210px;
     }
-
 
     .hoc-footer-logo {
         height: 80px;
