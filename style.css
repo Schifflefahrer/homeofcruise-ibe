@@ -1123,3 +1123,59 @@ a.xtc-search-offer-button:hover {
         gap: 26px;
     }
 }
+/* ==========================================================
+   HEADER DESKTOP – KOMPAKTER
+   ========================================================== */
+
+@media (min-width: 768px) {
+
+    .hoc-header-inner {
+        min-height: 0 !important;
+        height: auto !important;
+
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+    }
+
+    .hoc-header-logo {
+        width: 360px !important;
+        height: auto !important;
+
+        max-width: 360px !important;
+        max-height: 95px !important;
+    }
+}
+
+
+/* Große Bildschirme */
+
+@media (min-width: 1400px) {
+
+    .hoc-header-inner {
+        min-height: 0 !important;
+
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    .hoc-header-logo {
+        width: 400px !important;
+        height: auto !important;
+
+        max-width: 400px !important;
+        max-height: 105px !important;
+    }
+}
+
+
+/* Sehr große Bildschirme */
+
+@media (min-width: 1800px) {
+
+    .hoc-header-logo {
+        width: 420px !important;
+
+        max-width: 420px !important;
+        max-height: 110px !important;
+    }
+}
