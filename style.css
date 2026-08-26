@@ -24,11 +24,12 @@ body {
 
 
 /* ==========================================================
-   HEADER – KOMPAKT
+   HEADER
    ========================================================== */
 
 .hoc-header {
     width: 100%;
+
     background: #ffffff;
 
     border-bottom: 1px solid #e5eaec;
@@ -58,7 +59,7 @@ body {
 }
 
 
-/* Header Logo */
+/* Logo */
 
 .hoc-logo-link {
     display: flex;
@@ -79,9 +80,7 @@ body {
 }
 
 
-/* ==========================================================
-   HEADER KONTAKT
-   ========================================================== */
+/* Header Kontakt */
 
 .hoc-header-contact {
     display: flex;
@@ -118,7 +117,7 @@ body {
 }
 
 .hoc-whatsapp .hoc-contact-symbol {
-    color: #00b84a;
+    color: #00B84A;
 }
 
 .hoc-header-divider {
@@ -131,7 +130,7 @@ body {
 }
 
 
-/* Startseite Button */
+/* Startseite */
 
 .hoc-home-button {
     min-height: 44px;
@@ -220,7 +219,7 @@ body {
 
 /* ==========================================================
    FORMULARFELDER
-   WICHTIG: keine feste Mindesthöhe
+   Keine feste Höhe – wichtig für Kalender
    ========================================================== */
 
 .form-control,
@@ -257,15 +256,11 @@ body {
     box-shadow:
         0 3px 10px rgba(0, 0, 0, 0.045);
 
-    /*
-       SEHR WICHTIG:
-       Kalender darf aus dem Container herausragen
-    */
     overflow: visible !important;
 }
 
 
-/* obere Kreuzfahrtsuche */
+/* obere Suche */
 
 #xt-cruisefinder-top {
     padding: 16px !important;
@@ -287,9 +282,7 @@ body {
 }
 
 
-/* ==========================================================
-   FILTER ÜBERSCHRIFTEN
-   ========================================================== */
+/* Überschriften */
 
 #xt-cruisefinder-top h1,
 #xt-cruisefinder-top h2,
@@ -303,9 +296,7 @@ body {
 }
 
 
-/* ==========================================================
-   FILTER FELDER
-   ========================================================== */
+/* Felder */
 
 #xt-cruisefinder-top .form-control,
 #xt-cruisefinder-top .form-select,
@@ -319,7 +310,7 @@ body {
 }
 
 
-/* Filter Labels */
+/* Labels */
 
 #xt-cruisefinder-top label,
 #xt-cruisefinder-extended label {
@@ -350,7 +341,6 @@ body {
 
 /* ==========================================================
    KALENDER / DROPDOWNS
-   darf NICHT abgeschnitten werden
    ========================================================== */
 
 .datepicker,
@@ -359,12 +349,6 @@ body {
 .daterangepicker {
     z-index: 9999 !important;
 }
-
-
-/*
-   Falls COMPASS eigene Datepicker-Container verwendet,
-   verhindern wir auch dort Clipping.
-*/
 
 #xt-cruisefinder-top .dropdown-menu,
 #xt-cruisefinder-top .datepicker,
@@ -377,7 +361,6 @@ body {
 
 /* ==========================================================
    ANGEBOTSKARTEN
-   nur optisch verbessern
    ========================================================== */
 
 .list-group-item {
@@ -409,9 +392,7 @@ body {
 }
 
 
-/* ==========================================================
-   SCHIFFSBILDER
-   ========================================================== */
+/* Schiffsbilder */
 
 .list-group-item img,
 .card img,
@@ -423,9 +404,7 @@ body {
 }
 
 
-/* ==========================================================
-   ANGEBOT BUTTON
-   ========================================================== */
+/* Angebot prüfen */
 
 .xtc-search-offer-button,
 a.xtc-search-offer-button {
@@ -451,9 +430,7 @@ a.xtc-search-offer-button:hover {
 }
 
 
-/* ==========================================================
-   REISEDETAILS BUTTON
-   ========================================================== */
+/* Reisedetails */
 
 .list-group-item .btn-outline-primary {
     background: #ffffff !important;
@@ -572,8 +549,7 @@ a.xtc-search-offer-button:hover {
 }
 
 .hoc-footer-column h3 {
-    margin:
-        0 0 9px;
+    margin: 0 0 9px;
 
     color: #ffffff;
 
@@ -610,8 +586,7 @@ a.xtc-search-offer-button:hover {
     .hoc-header-inner {
         min-height: 82px;
 
-        padding:
-            10px 20px;
+        padding: 10px 20px;
     }
 
     .hoc-header-logo {
@@ -637,73 +612,169 @@ a.xtc-search-offer-button:hover {
             1fr
             1fr;
 
-        gap:
-            35px 50px;
+        gap: 35px 50px;
     }
 }
 
 
 /* ==========================================================
-   MOBILE
+   MOBILE HEADER
    ========================================================== */
 
 @media (max-width: 767px) {
 
-    /* Header */
+    .hoc-header {
+        box-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+
+    /* Header Aufbau */
 
     .hoc-header-inner {
         min-height: auto;
 
-        padding: 14px;
+        padding: 12px 14px 14px;
 
         flex-direction: column;
 
-        justify-content: center;
         align-items: center;
+        justify-content: center;
 
-        gap: 12px;
+        gap: 10px;
     }
 
+
+    /* Logo */
+
     .hoc-logo-link {
+        width: 100%;
+
+        display: flex;
+
         justify-content: center;
     }
 
     .hoc-header-logo {
         width: auto;
-        height: 58px;
+        height: 52px;
 
-        max-width: 240px;
+        max-width: 210px;
 
         margin: 0 auto;
     }
 
+
+    /* zwei Buttons nebeneinander */
+
     .hoc-header-contact {
         width: 100%;
 
-        justify-content: center;
+        display: grid;
 
-        flex-wrap: wrap;
+        grid-template-columns:
+            1fr
+            1fr;
 
-        gap:
-            9px 14px;
-    }
-
-    .hoc-contact-item {
-        font-size: 13px;
+        gap: 8px;
     }
 
     .hoc-header-divider {
         display: none;
     }
 
-    .hoc-home-button {
-        width: 100%;
 
-        max-width: 240px;
+    /* WhatsApp + Telefon */
+
+    .hoc-contact-item {
+        min-height: 40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        padding: 7px 8px;
+
+        background: #F4F8F9;
+
+        border: 1px solid #DCEBED;
+
+        border-radius: 10px;
+
+        color: #17323D;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+    .hoc-contact-symbol {
+        font-size: 16px;
+    }
+
+    .hoc-whatsapp .hoc-contact-symbol {
+        color: #00B84A;
+    }
+
+    .hoc-phone .hoc-contact-symbol {
+        color: #0094A9;
     }
 
 
-    /* COMPASS */
+    /* Desktoptext ausblenden,
+       Mobiletext einsetzen */
+
+    .hoc-whatsapp .hoc-contact-label {
+        font-size: 0;
+    }
+
+    .hoc-whatsapp .hoc-contact-label::after {
+        content: "WhatsApp";
+
+        font-size: 12px;
+    }
+
+
+    .hoc-phone .hoc-contact-label {
+        font-size: 0;
+    }
+
+    .hoc-phone .hoc-contact-label::after {
+        content: "Anrufen";
+
+        font-size: 12px;
+    }
+
+
+    /* Startseite unter beiden */
+
+    .hoc-home-button {
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        max-width: none;
+
+        min-height: 42px;
+
+        margin: 0;
+
+        padding: 9px 16px;
+
+        border-radius: 10px;
+
+        font-size: 13px;
+        font-weight: 700;
+    }
+
+
+    /* IBE */
 
     .ibe-page {
         padding: 8px;
@@ -716,10 +787,7 @@ a.xtc-search-offer-button:hover {
     #xt-cruisefinder-extended {
         margin-left: 0 !important;
         margin-right: 0 !important;
-    }
 
-    #xt-cruisefinder-top,
-    #xt-cruisefinder-extended {
         padding: 14px !important;
     }
 
@@ -736,13 +804,11 @@ a.xtc-search-offer-button:hover {
     /* Footer */
 
     .hoc-footer {
-        padding:
-            34px 20px;
+        padding: 34px 20px;
     }
 
     .hoc-footer-inner {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
 
         gap: 28px;
 
@@ -773,22 +839,41 @@ a.xtc-search-offer-button:hover {
 
 @media (max-width: 430px) {
 
-    .hoc-header-logo {
-        height: 52px;
+    .hoc-header-inner {
+        padding: 10px 10px 12px;
+    }
 
-        max-width: 210px;
+    .hoc-header-logo {
+        height: 48px;
+
+        max-width: 190px;
     }
 
     .hoc-header-contact {
-        flex-direction: column;
+        gap: 6px;
     }
 
     .hoc-contact-item {
-        justify-content: center;
+        min-height: 38px;
+
+        padding: 6px 5px;
+
+        font-size: 11px;
+    }
+
+    .hoc-contact-symbol {
+        font-size: 15px;
+    }
+
+    .hoc-whatsapp .hoc-contact-label::after,
+    .hoc-phone .hoc-contact-label::after {
+        font-size: 11px;
     }
 
     .hoc-home-button {
-        max-width: 210px;
+        min-height: 40px;
+
+        font-size: 12px;
     }
 
     .hoc-footer-logo {
