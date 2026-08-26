@@ -1,6 +1,6 @@
 /* ==========================================================
    HOME OF CRUISE – COMPASS IBE
-   style.css
+   KOMPLETTER STYLE
    ========================================================== */
 
 
@@ -15,6 +15,7 @@ body {
     width: 100%;
 
     font-family: "Montserrat", Arial, sans-serif;
+
     background: #ffffff;
     color: #111111;
 
@@ -29,93 +30,116 @@ body {
 
 
 /* ==========================================================
-   2. HOME OF CRUISE HEADER
+   2. HEADER
    ========================================================== */
 
 .hoc-header {
     width: 100%;
+
     background: #ffffff;
-    border-bottom: 1px solid #e4e8ea;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+
+    border-bottom: 1px solid #e5eaec;
+
+    box-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.045);
+
+    position: relative;
+    z-index: 20;
 }
+
 
 .hoc-header-inner {
     width: 100%;
     max-width: 1600px;
 
-    margin: 0 auto;
-    padding: 18px 40px;
+    min-height: 105px;
 
-    min-height: 110px;
+    margin: 0 auto;
+
+    padding: 12px 40px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    gap: 40px;
+    gap: 45px;
 }
 
 
-/* Logo */
+/* ==========================================================
+   3. HEADER LOGO
+   ========================================================== */
 
 .hoc-logo-link {
     display: flex;
     align-items: center;
 
     text-decoration: none;
+
     flex-shrink: 0;
 }
+
 
 .hoc-header-logo {
     display: block;
 
     width: auto;
-    height: 82px;
+    height: 80px;
+
     max-width: 360px;
 
     object-fit: contain;
 }
 
 
-/* rechter Bereich */
+/* ==========================================================
+   4. HEADER KONTAKTBEREICH
+   ========================================================== */
 
-.hoc-header-right {
+.hoc-header-contact {
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    gap: 24px;
+    gap: 22px;
+
+    margin-left: auto;
+}
+
+
+.hoc-contact-item {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #111111;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: none;
 
     white-space: nowrap;
 }
 
 
-/* WhatsApp */
-
-.hoc-whatsapp {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-
-    color: #111111;
-    text-decoration: none;
-
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.hoc-whatsapp:hover {
+.hoc-contact-item:hover {
     color: #0094A9;
 }
 
-.hoc-whatsapp-dot {
-    width: 9px;
-    height: 9px;
 
-    border-radius: 50%;
-    background: #00b93c;
+.hoc-contact-symbol {
+    color: #0094A9;
 
-    flex-shrink: 0;
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+.hoc-whatsapp .hoc-contact-symbol {
+    color: #00B84A;
 }
 
 
@@ -123,60 +147,40 @@ body {
 
 .hoc-header-divider {
     width: 1px;
-    height: 36px;
+    height: 32px;
 
     background: #0094A9;
 
-    opacity: 0.65;
+    opacity: 0.55;
 }
 
 
-/* Telefon */
-
-.hoc-phone {
-    display: flex;
-    align-items: center;
-    gap: 9px;
-
-    color: #111111;
-    text-decoration: none;
-
-    font-size: 16px;
-    font-weight: 500;
-}
-
-.hoc-phone:hover {
-    color: #0094A9;
-}
-
-.hoc-phone-icon {
-    color: #0094A9;
-    font-size: 18px;
-}
-
-
-/* Startseite Button */
+/* ==========================================================
+   5. STARTSEITE BUTTON
+   ========================================================== */
 
 .hoc-home-button {
+    min-height: 46px;
+
+    padding: 10px 26px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    min-height: 48px;
-
-    padding: 0 25px;
-
     background: #0094A9;
+
     color: #ffffff !important;
 
     border-radius: 10px;
 
-    text-decoration: none;
-
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 700;
 
-    box-shadow: 0 3px 8px rgba(0, 148, 169, 0.16);
+    text-decoration: none;
+
+    box-shadow:
+        0 3px 8px rgba(0, 148, 169, 0.18);
 
     transition:
         background-color 0.2s ease,
@@ -184,17 +188,19 @@ body {
         box-shadow 0.2s ease;
 }
 
+
 .hoc-home-button:hover {
     background: #007f91;
 
     transform: translateY(-1px);
 
-    box-shadow: 0 4px 10px rgba(0, 148, 169, 0.22);
+    box-shadow:
+        0 4px 10px rgba(0, 148, 169, 0.22);
 }
 
 
 /* ==========================================================
-   3. COMPASS HAUPTBEREICH
+   6. COMPASS HAUPTBEREICH
    ========================================================== */
 
 .ibe-page {
@@ -202,24 +208,20 @@ body {
 
     margin: 0;
 
-    padding: 24px;
+    padding: 22px;
 
     background: #EEF0F1;
 }
 
 
 /* ==========================================================
-   4. HOME OF CRUISE FARBEN
+   7. HOME OF CRUISE FARBEN
    ========================================================== */
-
-.bg-primary,
-.text-bg-primary {
-    background-color: #0094A9 !important;
-}
 
 .text-primary {
     color: #0094A9 !important;
 }
+
 
 .border-primary {
     border-color: #0094A9 !important;
@@ -227,11 +229,12 @@ body {
 
 
 /* ==========================================================
-   5. BUTTONS
+   8. BUTTONS
    ========================================================== */
 
 .btn-primary {
     background-color: #0094A9 !important;
+
     border-color: #0094A9 !important;
 
     color: #ffffff !important;
@@ -239,10 +242,12 @@ body {
     border-radius: 10px !important;
 }
 
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
     background-color: #007f91 !important;
+
     border-color: #007f91 !important;
 
     color: #ffffff !important;
@@ -250,122 +255,153 @@ body {
 
 
 /* ==========================================================
-   6. EINGABEFELDER
+   9. EINGABEFELDER
+   WICHTIG:
+   keine feste Höhe, damit COMPASS-Kalender und
+   eigene Controls unverändert funktionieren.
    ========================================================== */
 
 .form-control,
 .form-select {
-    background-color: #ffffff;
-
-    border: 1px solid #d5dde0;
-
-    border-radius: 10px !important;
-}
-
-
-/* ==========================================================
-   7. KREUZFAHRTSUCHE
-   ========================================================== */
-
-#xt-cruisefinder {
-    background: #EAF7F9 !important;
-
-    border: 1px solid #b9e2e8 !important;
-
-    border-radius: 12px !important;
-
-    padding: 18px !important;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-
-
-/* Überschrift Kreuzfahrtsuche */
-
-#xt-cruisefinder h1,
-#xt-cruisefinder h2,
-#xt-cruisefinder h3,
-#xt-cruisefinder .card-title,
-#xt-cruisefinder .xtc-search-cruisefinder-title {
-    color: #00869A !important;
-}
-
-
-/* Felder innerhalb der Suche */
-
-#xt-cruisefinder .form-control,
-#xt-cruisefinder .form-select {
     background: #ffffff;
 
-    border: 1px solid #cfdadd;
+    border: 1px solid #d6e0e3;
 
     border-radius: 10px !important;
 }
 
 
+.form-control:focus,
+.form-select:focus {
+    border-color: #0094A9;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 148, 169, 0.10);
+}
+
+
 /* ==========================================================
-   8. ERWEITERTE SUCHE
+   10. KREUZFAHRTSUCHE LINKS
    ========================================================== */
 
-#xt-cruisefinder-extended {
-    background: #EAF7F9 !important;
+/*
+   COMPASS kann je nach Template unterschiedliche IDs nutzen.
+   Deshalb beide Varianten berücksichtigen.
+*/
 
-    border: 1px solid #b9e2e8 !important;
+#xt-cruisefinder,
+#xt-cruisefinder-top,
+#xt-cruisefinder-extended {
+    background: #EAF7F8 !important;
+
+    border:
+        1px solid rgba(0, 148, 169, 0.18) !important;
 
     border-radius: 12px !important;
 
-    margin-top: 16px !important;
-
-    padding: 18px !important;
-
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.045);
 
     /*
        WICHTIG:
        Kein overflow:hidden.
        Sonst kann der Kalender abgeschnitten werden.
     */
+    overflow: visible !important;
 }
 
 
-/* Überschrift */
+/* obere Kreuzfahrtsuche */
 
+#xt-cruisefinder,
+#xt-cruisefinder-top {
+    padding: 16px !important;
+
+    margin-bottom: 14px !important;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+
+/* Erweiterte Suche */
+
+#xt-cruisefinder-extended {
+    margin:
+        0 0 16px 0 !important;
+
+    padding: 16px !important;
+
+    position: relative;
+}
+
+
+/* ==========================================================
+   11. SUCHBEREICH ÜBERSCHRIFTEN
+   ========================================================== */
+
+#xt-cruisefinder h1,
+#xt-cruisefinder h2,
+#xt-cruisefinder h3,
+#xt-cruisefinder-top h1,
+#xt-cruisefinder-top h2,
+#xt-cruisefinder-top h3,
+#xt-cruisefinder .xtc-search-cruisefinder-title,
+#xt-cruisefinder-top .xtc-search-cruisefinder-title,
 #xt-cruisefinder-extended
 .xtc-search-cruisefinder-extended-title {
-    color: #00869A !important;
+    color: #007f91 !important;
 
-    margin-top: 0 !important;
-    margin-bottom: 18px !important;
+    font-weight: 700 !important;
 }
 
 
-/* Eingabefelder */
+/* ==========================================================
+   12. FELDER IN DER SUCHE
+   ========================================================== */
 
+#xt-cruisefinder .form-control,
+#xt-cruisefinder .form-select,
+#xt-cruisefinder-top .form-control,
+#xt-cruisefinder-top .form-select,
 #xt-cruisefinder-extended .form-control,
 #xt-cruisefinder-extended .form-select {
-    background-color: #ffffff;
+    background: #ffffff !important;
 
-    border: 1px solid #cfdadd;
+    border: 1px solid #d2e2e5 !important;
 
     border-radius: 10px !important;
 }
 
 
-/* Accordion Bereiche */
+/* Labels */
+
+#xt-cruisefinder label,
+#xt-cruisefinder-top label,
+#xt-cruisefinder-extended label {
+    color: #16323e !important;
+}
+
+
+/* ==========================================================
+   13. FILTER ACCORDIONS
+   ========================================================== */
 
 #xt-cruisefinder-extended .accordion-item {
-    border: 1px solid #cfdadd !important;
+    background: #ffffff !important;
+
+    border:
+        1px solid #d2e2e5 !important;
 
     border-radius: 10px !important;
 
     /*
-       Kein overflow:hidden,
-       damit Dropdowns / Kalender funktionieren.
+       Bewusst KEIN overflow:hidden.
+       Dropdowns dürfen herausragen.
     */
 }
 
-
-/* Abstand */
 
 #xt-cruisefinder-extended
 .accordion-item + .accordion-item {
@@ -374,52 +410,160 @@ body {
 
 
 /* ==========================================================
-   9. ANGEBOTSKARTEN
+   14. KALENDER / DROPDOWNS
    ========================================================== */
 
-.card,
-.list-group-item {
-    background: #ffffff;
-
-    border: 1px solid #d9dfe2 !important;
-
-    border-radius: 12px !important;
-
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+.datepicker,
+.dropdown-menu,
+.flatpickr-calendar,
+.daterangepicker {
+    z-index: 9999 !important;
 }
 
 
-/* Bilder */
+#xt-cruisefinder .dropdown-menu,
+#xt-cruisefinder-top .dropdown-menu,
+#xt-cruisefinder .datepicker,
+#xt-cruisefinder-top .datepicker,
+#xt-cruisefinder .daterangepicker,
+#xt-cruisefinder-top .daterangepicker {
+    overflow: visible !important;
 
-.card img,
-.list-group-item img,
-.carousel-item img {
-    border-radius: 10px !important;
+    z-index: 9999 !important;
+}
+
+
+/* ==========================================================
+   15. ANGEBOTSKARTEN
+   ========================================================== */
+
+.list-group-item {
+    background: #ffffff !important;
+
+    border:
+        1px solid #dce4e7 !important;
+
+    border-radius: 12px !important;
+
+    /*
+       Bei Karten kann hidden bleiben,
+       da hier keine Datepicker geöffnet werden.
+    */
+    overflow: hidden;
+
+    margin-bottom: 14px !important;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.05);
 }
 
 
 /* Angebotsüberschriften */
 
-.card-title {
-    color: #111111;
+.list-group-item h1,
+.list-group-item h2,
+.list-group-item h3,
+.list-group-item h4 {
+    color: #102C3A !important;
 
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 
 /* ==========================================================
-   10. PAGINATION
+   16. SCHIFFSBILDER
    ========================================================== */
 
-.page-link {
-    color: #0094A9;
+.list-group-item img,
+.card img,
+.carousel-item img,
+.xt-of-cover {
+    border-radius: 10px !important;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   17. ANGEBOT PRÜFEN
+   ========================================================== */
+
+.xtc-search-offer-button,
+a.xtc-search-offer-button {
+    background: #0094A9 !important;
+
+    border:
+        1px solid #0094A9 !important;
+
+    color: #ffffff !important;
+
+    border-radius: 10px !important;
+
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 2px 6px rgba(0, 148, 169, 0.15);
+}
+
+
+.xtc-search-offer-button:hover,
+a.xtc-search-offer-button:hover {
+    background: #007f91 !important;
+
+    border-color: #007f91 !important;
+}
+
+
+/* ==========================================================
+   18. REISEDETAILS
+   ========================================================== */
+
+.list-group-item .btn-outline-primary {
+    background: #ffffff !important;
+
+    border:
+        1px solid #b9dbe0 !important;
+
+    color: #007f91 !important;
 
     border-radius: 10px !important;
 }
 
-.page-link:hover {
-    color: #007f91;
+
+.list-group-item .btn-outline-primary:hover {
+    background: #EAF7F8 !important;
+
+    border-color: #0094A9 !important;
 }
+
+
+/* ==========================================================
+   19. ALLGEMEINE KARTEN
+   ========================================================== */
+
+.card,
+.modal-content {
+    border-radius: 10px !important;
+}
+
+
+/* ==========================================================
+   20. PAGINATION
+   ========================================================== */
+
+.page-link {
+    color: #0094A9 !important;
+
+    border-radius: 10px !important;
+}
+
+
+.page-link:hover {
+    color: #007f91 !important;
+}
+
 
 .page-item.active .page-link {
     background: #0094A9 !important;
@@ -431,16 +575,19 @@ body {
 
 
 /* ==========================================================
-   11. FOOTER
+   21. FOOTER
    ========================================================== */
 
 .hoc-footer {
     width: 100%;
 
-    background: #063746;
+    background: #073247;
 
     color: #ffffff;
+
+    padding: 46px 30px;
 }
+
 
 .hoc-footer-inner {
     width: 100%;
@@ -448,214 +595,333 @@ body {
 
     margin: 0 auto;
 
-    padding: 34px 40px;
-
     display: grid;
 
     grid-template-columns:
-        minmax(240px, 1.2fr)
-        minmax(220px, 1fr)
-        minmax(220px, 1fr);
+        1.4fr
+        1fr
+        1fr
+        1fr;
 
-    gap: 60px;
+    gap: 55px;
 
     align-items: start;
 }
 
 
-/* Footer Logo */
+/* ==========================================================
+   22. FOOTER LOGO
+   ========================================================== */
+
+.hoc-footer-brand {
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+.hoc-footer-brand a {
+    display: block;
+}
+
 
 .hoc-footer-logo {
     display: block;
 
-    width: 260px;
-    max-width: 100%;
+    width: auto;
+    height: 100px;
 
-    height: auto;
-}
+    max-width: 260px;
 
-
-/* Footer Überschriften */
-
-.hoc-footer h3 {
-    margin: 0 0 14px 0;
-
-    color: #ffffff;
-
-    font-size: 20px;
-    font-weight: 700;
-}
-
-
-/* Footer Text */
-
-.hoc-footer p {
-    margin: 7px 0;
-
-    color: #ffffff;
-}
-
-
-/* Footer Links */
-
-.hoc-footer a {
-    color: #ffffff;
-
-    text-decoration: none;
-}
-
-.hoc-footer a:hover {
-    color: #6fd5e2;
-    text-decoration: underline;
+    object-fit: contain;
 }
 
 
 /* ==========================================================
-   12. TABLET
+   23. FOOTER SPALTEN
+   ========================================================== */
+
+.hoc-footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.hoc-footer-column h3 {
+    margin:
+        0 0 9px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+.hoc-footer-column a {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    text-decoration: none;
+
+    opacity: 0.95;
+}
+
+
+.hoc-footer-column a:hover {
+    color: #29BCD0;
+
+    opacity: 1;
+}
+
+
+/* ==========================================================
+   24. TABLET / KLEINERE DESKTOPS
    ========================================================== */
 
 @media (max-width: 1100px) {
 
     .hoc-header-inner {
-        padding: 16px 24px;
+        min-height: 90px;
 
-        min-height: 100px;
+        padding:
+            10px 20px;
 
         gap: 20px;
     }
 
-    .hoc-header-logo {
-        height: 70px;
-        max-width: 300px;
-    }
-
-    .hoc-header-right {
-        gap: 15px;
-    }
-
-    .hoc-whatsapp,
-    .hoc-phone {
-        font-size: 14px;
-    }
-
-    .hoc-home-button {
-        min-height: 44px;
-
-        padding: 0 18px;
-
-        font-size: 14px;
-    }
-
-    .hoc-footer-inner {
-        padding-left: 28px;
-        padding-right: 28px;
-
-        gap: 35px;
-    }
-}
-
-
-/* ==========================================================
-   13. HANDY
-   ========================================================== */
-
-@media (max-width: 767px) {
-
-    /* --------------------------
-       Header
-       -------------------------- */
-
-    .hoc-header-inner {
-        min-height: auto;
-
-        padding: 12px 14px 14px;
-
-        display: flex;
-        flex-direction: column;
-
-        align-items: center;
-
-        gap: 11px;
-    }
-
-
-    /* Logo mittig */
-
-    .hoc-logo-link {
-        width: 100%;
-
-        justify-content: center;
-    }
 
     .hoc-header-logo {
-        width: auto;
-
         height: 66px;
 
-        max-width: 270px;
+        max-width: 280px;
     }
 
 
-    /* Kontakte */
-
-    .hoc-header-right {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: 1fr 1fr;
-
-        gap: 8px;
+    .hoc-header-contact {
+        gap: 13px;
     }
 
 
-    .hoc-whatsapp,
-    .hoc-phone {
-        min-height: 40px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 7px 8px;
-
-        background: #f4f8f9;
-
-        border-radius: 8px;
-
-        font-size: 12px;
-
-        white-space: nowrap;
+    .hoc-contact-item {
+        font-size: 13px;
     }
 
-
-    /* Trennlinie auf Handy ausblenden */
 
     .hoc-header-divider {
         display: none;
     }
 
 
-    /* Startseite über volle Breite */
-
     .hoc-home-button {
-        grid-column: 1 / -1;
-
-        width: 100%;
-
         min-height: 42px;
 
-        padding: 0 16px;
+        padding:
+            9px 18px;
 
-        border-radius: 8px;
-
-        font-size: 14px;
+        font-size: 13px;
     }
 
 
-    /* --------------------------
+    .hoc-footer-inner {
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap:
+            35px 50px;
+    }
+}
+
+
+/* ==========================================================
+   25. MOBILE
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    /* ------------------------------------------------------
+       HEADER
+       ------------------------------------------------------ */
+
+    .hoc-header {
+        box-shadow:
+            0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .hoc-header-inner {
+        min-height: auto;
+
+        padding:
+            12px 14px 14px;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+    }
+
+
+    /* Logo */
+
+    .hoc-logo-link {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+    }
+
+
+    .hoc-header-logo {
+        width: auto;
+        height: 58px;
+
+        max-width: 230px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Kontakt */
+
+    .hoc-header-contact {
+        width: 100%;
+
+        margin-left: 0;
+
+        display: grid;
+
+        grid-template-columns:
+            1fr
+            1fr;
+
+        gap: 8px;
+    }
+
+
+    .hoc-header-divider {
+        display: none;
+    }
+
+
+    /* WhatsApp + Telefon als Buttons */
+
+    .hoc-contact-item {
+        min-height: 40px;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        padding:
+            7px 8px;
+
+        background: #F4F8F9;
+
+        border:
+            1px solid #DCEBED;
+
+        border-radius: 10px;
+
+        color: #17323D;
+
+        font-size: 12px;
+        font-weight: 600;
+
+        text-align: center;
+
+        white-space: nowrap;
+    }
+
+
+    .hoc-contact-symbol {
+        font-size: 16px;
+    }
+
+
+    .hoc-whatsapp .hoc-contact-symbol {
+        color: #00B84A;
+    }
+
+
+    .hoc-phone .hoc-contact-symbol {
+        color: #0094A9;
+    }
+
+
+    /*
+       Desktop-Text mobil kürzen:
+       "Beratung per WhatsApp" → "WhatsApp"
+    */
+
+    .hoc-whatsapp .hoc-contact-label {
+        font-size: 0;
+    }
+
+
+    .hoc-whatsapp .hoc-contact-label::after {
+        content: "WhatsApp";
+
+        font-size: 12px;
+    }
+
+
+    /*
+       Telefonnummer → "Anrufen"
+    */
+
+    .hoc-phone .hoc-contact-label {
+        font-size: 0;
+    }
+
+
+    .hoc-phone .hoc-contact-label::after {
+        content: "Anrufen";
+
+        font-size: 12px;
+    }
+
+
+    /* Startseite unter beiden */
+
+    .hoc-home-button {
+        grid-column:
+            1 / -1;
+
+        width: 100%;
+
+        max-width: none;
+
+        min-height: 42px;
+
+        margin: 0;
+
+        padding:
+            9px 16px;
+
+        border-radius: 10px;
+
+        font-size: 13px;
+    }
+
+
+    /* ------------------------------------------------------
        COMPASS
-       -------------------------- */
+       ------------------------------------------------------ */
 
     .ibe-page {
         padding: 8px;
@@ -665,114 +931,196 @@ body {
     /* Suchbereiche */
 
     #xt-cruisefinder,
+    #xt-cruisefinder-top,
     #xt-cruisefinder-extended {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
         padding: 14px !important;
 
         border-radius: 10px !important;
     }
 
 
-    /* --------------------------
-       Footer
-       -------------------------- */
+    /* Karten */
+
+    .list-group-item {
+        border-radius: 10px !important;
+
+        margin-bottom: 12px !important;
+    }
+
+
+    /* ------------------------------------------------------
+       FOOTER
+       ------------------------------------------------------ */
+
+    .hoc-footer {
+        padding:
+            34px 20px;
+    }
+
 
     .hoc-footer-inner {
-        padding: 28px 22px;
+        grid-template-columns:
+            1fr;
 
-        grid-template-columns: 1fr;
-
-        gap: 25px;
+        gap: 28px;
 
         text-align: center;
     }
 
+
+    .hoc-footer-brand {
+        justify-content: center;
+    }
+
+
     .hoc-footer-logo {
-        width: 220px;
+        height: 88px;
+
+        max-width: 220px;
 
         margin: 0 auto;
     }
 
-    .hoc-footer h3 {
-        font-size: 18px;
+
+    .hoc-footer-column {
+        align-items: center;
     }
 }
 
 
 /* ==========================================================
-   14. SEHR KLEINE HANDYS
+   26. SEHR KLEINE HANDYS
    ========================================================== */
 
 @media (max-width: 430px) {
 
-    .hoc-header-logo {
-        height: 60px;
-        max-width: 240px;
+    .hoc-header-inner {
+        padding:
+            10px 10px 12px;
     }
 
-    .hoc-header-right {
-        grid-template-columns: 1fr;
+
+    .hoc-header-logo {
+        height: 52px;
+
+        max-width: 205px;
     }
+
+
+    .hoc-header-contact {
+        gap: 6px;
+    }
+
+
+    .hoc-contact-item {
+        min-height: 38px;
+
+        padding:
+            6px 5px;
+
+        font-size: 11px;
+    }
+
+
+    .hoc-contact-symbol {
+        font-size: 15px;
+    }
+
+
+    .hoc-whatsapp .hoc-contact-label::after,
+    .hoc-phone .hoc-contact-label::after {
+        font-size: 11px;
+    }
+
 
     .hoc-home-button {
-        grid-column: auto;
-    }
-
-    .hoc-whatsapp,
-    .hoc-phone {
-        width: 100%;
+        min-height: 40px;
 
         font-size: 12px;
     }
 
+
     .ibe-page {
         padding: 6px;
+    }
+
+
+    .hoc-footer-logo {
+        height: 80px;
+
+        max-width: 195px;
     }
 }
 
 
 /* ==========================================================
-   15. GROSSE DESKTOP BILDSCHIRME
+   27. GROSSE DESKTOP-BILDSCHIRME
    ========================================================== */
 
 @media (min-width: 1400px) {
 
     .hoc-header-inner {
-        max-width: 1600px;
+        max-width: 1650px;
 
-        min-height: 115px;
+        min-height: 112px;
 
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 52px;
+        padding-right: 52px;
     }
+
 
     .hoc-header-logo {
-        height: 88px;
-        max-width: 390px;
+        height: 90px;
+
+        max-width: 400px;
     }
 
-    .hoc-header-right {
-        gap: 26px;
+
+    .hoc-header-contact {
+        gap: 24px;
     }
 
-    .hoc-whatsapp,
-    .hoc-phone {
+
+    .hoc-contact-item {
         font-size: 16px;
+    }
+
+
+    .hoc-home-button {
+        min-height: 48px;
+
+        padding-left: 27px;
+        padding-right: 27px;
+
+        font-size: 15px;
     }
 }
 
 
 /* ==========================================================
-   16. EXTRA BREITE BILDSCHIRME
+   28. EXTRA BREITE MONITORE
    ========================================================== */
 
 @media (min-width: 1800px) {
 
     .hoc-header-inner {
-        max-width: 1650px;
+        max-width: 1700px;
+
+        min-height: 116px;
     }
 
+
     .hoc-header-logo {
-        height: 92px;
-        max-width: 410px;
+        height: 96px;
+
+        max-width: 420px;
+    }
+
+
+    .hoc-header-contact {
+        gap: 26px;
     }
 }
