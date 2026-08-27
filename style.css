@@ -1,6 +1,6 @@
 /* ==========================================================
    HOME OF CRUISE – COMPASS IBE
-   FINAL
+   FINAL v35
    ========================================================== */
 
 
@@ -21,12 +21,10 @@ body {
         sans-serif;
 
     background: #ffffff;
-
     color: #111111;
 
     box-sizing: border-box;
 }
-
 
 *,
 *::before,
@@ -46,30 +44,23 @@ body {
     background: #ffffff;
 
     border-top: 3px solid #0094A9;
-
     border-bottom: 1px solid #e0e7e9;
 
     position: relative;
-
     z-index: 20;
 }
 
-
 .hoc-header-inner {
     width: calc(100% - 64px);
-
     max-width: 1700px;
 
     min-height: 116px;
 
     margin: 0 auto;
-
     padding: 8px 0;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
     gap: 40px;
@@ -83,11 +74,9 @@ body {
 
 .hoc-logo-link {
     display: flex;
-
     align-items: center;
 
     margin: 0;
-
     padding: 0;
 
     flex-shrink: 0;
@@ -95,16 +84,13 @@ body {
     text-decoration: none;
 }
 
-
 .hoc-header-logo {
     display: block;
 
     width: 390px;
-
     height: auto;
 
     max-width: 100%;
-
     max-height: 100px;
 
     object-fit: contain;
@@ -120,9 +106,7 @@ body {
     margin-left: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: flex-end;
 
     gap: 22px;
@@ -130,10 +114,8 @@ body {
     white-space: nowrap;
 }
 
-
 .hoc-contact-card {
     display: flex;
-
     align-items: center;
 
     gap: 10px;
@@ -142,7 +124,6 @@ body {
 
     text-decoration: none;
 }
-
 
 .hoc-contact-card:hover {
     color: #007f91;
@@ -158,7 +139,6 @@ body {
     display: block;
 
     width: 88px;
-
     height: auto;
 
     max-height: 42px;
@@ -167,7 +147,6 @@ body {
 
     flex-shrink: 0;
 }
-
 
 .hoc-whatsapp-text strong {
     color: #111111;
@@ -181,19 +160,15 @@ body {
 
 .hoc-contact-icon {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     width: 36px;
-
     min-width: 36px;
 
     color: #0094A9;
 
     font-size: 23px;
-
     line-height: 1;
 }
 
@@ -205,23 +180,19 @@ body {
 
 .hoc-contact-text {
     display: flex;
-
     flex-direction: column;
 
     gap: 2px;
 }
 
-
 .hoc-contact-text strong {
     color: #111111;
 
     font-size: 15px;
-
     font-weight: 600;
 
     line-height: 1.25;
 }
-
 
 .hoc-contact-text small {
     color: #526973;
@@ -239,7 +210,6 @@ body {
 
 .hoc-header-divider {
     width: 1px;
-
     height: 44px;
 
     background: #0094A9;
@@ -255,9 +225,7 @@ body {
 
 .hoc-home-button {
     display: inline-flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 8px;
@@ -267,15 +235,12 @@ body {
     padding: 0 26px;
 
     background: #0094A9;
-
     color: #ffffff !important;
 
     border: 0;
-
     border-radius: 10px;
 
     font-size: 14px;
-
     font-weight: 700;
 
     text-decoration: none;
@@ -286,7 +251,6 @@ body {
         background-color 0.2s ease;
 }
 
-
 .hoc-home-button:hover,
 .hoc-home-button:focus {
     background: #007f91;
@@ -294,14 +258,11 @@ body {
     color: #ffffff !important;
 
     box-shadow: none !important;
-
     transform: none !important;
 }
 
-
 .hoc-home-icon {
     font-size: 22px;
-
     line-height: 1;
 }
 
@@ -315,7 +276,6 @@ body {
     width: 100%;
 
     margin: 0;
-
     padding: 22px;
 
     background: #EEF0F1;
@@ -331,7 +291,6 @@ body {
     color: #0094A9 !important;
 }
 
-
 .border-primary {
     border-color: #0094A9 !important;
 }
@@ -344,7 +303,6 @@ body {
 
 .btn-primary {
     background-color: #0094A9 !important;
-
     border-color: #0094A9 !important;
 
     color: #ffffff !important;
@@ -352,12 +310,10 @@ body {
     border-radius: 10px !important;
 }
 
-
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
     background-color: #007f91 !important;
-
     border-color: #007f91 !important;
 
     color: #ffffff !important;
@@ -373,13 +329,10 @@ body {
 .form-select {
     background: #ffffff;
 
-    border:
-        1px solid #d6e0e3;
+    border: 1px solid #d6e0e3;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
-
 
 .form-control:focus,
 .form-select:focus {
@@ -399,57 +352,45 @@ body {
 #xt-cruisefinder,
 #xt-cruisefinder-top,
 #xt-cruisefinder-extended {
-    background:
-        #EAF7F8 !important;
+    background: #EAF7F8 !important;
 
     border:
         1px solid
         rgba(0, 148, 169, 0.18)
         !important;
 
-    border-radius:
-        12px !important;
+    border-radius: 12px !important;
 
     box-shadow:
         0 3px 10px
         rgba(0, 0, 0, 0.045);
 
-    overflow:
-        visible !important;
+    overflow: visible !important;
 }
-
 
 
 /* obere Suche */
 
 #xt-cruisefinder,
 #xt-cruisefinder-top {
-    padding:
-        16px !important;
+    padding: 16px !important;
 
-    margin-bottom:
-        14px !important;
+    margin-bottom: 14px !important;
 
-    position:
-        relative;
+    position: relative;
 
-    z-index:
-        10;
+    z-index: 10;
 }
-
 
 
 /* Erweiterte Suche */
 
 #xt-cruisefinder-extended {
-    margin:
-        0 0 16px 0 !important;
+    margin: 0 0 16px 0 !important;
 
-    padding:
-        16px !important;
+    padding: 16px !important;
 
-    position:
-        relative;
+    position: relative;
 }
 
 
@@ -466,11 +407,8 @@ body {
 #xt-cruisefinder-top h2,
 #xt-cruisefinder-top h3,
 
-#xt-cruisefinder
-.xtc-search-cruisefinder-title,
-
-#xt-cruisefinder-top
-.xtc-search-cruisefinder-title,
+#xt-cruisefinder .xtc-search-cruisefinder-title,
+#xt-cruisefinder-top .xtc-search-cruisefinder-title,
 
 #xt-cruisefinder-extended
 .xtc-search-cruisefinder-extended-title {
@@ -493,26 +431,19 @@ body {
 
 #xt-cruisefinder-extended .form-control,
 #xt-cruisefinder-extended .form-select {
-    background:
-        #ffffff !important;
+    background: #ffffff !important;
 
     border:
         1px solid
         #d2e2e5 !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
-
-
-
-/* Labels */
 
 #xt-cruisefinder label,
 #xt-cruisefinder-top label,
 #xt-cruisefinder-extended label {
-    color:
-        #16323e !important;
+    color: #16323e !important;
 }
 
 
@@ -523,23 +454,19 @@ body {
 
 #xt-cruisefinder-extended
 .accordion-item {
-    background:
-        #ffffff !important;
+    background: #ffffff !important;
 
     border:
         1px solid
         #d2e2e5 !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
-
 
 #xt-cruisefinder-extended
 .accordion-item +
 .accordion-item {
-    margin-top:
-        10px;
+    margin-top: 10px;
 }
 
 
@@ -552,10 +479,8 @@ body {
 .dropdown-menu,
 .flatpickr-calendar,
 .daterangepicker {
-    z-index:
-        9999 !important;
+    z-index: 9999 !important;
 }
-
 
 #xt-cruisefinder .dropdown-menu,
 #xt-cruisefinder-top .dropdown-menu,
@@ -565,11 +490,9 @@ body {
 
 #xt-cruisefinder .daterangepicker,
 #xt-cruisefinder-top .daterangepicker {
-    overflow:
-        visible !important;
+    overflow: visible !important;
 
-    z-index:
-        9999 !important;
+    z-index: 9999 !important;
 }
 
 
@@ -579,43 +502,32 @@ body {
    ========================================================== */
 
 .list-group-item {
-    background:
-        #ffffff !important;
+    background: #ffffff !important;
 
     border:
         1px solid
         #dce4e7 !important;
 
-    border-radius:
-        12px !important;
+    border-radius: 12px !important;
 
-    overflow:
-        hidden;
+    overflow: hidden;
 
-    margin-bottom:
-        14px !important;
+    margin-bottom: 14px !important;
 
     box-shadow:
         0 3px 12px
         rgba(0, 0, 0, 0.05);
 
-    position:
-        relative;
+    position: relative;
 }
-
-
-
-/* Titel */
 
 .list-group-item h1,
 .list-group-item h2,
 .list-group-item h3,
 .list-group-item h4 {
-    color:
-        #102C3A !important;
+    color: #102C3A !important;
 
-    font-weight:
-        700 !important;
+    font-weight: 700 !important;
 }
 
 
@@ -624,57 +536,150 @@ body {
    BILDER
    ========================================================== */
 
+/*
+   Normale Bilder dürfen nicht abgeschnitten werden.
+*/
+
 .list-group-item img,
-.card img,
+.card img {
+    height: auto;
+
+    max-width: 100%;
+}
+
+
+/*
+   Nur echte Schiffsbilder / Coverbilder
+   sollen eine Fläche komplett füllen.
+*/
+
 .carousel-item img,
 .xt-of-cover {
-    border-radius:
-        10px !important;
+    width: 100%;
+    height: 100%;
 
-    object-fit:
-        cover;
+    object-fit: cover !important;
+
+    object-position: center !important;
+
+    border-radius: 10px !important;
 }
 
 
 
 /* ==========================================================
-   REEDEREI LOGOS – ABSTAND RECHTS
+   REEDEREI-LOGOS
+   COSTA / AIDA / MSC / ROYAL ETC.
    ========================================================== */
 
 /*
-   Gibt allen Bildern im rechten Kartenbereich
-   etwas Sicherheitsabstand zur Rundung.
-*/
-
-.list-group-item img {
-    max-width:
-        calc(100% - 10px);
-}
-
-
-/*
-   Falls COMPASS das Reederei-Logo absolut
-   oder rechts ausrichtet, wird es leicht
-   nach links gezogen.
+   WICHTIG:
+   Die Container rund um Reederei-Logos dürfen
+   das Logo nicht horizontal abschneiden.
 */
 
 .list-group-item [class*="logo"],
 .list-group-item [class*="Logo"],
 .list-group-item [class*="cruise-line"],
-.list-group-item [class*="reederei"] {
-    margin-right:
-        10px !important;
+.list-group-item [class*="reederei"],
+.list-group-item [class*="operator"],
+.list-group-item [class*="company"] {
+    overflow: visible !important;
+
+    width: auto !important;
+
+    max-width: none !important;
+
+    min-width: 0 !important;
+
+    padding-left: 8px !important;
+    padding-right: 12px !important;
 }
 
 
 /*
-   Allgemeiner Sicherheitsabstand am rechten Rand
-   der Karte.
+   Bilder in solchen Logo-Bereichen vollständig darstellen.
 */
 
-.list-group-item > *:last-child {
-    padding-right:
-        10px;
+.list-group-item [class*="logo"] img,
+.list-group-item [class*="Logo"] img,
+.list-group-item [class*="cruise-line"] img,
+.list-group-item [class*="reederei"] img,
+.list-group-item [class*="operator"] img,
+.list-group-item [class*="company"] img {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 120px !important;
+    max-height: 70px !important;
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+    overflow: visible !important;
+
+    margin-left: auto !important;
+    margin-right: 0 !important;
+
+    border-radius: 0 !important;
+}
+
+
+/*
+   Falls COMPASS die relevante Klasse direkt
+   am img-Element verwendet.
+*/
+
+.list-group-item img[class*="logo"],
+.list-group-item img[class*="Logo"],
+.list-group-item img[class*="cruise-line"],
+.list-group-item img[class*="reederei"],
+.list-group-item img[class*="operator"],
+.list-group-item img[class*="company"] {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 120px !important;
+    max-height: 70px !important;
+
+    object-fit: contain !important;
+
+    object-position: center center !important;
+
+    overflow: visible !important;
+
+    margin-left: auto !important;
+    margin-right: 10px !important;
+
+    border-radius: 0 !important;
+}
+
+
+/*
+   Allgemein: rechte Spalten dürfen Kinder
+   nicht unnötig beschneiden.
+*/
+
+.list-group-item > *,
+.list-group-item .row,
+.list-group-item [class*="col-"] {
+    min-width: 0;
+}
+
+
+/*
+   Falls das Logo direkt rechts in einem Flex-/Grid-Bereich
+   sitzt, etwas mehr Platz reservieren.
+*/
+
+.list-group-item [class*="logo"],
+.list-group-item [class*="Logo"] {
+    flex-shrink: 0 !important;
 }
 
 
@@ -685,37 +690,28 @@ body {
 
 .xtc-search-offer-button,
 a.xtc-search-offer-button {
-    background:
-        #0094A9 !important;
+    background: #0094A9 !important;
 
     border:
         1px solid
         #0094A9 !important;
 
-    color:
-        #ffffff !important;
+    color: #ffffff !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 
-    font-weight:
-        600;
+    font-weight: 600;
 
-    text-decoration:
-        none !important;
+    text-decoration: none !important;
 
-    box-shadow:
-        none;
+    box-shadow: none;
 }
-
 
 .xtc-search-offer-button:hover,
 a.xtc-search-offer-button:hover {
-    background:
-        #007f91 !important;
+    background: #007f91 !important;
 
-    border-color:
-        #007f91 !important;
+    border-color: #007f91 !important;
 }
 
 
@@ -726,28 +722,22 @@ a.xtc-search-offer-button:hover {
 
 .list-group-item
 .btn-outline-primary {
-    background:
-        #ffffff !important;
+    background: #ffffff !important;
 
     border:
         1px solid
         #b9dbe0 !important;
 
-    color:
-        #007f91 !important;
+    color: #007f91 !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
-
 
 .list-group-item
 .btn-outline-primary:hover {
-    background:
-        #EAF7F8 !important;
+    background: #EAF7F8 !important;
 
-    border-color:
-        #0094A9 !important;
+    border-color: #0094A9 !important;
 }
 
 
@@ -758,8 +748,7 @@ a.xtc-search-offer-button:hover {
 
 .card,
 .modal-content {
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
 
 
@@ -769,30 +758,22 @@ a.xtc-search-offer-button:hover {
    ========================================================== */
 
 .page-link {
-    color:
-        #0094A9 !important;
+    color: #0094A9 !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
-
 
 .page-link:hover {
-    color:
-        #007f91 !important;
+    color: #007f91 !important;
 }
-
 
 .page-item.active
 .page-link {
-    background:
-        #0094A9 !important;
+    background: #0094A9 !important;
 
-    border-color:
-        #0094A9 !important;
+    border-color: #0094A9 !important;
 
-    color:
-        #ffffff !important;
+    color: #ffffff !important;
 }
 
 
@@ -804,37 +785,25 @@ a.xtc-search-offer-button:hover {
 .hoc-footer {
     width: 100%;
 
-    background:
-        #073247;
+    background: #073247;
 
-    color:
-        #ffffff;
+    color: #ffffff;
 
-    padding:
-        24px 30px 22px;
+    padding: 24px 30px 22px;
 }
-
-
-
-/* Footer innen */
 
 .hoc-footer-inner {
     width: 100%;
 
-    max-width:
-        1500px;
+    max-width: 1500px;
 
-    margin:
-        0 auto;
+    margin: 0 auto;
 
-    display:
-        flex;
+    display: flex;
 
-    flex-direction:
-        column;
+    flex-direction: column;
 
-    align-items:
-        center;
+    align-items: center;
 }
 
 
@@ -844,35 +813,25 @@ a.xtc-search-offer-button:hover {
    ========================================================== */
 
 .hoc-footer-brand {
-    display:
-        flex;
+    display: flex;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    align-items:
-        flex-start;
+    align-items: flex-start;
 
-    margin:
-        0 0 18px;
+    margin: 0 0 18px;
 }
 
-
 .hoc-footer-logo {
-    display:
-        block;
+    display: block;
 
-    width:
-        350px;
+    width: 350px;
 
-    max-width:
-        100%;
+    max-width: 100%;
 
-    height:
-        auto;
+    height: auto;
 
-    object-fit:
-        contain;
+    object-fit: contain;
 }
 
 
@@ -882,65 +841,44 @@ a.xtc-search-offer-button:hover {
    ========================================================== */
 
 .hoc-footer-contact {
-    width:
-        100%;
+    width: 100%;
 
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    gap:
-        28px;
+    gap: 28px;
 
-    flex-wrap:
-        wrap;
+    flex-wrap: wrap;
 }
-
 
 .hoc-footer-contact a {
-    display:
-        inline-flex;
+    display: inline-flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    gap:
-        9px;
+    gap: 9px;
 
-    color:
-        #ffffff;
+    color: #ffffff;
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    text-decoration:
-        none;
+    text-decoration: none;
 }
-
 
 .hoc-footer-contact a:hover {
-    color:
-        #55cfdd;
+    color: #55cfdd;
 }
 
-
-
-/* Trenner */
-
 .hoc-footer-divider {
-    width:
-        1px;
+    width: 1px;
 
-    height:
-        28px;
+    height: 28px;
 
     background:
-        rgba(255,255,255,0.5);
+        rgba(255, 255, 255, 0.5);
 }
 
 
@@ -950,17 +888,14 @@ a.xtc-search-offer-button:hover {
    ========================================================== */
 
 .hoc-footer-line {
-    width:
-        100%;
+    width: 100%;
 
-    height:
-        1px;
+    height: 1px;
 
-    margin:
-        22px 0 17px;
+    margin: 22px 0 17px;
 
     background:
-        rgba(255,255,255,0.42);
+        rgba(255, 255, 255, 0.42);
 }
 
 
@@ -970,50 +905,36 @@ a.xtc-search-offer-button:hover {
    ========================================================== */
 
 .hoc-footer-legal {
-    display:
-        flex;
+    display: flex;
 
-    align-items:
-        center;
+    align-items: center;
 
-    justify-content:
-        center;
+    justify-content: center;
 
-    gap:
-        22px;
+    gap: 22px;
 
-    flex-wrap:
-        wrap;
+    flex-wrap: wrap;
 }
-
 
 .hoc-footer-legal a {
-    color:
-        #ffffff;
+    color: #ffffff;
 
-    font-size:
-        14px;
+    font-size: 14px;
 
-    text-decoration:
-        none;
+    text-decoration: none;
 }
-
 
 .hoc-footer-legal a:hover {
-    color:
-        #55cfdd;
+    color: #55cfdd;
 }
 
-
 .hoc-footer-legal span {
-    width:
-        1px;
+    width: 1px;
 
-    height:
-        24px;
+    height: 24px;
 
     background:
-        rgba(255,255,255,0.5);
+        rgba(255, 255, 255, 0.5);
 }
 
 
@@ -1028,66 +949,47 @@ a.xtc-search-offer-button:hover {
         width:
             calc(100% - 36px);
 
-        min-height:
-            98px;
+        min-height: 98px;
 
-        gap:
-            18px;
+        gap: 18px;
     }
-
 
     .hoc-header-logo {
-        width:
-            290px;
+        width: 290px;
 
-        max-height:
-            80px;
+        max-height: 80px;
     }
-
 
     .hoc-header-contact {
-        gap:
-            12px;
+        gap: 12px;
     }
-
 
     .hoc-whatsapp-logo {
-        width:
-            70px;
+        width: 70px;
 
-        max-height:
-            36px;
+        max-height: 36px;
     }
-
 
     .hoc-contact-text strong {
-        font-size:
-            13px;
+        font-size: 13px;
     }
-
 
     .hoc-contact-text small {
-        font-size:
-            11px;
+        font-size: 11px;
     }
-
 
     .hoc-header-divider {
-        display:
-            none;
+        display: none;
     }
-
 
     .hoc-home-button {
-        min-height:
-            42px;
+        min-height: 42px;
 
-        padding:
-            0 18px;
+        padding: 0 18px;
 
-        font-size:
-            13px;
+        font-size: 13px;
     }
+
 }
 
 
@@ -1098,260 +1000,178 @@ a.xtc-search-offer-button:hover {
 
 @media (max-width: 767px) {
 
-
-    /* Header */
-
     .hoc-header-inner {
-        width:
-            100%;
+        width: 100%;
 
-        min-height:
-            auto;
+        min-height: auto;
 
         padding:
             10px 12px 12px;
 
-        flex-direction:
-            column;
+        flex-direction: column;
 
-        gap:
-            10px;
+        gap: 10px;
     }
 
-
-
-    /* Logo */
 
     .hoc-logo-link {
-        width:
-            100%;
+        width: 100%;
 
-        justify-content:
-            center;
+        justify-content: center;
     }
-
 
     .hoc-header-logo {
-        width:
-            245px;
+        width: 245px;
 
-        height:
-            auto;
+        height: auto;
 
-        max-width:
-            82vw;
+        max-width: 82vw;
 
-        max-height:
-            none;
+        max-height: none;
     }
 
 
-
-    /* Mobile Navigation */
-
     .hoc-header-contact {
-        width:
-            100%;
+        width: 100%;
 
-        margin:
-            0;
+        margin: 0;
 
-        display:
-            grid;
+        display: grid;
 
         grid-template-columns:
-            1fr
-            1fr
-            1fr;
+            1fr 1fr 1fr;
 
-        gap:
-            0;
+        gap: 0;
 
         border:
             1px solid #dbe5e7;
 
-        border-radius:
-            10px;
+        border-radius: 10px;
 
-        overflow:
-            hidden;
+        overflow: hidden;
 
-        background:
-            #ffffff;
+        background: #ffffff;
     }
-
 
     .hoc-header-divider {
-        display:
-            none;
+        display: none;
     }
 
 
-
-    /* Kontakt */
-
     .hoc-contact-card {
-        min-height:
-            67px;
+        min-height: 67px;
 
         padding:
             7px 4px;
 
-        flex-direction:
-            column;
+        flex-direction: column;
 
-        align-items:
-            center;
+        align-items: center;
 
-        justify-content:
-            center;
+        justify-content: center;
 
-        gap:
-            3px;
+        gap: 3px;
 
         border-right:
             1px solid #dce5e7;
 
-        text-align:
-            center;
+        text-align: center;
     }
 
-
-
-    /* WhatsApp mobil */
 
     .hoc-whatsapp-logo {
-        width:
-            62px;
+        width: 62px;
 
-        max-height:
-            28px;
+        max-height: 28px;
     }
-
 
     .hoc-whatsapp-text small {
-        display:
-            none;
+        display: none;
     }
-
 
     .hoc-whatsapp-text strong {
-        font-size:
-            11px;
+        font-size: 11px;
     }
 
-
-
-    /* Telefon */
 
     .hoc-contact-icon {
-        width:
-            auto;
+        width: auto;
 
-        min-width:
-            0;
+        min-width: 0;
 
-        font-size:
-            21px;
+        font-size: 21px;
     }
-
 
     .hoc-contact-text {
-        align-items:
-            center;
+        align-items: center;
     }
 
-
-    .hoc-phone .hoc-contact-text strong {
-        font-size:
-            0;
+    .hoc-phone
+    .hoc-contact-text strong {
+        font-size: 0;
     }
 
+    .hoc-phone
+    .hoc-contact-text strong::after {
+        content: "Anrufen";
 
-    .hoc-phone .hoc-contact-text strong::after {
-        content:
-            "Anrufen";
-
-        font-size:
-            12px;
+        font-size: 12px;
     }
 
-
-    .hoc-phone .hoc-contact-text small {
-        font-size:
-            0;
+    .hoc-phone
+    .hoc-contact-text small {
+        font-size: 0;
     }
 
+    .hoc-phone
+    .hoc-contact-text small::after {
+        content: "Jetzt anrufen";
 
-    .hoc-phone .hoc-contact-text small::after {
-        content:
-            "Jetzt anrufen";
-
-        font-size:
-            10px;
+        font-size: 10px;
     }
 
-
-
-    /* Startseite */
 
     .hoc-home-button {
-        min-height:
-            67px;
+        min-height: 67px;
 
         padding:
             8px 5px;
 
-        flex-direction:
-            column;
+        flex-direction: column;
 
-        gap:
-            3px;
+        gap: 3px;
 
-        background:
-            transparent;
+        background: transparent;
 
         color:
             #007f91 !important;
 
-        border-radius:
-            0;
+        border-radius: 0;
 
-        font-size:
-            12px;
+        font-size: 12px;
     }
-
 
     .hoc-home-button:hover,
     .hoc-home-button:focus {
-        background:
-            #EAF7F8;
+        background: #EAF7F8;
 
         color:
             #007f91 !important;
     }
 
 
-
-    /* COMPASS */
-
     .ibe-page {
-        padding:
-            8px;
+        padding: 8px;
     }
 
 
     #xt-cruisefinder,
     #xt-cruisefinder-top,
     #xt-cruisefinder-extended {
-        margin-left:
-            0 !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
 
-        margin-right:
-            0 !important;
-
-        padding:
-            14px !important;
+        padding: 14px !important;
 
         border-radius:
             10px !important;
@@ -1367,61 +1187,61 @@ a.xtc-search-offer-button:hover {
     }
 
 
+    /*
+       Reederei-Logos mobil kleiner,
+       aber vollständig sichtbar.
+    */
 
-    /* Footer */
+    .list-group-item [class*="logo"] img,
+    .list-group-item [class*="Logo"] img,
+    .list-group-item img[class*="logo"],
+    .list-group-item img[class*="Logo"] {
+        max-width:
+            90px !important;
+
+        max-height:
+            55px !important;
+    }
+
 
     .hoc-footer {
         padding:
             22px 15px;
     }
 
-
     .hoc-footer-logo {
-        width:
-            270px;
+        width: 270px;
 
-        max-width:
-            85vw;
+        max-width: 85vw;
     }
-
 
     .hoc-footer-brand {
-        margin-bottom:
-            16px;
+        margin-bottom: 16px;
     }
-
 
     .hoc-footer-contact {
-        flex-direction:
-            column;
+        flex-direction: column;
 
-        gap:
-            11px;
+        gap: 11px;
     }
-
 
     .hoc-footer-divider {
-        display:
-            none;
+        display: none;
     }
-
 
     .hoc-footer-line {
         margin:
             20px 0 16px;
     }
 
-
     .hoc-footer-legal {
-        gap:
-            13px;
+        gap: 13px;
     }
-
 
     .hoc-footer-legal span {
-        height:
-            18px;
+        height: 18px;
     }
+
 }
 
 
@@ -1433,34 +1253,26 @@ a.xtc-search-offer-button:hover {
 @media (max-width: 430px) {
 
     .hoc-header-logo {
-        width:
-            220px;
+        width: 220px;
     }
-
 
     .hoc-contact-card,
     .hoc-home-button {
-        min-height:
-            64px;
+        min-height: 64px;
     }
-
 
     .hoc-whatsapp-logo {
-        width:
-            56px;
+        width: 56px;
     }
-
 
     .hoc-footer-logo {
-        width:
-            240px;
+        width: 240px;
     }
-
 
     .ibe-page {
-        padding:
-            6px;
+        padding: 6px;
     }
+
 }
 
 
@@ -1475,54 +1287,39 @@ a.xtc-search-offer-button:hover {
         width:
             calc(100% - 80px);
 
-        max-width:
-            1700px;
+        max-width: 1700px;
 
-        min-height:
-            120px;
+        min-height: 120px;
     }
-
 
     .hoc-header-logo {
-        width:
-            425px;
+        width: 425px;
 
-        max-height:
-            104px;
+        max-height: 104px;
     }
-
 
     .hoc-whatsapp-logo {
-        width:
-            96px;
+        width: 96px;
 
-        max-height:
-            44px;
+        max-height: 44px;
     }
-
 
     .hoc-contact-text strong {
-        font-size:
-            16px;
+        font-size: 16px;
     }
-
 
     .hoc-home-button {
-        min-height:
-            48px;
+        min-height: 48px;
 
-        padding:
-            0 28px;
+        padding: 0 28px;
 
-        font-size:
-            15px;
+        font-size: 15px;
     }
-
 
     .hoc-footer-logo {
-        width:
-            370px;
+        width: 370px;
     }
+
 }
 
 
@@ -1534,22 +1331,17 @@ a.xtc-search-offer-button:hover {
 @media (min-width: 1800px) {
 
     .hoc-header-inner {
-        max-width:
-            1750px;
+        max-width: 1750px;
     }
-
 
     .hoc-header-logo {
-        width:
-            445px;
+        width: 445px;
 
-        max-height:
-            108px;
+        max-height: 108px;
     }
-
 
     .hoc-footer-logo {
-        width:
-            390px;
+        width: 390px;
     }
+
 }
