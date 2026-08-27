@@ -60,7 +60,7 @@ body {
 
     max-width: 1700px;
 
-    min-height: 118px;
+    min-height: 116px;
 
     margin: 0 auto;
 
@@ -99,13 +99,13 @@ body {
 .hoc-header-logo {
     display: block;
 
-    width: 400px;
+    width: 390px;
 
     height: auto;
 
     max-width: 100%;
 
-    max-height: 102px;
+    max-height: 100px;
 
     object-fit: contain;
 }
@@ -149,6 +149,36 @@ body {
 }
 
 
+
+/* ==========================================================
+   WHATSAPP
+   ========================================================== */
+
+.hoc-whatsapp-logo {
+    display: block;
+
+    width: 88px;
+
+    height: auto;
+
+    max-height: 42px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+
+.hoc-whatsapp-text strong {
+    color: #111111;
+}
+
+
+
+/* ==========================================================
+   TELEFON ICON
+   ========================================================== */
+
 .hoc-contact-icon {
     display: flex;
 
@@ -168,13 +198,10 @@ body {
 }
 
 
-.hoc-whatsapp .hoc-contact-icon {
-    color: #00B84A;
-}
 
-
-
-/* Text */
+/* ==========================================================
+   KONTAKT TEXT
+   ========================================================== */
 
 .hoc-contact-text {
     display: flex;
@@ -206,12 +233,14 @@ body {
 
 
 
-/* Trennlinie */
+/* ==========================================================
+   HEADER TRENNLINIE
+   ========================================================== */
 
 .hoc-header-divider {
     width: 1px;
 
-    height: 46px;
+    height: 44px;
 
     background: #0094A9;
 
@@ -569,6 +598,9 @@ body {
     box-shadow:
         0 3px 12px
         rgba(0, 0, 0, 0.05);
+
+    position:
+        relative;
 }
 
 
@@ -601,6 +633,48 @@ body {
 
     object-fit:
         cover;
+}
+
+
+
+/* ==========================================================
+   REEDEREI LOGOS – ABSTAND RECHTS
+   ========================================================== */
+
+/*
+   Gibt allen Bildern im rechten Kartenbereich
+   etwas Sicherheitsabstand zur Rundung.
+*/
+
+.list-group-item img {
+    max-width:
+        calc(100% - 10px);
+}
+
+
+/*
+   Falls COMPASS das Reederei-Logo absolut
+   oder rechts ausrichtet, wird es leicht
+   nach links gezogen.
+*/
+
+.list-group-item [class*="logo"],
+.list-group-item [class*="Logo"],
+.list-group-item [class*="cruise-line"],
+.list-group-item [class*="reederei"] {
+    margin-right:
+        10px !important;
+}
+
+
+/*
+   Allgemeiner Sicherheitsabstand am rechten Rand
+   der Karte.
+*/
+
+.list-group-item > *:last-child {
+    padding-right:
+        10px;
 }
 
 
@@ -737,7 +811,7 @@ a.xtc-search-offer-button:hover {
         #ffffff;
 
     padding:
-        26px 30px 24px;
+        24px 30px 22px;
 }
 
 
@@ -780,7 +854,7 @@ a.xtc-search-offer-button:hover {
         flex-start;
 
     margin:
-        0 0 20px;
+        0 0 18px;
 }
 
 
@@ -789,7 +863,7 @@ a.xtc-search-offer-button:hover {
         block;
 
     width:
-        340px;
+        350px;
 
     max-width:
         100%;
@@ -883,7 +957,7 @@ a.xtc-search-offer-button:hover {
         1px;
 
     margin:
-        24px 0 18px;
+        22px 0 17px;
 
     background:
         rgba(255,255,255,0.42);
@@ -955,7 +1029,7 @@ a.xtc-search-offer-button:hover {
             calc(100% - 36px);
 
         min-height:
-            100px;
+            98px;
 
         gap:
             18px;
@@ -964,16 +1038,25 @@ a.xtc-search-offer-button:hover {
 
     .hoc-header-logo {
         width:
-            300px;
+            290px;
 
         max-height:
-            82px;
+            80px;
     }
 
 
     .hoc-header-contact {
         gap:
             12px;
+    }
+
+
+    .hoc-whatsapp-logo {
+        width:
+            70px;
+
+        max-height:
+            36px;
     }
 
 
@@ -1112,7 +1195,7 @@ a.xtc-search-offer-button:hover {
             67px;
 
         padding:
-            8px 5px;
+            7px 4px;
 
         flex-direction:
             column;
@@ -1134,6 +1217,33 @@ a.xtc-search-offer-button:hover {
     }
 
 
+
+    /* WhatsApp mobil */
+
+    .hoc-whatsapp-logo {
+        width:
+            62px;
+
+        max-height:
+            28px;
+    }
+
+
+    .hoc-whatsapp-text small {
+        display:
+            none;
+    }
+
+
+    .hoc-whatsapp-text strong {
+        font-size:
+            11px;
+    }
+
+
+
+    /* Telefon */
+
     .hoc-contact-icon {
         width:
             auto;
@@ -1152,46 +1262,13 @@ a.xtc-search-offer-button:hover {
     }
 
 
-    .hoc-contact-text strong {
+    .hoc-phone .hoc-contact-text strong {
         font-size:
             0;
     }
 
 
-    .hoc-contact-text small {
-        font-size:
-            0;
-    }
-
-
-
-    /* WhatsApp */
-
-    .hoc-whatsapp
-    .hoc-contact-text strong::after {
-        content:
-            "WhatsApp";
-
-        font-size:
-            12px;
-    }
-
-
-    .hoc-whatsapp
-    .hoc-contact-text small::after {
-        content:
-            "Beratung";
-
-        font-size:
-            10px;
-    }
-
-
-
-    /* Anrufen */
-
-    .hoc-phone
-    .hoc-contact-text strong::after {
+    .hoc-phone .hoc-contact-text strong::after {
         content:
             "Anrufen";
 
@@ -1200,8 +1277,13 @@ a.xtc-search-offer-button:hover {
     }
 
 
-    .hoc-phone
-    .hoc-contact-text small::after {
+    .hoc-phone .hoc-contact-text small {
+        font-size:
+            0;
+    }
+
+
+    .hoc-phone .hoc-contact-text small::after {
         content:
             "Jetzt anrufen";
 
@@ -1290,7 +1372,7 @@ a.xtc-search-offer-button:hover {
 
     .hoc-footer {
         padding:
-            24px 15px;
+            22px 15px;
     }
 
 
@@ -1305,7 +1387,7 @@ a.xtc-search-offer-button:hover {
 
     .hoc-footer-brand {
         margin-bottom:
-            18px;
+            16px;
     }
 
 
@@ -1326,7 +1408,7 @@ a.xtc-search-offer-button:hover {
 
     .hoc-footer-line {
         margin:
-            21px 0 17px;
+            20px 0 16px;
     }
 
 
@@ -1363,6 +1445,12 @@ a.xtc-search-offer-button:hover {
     }
 
 
+    .hoc-whatsapp-logo {
+        width:
+            56px;
+    }
+
+
     .hoc-footer-logo {
         width:
             240px;
@@ -1391,16 +1479,25 @@ a.xtc-search-offer-button:hover {
             1700px;
 
         min-height:
-            122px;
+            120px;
     }
 
 
     .hoc-header-logo {
         width:
-            430px;
+            425px;
 
         max-height:
-            106px;
+            104px;
+    }
+
+
+    .hoc-whatsapp-logo {
+        width:
+            96px;
+
+        max-height:
+            44px;
     }
 
 
@@ -1444,10 +1541,10 @@ a.xtc-search-offer-button:hover {
 
     .hoc-header-logo {
         width:
-            450px;
+            445px;
 
         max-height:
-            110px;
+            108px;
     }
 
 
@@ -1455,31 +1552,4 @@ a.xtc-search-offer-button:hover {
         width:
             390px;
     }
-}
-/* ==========================================================
-   FIX – REEDEREI LOGOS IN ANGEBOTSKARTEN
-   ========================================================== */
-
-.list-group-item {
-    position: relative;
-}
-
-/* rechter Bereich bekommt etwas Sicherheitsabstand */
-.list-group-item > div {
-    max-width: 100%;
-}
-
-/* Bilder innerhalb der Angebotskarte nicht an der
-   rechten Kartenrundung abschneiden */
-.list-group-item img {
-    max-width: 100%;
-}
-
-/* Reederei-Logo mit Abstand zur rechten Kante */
-.list-group-item img[alt*="Cruise"],
-.list-group-item img[alt*="Royal"],
-.list-group-item img[alt*="MSC"],
-.list-group-item img[alt*="Cunard"],
-.list-group-item img[alt*="Carnival"] {
-    margin-right: 10px !important;
 }
