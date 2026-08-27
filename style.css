@@ -1,6 +1,6 @@
 /* ==========================================================
    HOME OF CRUISE – COMPASS IBE
-   FINAL v35
+   FINAL v36
    ========================================================== */
 
 
@@ -14,6 +14,7 @@ body {
     padding: 0;
 
     width: 100%;
+    max-width: 100%;
 
     font-family:
         "Montserrat",
@@ -274,6 +275,7 @@ body {
 
 .ibe-page {
     width: 100%;
+    max-width: 100%;
 
     margin: 0;
     padding: 22px;
@@ -519,6 +521,8 @@ body {
         rgba(0, 0, 0, 0.05);
 
     position: relative;
+
+    max-width: 100%;
 }
 
 .list-group-item h1,
@@ -536,10 +540,6 @@ body {
    BILDER
    ========================================================== */
 
-/*
-   Normale Bilder dürfen nicht abgeschnitten werden.
-*/
-
 .list-group-item img,
 .card img {
     height: auto;
@@ -550,7 +550,7 @@ body {
 
 /*
    Nur echte Schiffsbilder / Coverbilder
-   sollen eine Fläche komplett füllen.
+   dürfen die Fläche füllen.
 */
 
 .carousel-item img,
@@ -572,12 +572,6 @@ body {
    COSTA / AIDA / MSC / ROYAL ETC.
    ========================================================== */
 
-/*
-   WICHTIG:
-   Die Container rund um Reederei-Logos dürfen
-   das Logo nicht horizontal abschneiden.
-*/
-
 .list-group-item [class*="logo"],
 .list-group-item [class*="Logo"],
 .list-group-item [class*="cruise-line"],
@@ -597,9 +591,7 @@ body {
 }
 
 
-/*
-   Bilder in solchen Logo-Bereichen vollständig darstellen.
-*/
+/* Bilder innerhalb der Logo-Bereiche */
 
 .list-group-item [class*="logo"] img,
 .list-group-item [class*="Logo"] img,
@@ -628,10 +620,7 @@ body {
 }
 
 
-/*
-   Falls COMPASS die relevante Klasse direkt
-   am img-Element verwendet.
-*/
+/* Falls die Klasse direkt am Bild sitzt */
 
 .list-group-item img[class*="logo"],
 .list-group-item img[class*="Logo"],
@@ -660,26 +649,12 @@ body {
 }
 
 
-/*
-   Allgemein: rechte Spalten dürfen Kinder
-   nicht unnötig beschneiden.
-*/
+/* Flex/Grid Kinder dürfen schrumpfen */
 
 .list-group-item > *,
 .list-group-item .row,
 .list-group-item [class*="col-"] {
     min-width: 0;
-}
-
-
-/*
-   Falls das Logo direkt rechts in einem Flex-/Grid-Bereich
-   sitzt, etwas mehr Platz reservieren.
-*/
-
-.list-group-item [class*="logo"],
-.list-group-item [class*="Logo"] {
-    flex-shrink: 0 !important;
 }
 
 
@@ -996,50 +971,98 @@ a.xtc-search-offer-button:hover {
 
 /* ==========================================================
    MOBILE
+   WICHTIG: KEIN HORIZONTALES SCROLLEN
    ========================================================== */
 
 @media (max-width: 767px) {
 
-    .hoc-header-inner {
-        width: 100%;
+    html,
+    body {
+        width: 100% !important;
 
+        max-width: 100% !important;
+
+        overflow-x: hidden !important;
+    }
+
+
+    body {
+        position: relative;
+    }
+
+
+    .hoc-header,
+    .hoc-header-inner,
+    .hoc-header-contact,
+    .ibe-page,
+    .hoc-footer,
+    .hoc-footer-inner {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+    }
+
+
+    /* ------------------------------------------------------
+       HEADER
+       ------------------------------------------------------ */
+
+    .hoc-header-inner {
         min-height: auto;
 
+        margin: 0 !important;
+
         padding:
-            10px 12px 12px;
+            10px 10px 12px;
 
         flex-direction: column;
+
+        align-items: center;
 
         gap: 10px;
     }
 
 
+    /* Logo */
+
     .hoc-logo-link {
-        width: 100%;
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
 
         justify-content: center;
     }
 
+
     .hoc-header-logo {
-        width: 245px;
+        width: 220px !important;
 
-        height: auto;
+        height: auto !important;
 
-        max-width: 82vw;
+        max-width: 80vw !important;
 
-        max-height: none;
+        max-height: none !important;
     }
 
 
+    /* ------------------------------------------------------
+       MOBILE NAVIGATION
+       ------------------------------------------------------ */
+
     .hoc-header-contact {
-        width: 100%;
+        margin: 0 !important;
 
-        margin: 0;
-
-        display: grid;
+        display: grid !important;
 
         grid-template-columns:
-            1fr 1fr 1fr;
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            minmax(0, 1fr)
+            !important;
 
         gap: 0;
 
@@ -1048,21 +1071,38 @@ a.xtc-search-offer-button:hover {
 
         border-radius: 10px;
 
-        overflow: hidden;
+        overflow: hidden !important;
 
         background: #ffffff;
+
+        white-space: normal;
     }
+
 
     .hoc-header-divider {
         display: none;
     }
 
 
+    .hoc-contact-card,
+    .hoc-home-button {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
+        overflow: hidden !important;
+    }
+
+
+    /* Kontakt */
+
     .hoc-contact-card {
         min-height: 67px;
 
         padding:
-            7px 4px;
+            7px 3px;
 
         flex-direction: column;
 
@@ -1079,20 +1119,57 @@ a.xtc-search-offer-button:hover {
     }
 
 
-    .hoc-whatsapp-logo {
-        width: 62px;
+    .hoc-contact-text {
+        width: 100%;
 
-        max-height: 28px;
+        max-width: 100%;
+
+        min-width: 0;
+
+        align-items: center;
+
+        overflow: hidden;
     }
+
+
+    .hoc-contact-text strong,
+    .hoc-contact-text small {
+        display: block;
+
+        max-width: 100%;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+    }
+
+
+    /* WhatsApp mobil */
+
+    .hoc-whatsapp-logo {
+        width: 56px !important;
+
+        max-width: 56px !important;
+
+        height: auto;
+
+        max-height: 27px;
+    }
+
 
     .hoc-whatsapp-text small {
         display: none;
     }
 
+
     .hoc-whatsapp-text strong {
-        font-size: 11px;
+        font-size: 10px;
     }
 
+
+    /* Telefon */
 
     .hoc-contact-icon {
         width: auto;
@@ -1102,14 +1179,12 @@ a.xtc-search-offer-button:hover {
         font-size: 21px;
     }
 
-    .hoc-contact-text {
-        align-items: center;
-    }
 
     .hoc-phone
     .hoc-contact-text strong {
         font-size: 0;
     }
+
 
     .hoc-phone
     .hoc-contact-text strong::after {
@@ -1118,24 +1193,28 @@ a.xtc-search-offer-button:hover {
         font-size: 12px;
     }
 
+
     .hoc-phone
     .hoc-contact-text small {
         font-size: 0;
     }
 
+
     .hoc-phone
     .hoc-contact-text small::after {
         content: "Jetzt anrufen";
 
-        font-size: 10px;
+        font-size: 9px;
     }
 
+
+    /* Startseite */
 
     .hoc-home-button {
         min-height: 67px;
 
         padding:
-            8px 5px;
+            8px 3px;
 
         flex-direction: column;
 
@@ -1148,8 +1227,11 @@ a.xtc-search-offer-button:hover {
 
         border-radius: 0;
 
-        font-size: 12px;
+        font-size: 11px;
+
+        white-space: normal;
     }
+
 
     .hoc-home-button:hover,
     .hoc-home-button:focus {
@@ -1160,25 +1242,48 @@ a.xtc-search-offer-button:hover {
     }
 
 
+    /* ------------------------------------------------------
+       COMPASS
+       ------------------------------------------------------ */
+
     .ibe-page {
-        padding: 8px;
+        margin: 0 !important;
+
+        padding:
+            8px 6px !important;
+
+        overflow-x: hidden;
     }
 
 
     #xt-cruisefinder,
     #xt-cruisefinder-top,
     #xt-cruisefinder-extended {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
         margin-left: 0 !important;
         margin-right: 0 !important;
 
-        padding: 14px !important;
+        padding:
+            14px !important;
 
         border-radius:
             10px !important;
     }
 
 
-    .list-group-item {
+    .list-group-item,
+    .card {
+        width: 100%;
+
+        max-width: 100% !important;
+
+        min-width: 0 !important;
+
         border-radius:
             10px !important;
 
@@ -1187,9 +1292,23 @@ a.xtc-search-offer-button:hover {
     }
 
 
+    .list-group-item .row,
+    .list-group-item [class*="col-"],
+    .card .row,
+    .card [class*="col-"] {
+        min-width: 0 !important;
+
+        max-width: 100% !important;
+    }
+
+
+    img {
+        max-width: 100%;
+    }
+
+
     /*
-       Reederei-Logos mobil kleiner,
-       aber vollständig sichtbar.
+       Reederei-Logos mobil
     */
 
     .list-group-item [class*="logo"] img,
@@ -1204,39 +1323,70 @@ a.xtc-search-offer-button:hover {
     }
 
 
+    /* ------------------------------------------------------
+       FOOTER
+       ------------------------------------------------------ */
+
     .hoc-footer {
         padding:
-            22px 15px;
+            22px 12px !important;
     }
+
+
+    .hoc-footer-inner {
+        margin: 0 auto;
+    }
+
 
     .hoc-footer-logo {
-        width: 270px;
+        width: 250px;
 
-        max-width: 85vw;
+        max-width: 82vw;
     }
+
 
     .hoc-footer-brand {
         margin-bottom: 16px;
     }
 
+
     .hoc-footer-contact {
+        width: 100%;
+
+        max-width: 100%;
+
         flex-direction: column;
 
         gap: 11px;
     }
 
+
+    .hoc-footer-contact a {
+        max-width: 100%;
+
+        overflow-wrap: anywhere;
+
+        text-align: center;
+    }
+
+
     .hoc-footer-divider {
         display: none;
     }
+
 
     .hoc-footer-line {
         margin:
             20px 0 16px;
     }
 
+
     .hoc-footer-legal {
+        max-width: 100%;
+
         gap: 13px;
     }
+
 
     .hoc-footer-legal span {
         height: 18px;
@@ -1252,25 +1402,62 @@ a.xtc-search-offer-button:hover {
 
 @media (max-width: 430px) {
 
-    .hoc-header-logo {
-        width: 220px;
+    .hoc-header-inner {
+        padding:
+            9px 8px 10px;
     }
+
+
+    .hoc-header-logo {
+        width: 205px !important;
+
+        max-width: 78vw !important;
+    }
+
 
     .hoc-contact-card,
     .hoc-home-button {
-        min-height: 64px;
+        min-height: 62px;
     }
+
 
     .hoc-whatsapp-logo {
-        width: 56px;
+        width: 52px !important;
+
+        max-width: 52px !important;
     }
 
-    .hoc-footer-logo {
-        width: 240px;
+
+    .hoc-whatsapp-text strong {
+        font-size: 9px;
     }
+
+
+    .hoc-phone
+    .hoc-contact-text strong::after {
+        font-size: 11px;
+    }
+
+
+    .hoc-phone
+    .hoc-contact-text small::after {
+        font-size: 8px;
+    }
+
+
+    .hoc-home-button {
+        font-size: 10px;
+    }
+
 
     .ibe-page {
-        padding: 6px;
+        padding:
+            6px 4px !important;
+    }
+
+
+    .hoc-footer-logo {
+        width: 230px;
     }
 
 }
