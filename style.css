@@ -1456,3 +1456,30 @@ a.xtc-search-offer-button:hover {
             390px;
     }
 }
+/* ==========================================================
+   FIX – REEDEREI LOGOS IN ANGEBOTSKARTEN
+   ========================================================== */
+
+.list-group-item {
+    position: relative;
+}
+
+/* rechter Bereich bekommt etwas Sicherheitsabstand */
+.list-group-item > div {
+    max-width: 100%;
+}
+
+/* Bilder innerhalb der Angebotskarte nicht an der
+   rechten Kartenrundung abschneiden */
+.list-group-item img {
+    max-width: 100%;
+}
+
+/* Reederei-Logo mit Abstand zur rechten Kante */
+.list-group-item img[alt*="Cruise"],
+.list-group-item img[alt*="Royal"],
+.list-group-item img[alt*="MSC"],
+.list-group-item img[alt*="Cunard"],
+.list-group-item img[alt*="Carnival"] {
+    margin-right: 10px !important;
+}
