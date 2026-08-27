@@ -1,6 +1,6 @@
 /* ==========================================================
-   HOME OF CRUISE
-   COMPASS IBE
+   HOME OF CRUISE – COMPASS IBE
+   FINAL
    ========================================================== */
 
 
@@ -41,84 +41,21 @@ body {
    ========================================================== */
 
 .hoc-header {
-    position: relative;
-
     width: 100%;
 
-    overflow: hidden;
+    background: #ffffff;
 
-    background:
-        linear-gradient(
-            110deg,
-            #f4fbfc 0%,
-            #ffffff 48%,
-            #f3fafb 100%
-        );
+    border-top: 3px solid #0094A9;
 
-    border-top:
-        3px solid #0094A9;
+    border-bottom: 1px solid #e0e7e9;
 
-    border-bottom:
-        1px solid #dce8ea;
+    position: relative;
 
     z-index: 20;
 }
 
 
-
-/* ----------------------------------------------------------
-   dezente Wellen im Hintergrund
-   ---------------------------------------------------------- */
-
-.hoc-header-wave {
-    position: absolute;
-
-    left: -5%;
-
-    width: 110%;
-
-    pointer-events: none;
-
-    border-radius: 50%;
-}
-
-
-.hoc-header-wave-1 {
-    height: 90px;
-
-    bottom: -58px;
-
-    background:
-        rgba(0, 148, 169, 0.065);
-
-    transform:
-        rotate(-2deg);
-}
-
-
-.hoc-header-wave-2 {
-    height: 65px;
-
-    bottom: -42px;
-
-    background:
-        rgba(0, 148, 169, 0.045);
-
-    transform:
-        rotate(2deg);
-}
-
-
-
-/* ==========================================================
-   HEADER INHALT
-   ========================================================== */
-
 .hoc-header-inner {
-    position: relative;
-
-    z-index: 2;
-
     width: calc(100% - 64px);
 
     max-width: 1700px;
@@ -127,8 +64,7 @@ body {
 
     margin: 0 auto;
 
-    padding:
-        9px 0;
+    padding: 8px 0;
 
     display: flex;
 
@@ -136,7 +72,7 @@ body {
 
     justify-content: space-between;
 
-    gap: 42px;
+    gap: 40px;
 }
 
 
@@ -150,11 +86,11 @@ body {
 
     align-items: center;
 
-    flex-shrink: 0;
-
     margin: 0;
 
     padding: 0;
+
+    flex-shrink: 0;
 
     text-decoration: none;
 }
@@ -163,13 +99,13 @@ body {
 .hoc-header-logo {
     display: block;
 
-    width: 380px;
+    width: 400px;
 
     height: auto;
 
     max-width: 100%;
 
-    max-height: 100px;
+    max-height: 102px;
 
     object-fit: contain;
 }
@@ -195,9 +131,6 @@ body {
 }
 
 
-
-/* Kontakt */
-
 .hoc-contact-card {
     display: flex;
 
@@ -205,7 +138,7 @@ body {
 
     gap: 10px;
 
-    color: #102c3a;
+    color: #111111;
 
     text-decoration: none;
 }
@@ -216,9 +149,6 @@ body {
 }
 
 
-
-/* Icon */
-
 .hoc-contact-icon {
     display: flex;
 
@@ -226,11 +156,9 @@ body {
 
     justify-content: center;
 
-    width: 38px;
+    width: 36px;
 
-    min-width: 38px;
-
-    height: 38px;
+    min-width: 36px;
 
     color: #0094A9;
 
@@ -240,15 +168,13 @@ body {
 }
 
 
-.hoc-whatsapp-icon {
-    color: #00b84a;
-
-    font-size: 25px;
+.hoc-whatsapp .hoc-contact-icon {
+    color: #00B84A;
 }
 
 
 
-/* Kontakttext */
+/* Text */
 
 .hoc-contact-text {
     display: flex;
@@ -271,7 +197,7 @@ body {
 
 
 .hoc-contact-text small {
-    color: #60727a;
+    color: #526973;
 
     font-size: 12px;
 
@@ -283,11 +209,9 @@ body {
 /* Trennlinie */
 
 .hoc-header-divider {
-    display: block;
-
     width: 1px;
 
-    height: 42px;
+    height: 46px;
 
     background: #0094A9;
 
@@ -297,7 +221,7 @@ body {
 
 
 /* ==========================================================
-   STARTSEITE BUTTON
+   STARTSEITE
    ========================================================== */
 
 .hoc-home-button {
@@ -311,8 +235,7 @@ body {
 
     min-height: 48px;
 
-    padding:
-        0 25px;
+    padding: 0 26px;
 
     background: #0094A9;
 
@@ -328,11 +251,7 @@ body {
 
     text-decoration: none;
 
-    /*
-       bewusst ohne Schatten
-    */
-
-    box-shadow: none;
+    box-shadow: none !important;
 
     transition:
         background-color 0.2s ease;
@@ -345,9 +264,9 @@ body {
 
     color: #ffffff !important;
 
-    box-shadow: none;
+    box-shadow: none !important;
 
-    transform: none;
+    transform: none !important;
 }
 
 
@@ -376,18 +295,16 @@ body {
 
 
 /* ==========================================================
-   HOME OF CRUISE FARBEN
+   FARBEN
    ========================================================== */
 
 .text-primary {
-    color:
-        #0094A9 !important;
+    color: #0094A9 !important;
 }
 
 
 .border-primary {
-    border-color:
-        #0094A9 !important;
+    border-color: #0094A9 !important;
 }
 
 
@@ -397,40 +314,30 @@ body {
    ========================================================== */
 
 .btn-primary {
-    background-color:
-        #0094A9 !important;
+    background-color: #0094A9 !important;
 
-    border-color:
-        #0094A9 !important;
+    border-color: #0094A9 !important;
 
-    color:
-        #ffffff !important;
+    color: #ffffff !important;
 
-    border-radius:
-        10px !important;
+    border-radius: 10px !important;
 }
 
 
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
-    background-color:
-        #007f91 !important;
+    background-color: #007f91 !important;
 
-    border-color:
-        #007f91 !important;
+    border-color: #007f91 !important;
 
-    color:
-        #ffffff !important;
+    color: #ffffff !important;
 }
 
 
 
 /* ==========================================================
-   FORMULARFELDER
-
-   KEINE feste Höhe.
-   Wichtig für COMPASS / Kalender.
+   EINGABEFELDER
    ========================================================== */
 
 .form-control,
@@ -447,8 +354,7 @@ body {
 
 .form-control:focus,
 .form-select:focus {
-    border-color:
-        #0094A9;
+    border-color: #0094A9;
 
     box-shadow:
         0 0 0 2px
@@ -479,11 +385,6 @@ body {
         0 3px 10px
         rgba(0, 0, 0, 0.045);
 
-    /*
-       Ganz wichtig:
-       Kalender darf herausragen.
-    */
-
     overflow:
         visible !important;
 }
@@ -513,8 +414,7 @@ body {
 
 #xt-cruisefinder-extended {
     margin:
-        0 0 16px 0
-        !important;
+        0 0 16px 0 !important;
 
     padding:
         16px !important;
@@ -545,17 +445,15 @@ body {
 
 #xt-cruisefinder-extended
 .xtc-search-cruisefinder-extended-title {
-    color:
-        #007f91 !important;
+    color: #007f91 !important;
 
-    font-weight:
-        700 !important;
+    font-weight: 700 !important;
 }
 
 
 
 /* ==========================================================
-   FELDER IN DER SUCHE
+   SUCHFELDER
    ========================================================== */
 
 #xt-cruisefinder .form-control,
@@ -630,23 +528,14 @@ body {
 }
 
 
-#xt-cruisefinder
-.dropdown-menu,
+#xt-cruisefinder .dropdown-menu,
+#xt-cruisefinder-top .dropdown-menu,
 
-#xt-cruisefinder-top
-.dropdown-menu,
+#xt-cruisefinder .datepicker,
+#xt-cruisefinder-top .datepicker,
 
-#xt-cruisefinder
-.datepicker,
-
-#xt-cruisefinder-top
-.datepicker,
-
-#xt-cruisefinder
-.daterangepicker,
-
-#xt-cruisefinder-top
-.daterangepicker {
+#xt-cruisefinder .daterangepicker,
+#xt-cruisefinder-top .daterangepicker {
     overflow:
         visible !important;
 
@@ -700,7 +589,7 @@ body {
 
 
 /* ==========================================================
-   SCHIFFSBILDER
+   BILDER
    ========================================================== */
 
 .list-group-item img,
@@ -790,7 +679,7 @@ a.xtc-search-offer-button:hover {
 
 
 /* ==========================================================
-   ALLGEMEINE KARTEN
+   KARTEN
    ========================================================== */
 
 .card,
@@ -848,9 +737,12 @@ a.xtc-search-offer-button:hover {
         #ffffff;
 
     padding:
-        44px 30px;
+        26px 30px 24px;
 }
 
+
+
+/* Footer innen */
 
 .hoc-footer-inner {
     width: 100%;
@@ -862,37 +754,33 @@ a.xtc-search-offer-button:hover {
         0 auto;
 
     display:
-        grid;
+        flex;
 
-    grid-template-columns:
-        1.5fr
-        1fr
-        1fr
-        1fr;
-
-    gap:
-        50px;
+    flex-direction:
+        column;
 
     align-items:
-        start;
+        center;
 }
 
 
 
-/* Footer Logo */
+/* ==========================================================
+   FOOTER LOGO
+   ========================================================== */
 
 .hoc-footer-brand {
     display:
         flex;
 
+    justify-content:
+        center;
+
     align-items:
         flex-start;
-}
 
-
-.hoc-footer-brand a {
-    display:
-        block;
+    margin:
+        0 0 20px;
 }
 
 
@@ -901,7 +789,7 @@ a.xtc-search-offer-button:hover {
         block;
 
     width:
-        300px;
+        340px;
 
     max-width:
         100%;
@@ -915,59 +803,143 @@ a.xtc-search-offer-button:hover {
 
 
 
-/* Footer Spalten */
+/* ==========================================================
+   FOOTER KONTAKT
+   ========================================================== */
 
-.hoc-footer-column {
+.hoc-footer-contact {
+    width:
+        100%;
+
     display:
         flex;
 
-    flex-direction:
-        column;
+    align-items:
+        center;
+
+    justify-content:
+        center;
 
     gap:
-        10px;
+        28px;
+
+    flex-wrap:
+        wrap;
 }
 
 
-.hoc-footer-column h3 {
-    margin:
-        0 0 9px;
+.hoc-footer-contact a {
+    display:
+        inline-flex;
 
-    color:
-        #ffffff;
+    align-items:
+        center;
 
-    font-size:
-        18px;
+    gap:
+        9px;
 
-    font-weight:
-        700;
-}
-
-
-.hoc-footer-column a {
     color:
         #ffffff;
 
     font-size:
         14px;
 
-    line-height:
-        1.55;
-
     text-decoration:
         none;
-
-    opacity:
-        0.95;
 }
 
 
-.hoc-footer-column a:hover {
+.hoc-footer-contact a:hover {
     color:
-        #29BCD0;
+        #55cfdd;
+}
 
-    opacity:
-        1;
+
+
+/* Trenner */
+
+.hoc-footer-divider {
+    width:
+        1px;
+
+    height:
+        28px;
+
+    background:
+        rgba(255,255,255,0.5);
+}
+
+
+
+/* ==========================================================
+   FOOTER LINIE
+   ========================================================== */
+
+.hoc-footer-line {
+    width:
+        100%;
+
+    height:
+        1px;
+
+    margin:
+        24px 0 18px;
+
+    background:
+        rgba(255,255,255,0.42);
+}
+
+
+
+/* ==========================================================
+   FOOTER RECHTLICH
+   ========================================================== */
+
+.hoc-footer-legal {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        22px;
+
+    flex-wrap:
+        wrap;
+}
+
+
+.hoc-footer-legal a {
+    color:
+        #ffffff;
+
+    font-size:
+        14px;
+
+    text-decoration:
+        none;
+}
+
+
+.hoc-footer-legal a:hover {
+    color:
+        #55cfdd;
+}
+
+
+.hoc-footer-legal span {
+    width:
+        1px;
+
+    height:
+        24px;
+
+    background:
+        rgba(255,255,255,0.5);
 }
 
 
@@ -986,16 +958,16 @@ a.xtc-search-offer-button:hover {
             100px;
 
         gap:
-            20px;
+            18px;
     }
 
 
     .hoc-header-logo {
         width:
-            290px;
+            300px;
 
         max-height:
-            80px;
+            82px;
     }
 
 
@@ -1025,23 +997,13 @@ a.xtc-search-offer-button:hover {
 
     .hoc-home-button {
         min-height:
-            43px;
+            42px;
 
         padding:
             0 18px;
 
         font-size:
             13px;
-    }
-
-
-    .hoc-footer-inner {
-        grid-template-columns:
-            1fr
-            1fr;
-
-        gap:
-            35px 45px;
     }
 }
 
@@ -1053,38 +1015,8 @@ a.xtc-search-offer-button:hover {
 
 @media (max-width: 767px) {
 
-    /* ------------------------------------------------------
-       Header Grundfläche
-       ------------------------------------------------------ */
 
-    .hoc-header {
-        border-top-width:
-            2px;
-    }
-
-
-    .hoc-header-wave-1 {
-        height:
-            55px;
-
-        bottom:
-            -36px;
-    }
-
-
-    .hoc-header-wave-2 {
-        height:
-            45px;
-
-        bottom:
-            -32px;
-    }
-
-
-
-    /* ------------------------------------------------------
-       Header Aufbau
-       ------------------------------------------------------ */
+    /* Header */
 
     .hoc-header-inner {
         width:
@@ -1105,9 +1037,7 @@ a.xtc-search-offer-button:hover {
 
 
 
-    /* ------------------------------------------------------
-       Logo
-       ------------------------------------------------------ */
+    /* Logo */
 
     .hoc-logo-link {
         width:
@@ -1134,9 +1064,7 @@ a.xtc-search-offer-button:hover {
 
 
 
-    /* ------------------------------------------------------
-       Mobile Aktionen
-       ------------------------------------------------------ */
+    /* Mobile Navigation */
 
     .hoc-header-contact {
         width:
@@ -1156,19 +1084,18 @@ a.xtc-search-offer-button:hover {
         gap:
             0;
 
-        background:
-            rgba(255,255,255,0.94);
-
         border:
-            1px solid #e2ebed;
+            1px solid #dbe5e7;
 
         border-radius:
             10px;
 
         overflow:
             hidden;
-    }
 
+        background:
+            #ffffff;
+    }
 
 
     .hoc-header-divider {
@@ -1178,20 +1105,20 @@ a.xtc-search-offer-button:hover {
 
 
 
-    /* Kontaktbuttons */
+    /* Kontakt */
 
     .hoc-contact-card {
-        min-width:
-            0;
-
         min-height:
-            68px;
+            67px;
 
         padding:
             8px 5px;
 
         flex-direction:
             column;
+
+        align-items:
+            center;
 
         justify-content:
             center;
@@ -1214,29 +1141,14 @@ a.xtc-search-offer-button:hover {
         min-width:
             0;
 
-        height:
-            auto;
-
         font-size:
             21px;
     }
 
 
-    .hoc-whatsapp-icon {
-        font-size:
-            22px;
-    }
-
-
-
-    /* Mobile Text */
-
     .hoc-contact-text {
         align-items:
             center;
-
-        gap:
-            1px;
     }
 
 
@@ -1247,13 +1159,13 @@ a.xtc-search-offer-button:hover {
 
 
     .hoc-contact-text small {
-        color:
-            #66777e;
-
         font-size:
-            10px;
+            0;
     }
 
+
+
+    /* WhatsApp */
 
     .hoc-whatsapp
     .hoc-contact-text strong::after {
@@ -1262,13 +1174,6 @@ a.xtc-search-offer-button:hover {
 
         font-size:
             12px;
-    }
-
-
-    .hoc-whatsapp
-    .hoc-contact-text small {
-        font-size:
-            0;
     }
 
 
@@ -1282,6 +1187,9 @@ a.xtc-search-offer-button:hover {
     }
 
 
+
+    /* Anrufen */
+
     .hoc-phone
     .hoc-contact-text strong::after {
         content:
@@ -1289,13 +1197,6 @@ a.xtc-search-offer-button:hover {
 
         font-size:
             12px;
-    }
-
-
-    .hoc-phone
-    .hoc-contact-text small {
-        font-size:
-            0;
     }
 
 
@@ -1314,7 +1215,7 @@ a.xtc-search-offer-button:hover {
 
     .hoc-home-button {
         min-height:
-            68px;
+            67px;
 
         padding:
             8px 5px;
@@ -1325,20 +1226,17 @@ a.xtc-search-offer-button:hover {
         gap:
             3px;
 
-        border-radius:
-            0;
-
         background:
             transparent;
 
         color:
             #007f91 !important;
 
+        border-radius:
+            0;
+
         font-size:
             12px;
-
-        font-weight:
-            700;
     }
 
 
@@ -1352,16 +1250,8 @@ a.xtc-search-offer-button:hover {
     }
 
 
-    .hoc-home-icon {
-        font-size:
-            23px;
-    }
 
-
-
-    /* ------------------------------------------------------
-       COMPASS
-       ------------------------------------------------------ */
+    /* COMPASS */
 
     .ibe-page {
         padding:
@@ -1386,7 +1276,6 @@ a.xtc-search-offer-button:hover {
     }
 
 
-
     .list-group-item {
         border-radius:
             10px !important;
@@ -1397,49 +1286,59 @@ a.xtc-search-offer-button:hover {
 
 
 
-    /* ------------------------------------------------------
-       Footer
-       ------------------------------------------------------ */
+    /* Footer */
 
     .hoc-footer {
         padding:
-            32px 20px;
-    }
-
-
-    .hoc-footer-inner {
-        grid-template-columns:
-            1fr;
-
-        gap:
-            26px;
-
-        text-align:
-            center;
-    }
-
-
-    .hoc-footer-brand {
-        justify-content:
-            center;
+            24px 15px;
     }
 
 
     .hoc-footer-logo {
         width:
-            260px;
+            270px;
 
         max-width:
-            82vw;
-
-        margin:
-            0 auto;
+            85vw;
     }
 
 
-    .hoc-footer-column {
-        align-items:
-            center;
+    .hoc-footer-brand {
+        margin-bottom:
+            18px;
+    }
+
+
+    .hoc-footer-contact {
+        flex-direction:
+            column;
+
+        gap:
+            11px;
+    }
+
+
+    .hoc-footer-divider {
+        display:
+            none;
+    }
+
+
+    .hoc-footer-line {
+        margin:
+            21px 0 17px;
+    }
+
+
+    .hoc-footer-legal {
+        gap:
+            13px;
+    }
+
+
+    .hoc-footer-legal span {
+        height:
+            18px;
     }
 }
 
@@ -1464,35 +1363,15 @@ a.xtc-search-offer-button:hover {
     }
 
 
-    .hoc-whatsapp
-    .hoc-contact-text strong::after,
-
-    .hoc-phone
-    .hoc-contact-text strong::after {
-        font-size:
-            11px;
-    }
-
-
-    .hoc-whatsapp
-    .hoc-contact-text small::after,
-
-    .hoc-phone
-    .hoc-contact-text small::after {
-        font-size:
-            9px;
+    .hoc-footer-logo {
+        width:
+            240px;
     }
 
 
     .ibe-page {
         padding:
             6px;
-    }
-
-
-    .hoc-footer-logo {
-        width:
-            235px;
     }
 }
 
@@ -1518,16 +1397,10 @@ a.xtc-search-offer-button:hover {
 
     .hoc-header-logo {
         width:
-            410px;
+            430px;
 
         max-height:
-            103px;
-    }
-
-
-    .hoc-header-contact {
-        gap:
-            24px;
+            106px;
     }
 
 
@@ -1542,7 +1415,7 @@ a.xtc-search-offer-button:hover {
             48px;
 
         padding:
-            0 27px;
+            0 28px;
 
         font-size:
             15px;
@@ -1551,7 +1424,7 @@ a.xtc-search-offer-button:hover {
 
     .hoc-footer-logo {
         width:
-            330px;
+            370px;
     }
 }
 
@@ -1571,15 +1444,15 @@ a.xtc-search-offer-button:hover {
 
     .hoc-header-logo {
         width:
-            430px;
+            450px;
 
         max-height:
-            108px;
+            110px;
     }
 
 
     .hoc-footer-logo {
         width:
-            350px;
+            390px;
     }
 }
