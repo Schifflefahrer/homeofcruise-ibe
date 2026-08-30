@@ -1630,3 +1630,54 @@ a.xtc-search-offer-button:hover {
 
     transform-origin: right center;
 }
+/* ==========================================================
+   HEADER LOGO – DESKTOP LINKS / MOBILE WEITER MITTIG
+   ========================================================== */
+
+/* DESKTOP + TABLET */
+@media (min-width: 768px) {
+
+    .hoc-header-inner {
+        width: 100% !important;
+        max-width: none !important;
+
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+
+        padding-left: 12px !important;
+        padding-right: 20px !important;
+    }
+
+    .hoc-logo-link {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+
+        flex: 0 0 auto;
+    }
+
+    .hoc-header-logo {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+
+/* ==========================================================
+   HANDY – LOGO BLEIBT MITTIG
+   ========================================================== */
+
+@media (max-width: 767px) {
+
+    .hoc-logo-link {
+        margin-left: auto !important;
+        margin-right: auto !important;
+
+        justify-content: center !important;
+        align-self: center !important;
+    }
+
+    .hoc-header-logo {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
