@@ -3,141 +3,87 @@
 
 <head>
     <meta charset="utf-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Home of Cruise – Kreuzfahrten buchen</title>
 
     <!-- COMPASS -->
     <!-- ibe::head -->
 
-    <link
-        rel="stylesheet"
-        href="https://schifflefahrer.github.io/homeofcruise-ibe/style.css?v=41"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
+
+    <link rel="stylesheet" href="https://schifflefahrer.github.io/homeofcruise-ibe/style.css?v=43">
 </head>
 
 <body>
 
-
     <!-- =====================================================
-         HEADER
+         HEADER – wie homeofcruise.de
          ===================================================== -->
 
     <header class="hoc-header">
-
         <div class="hoc-header-inner">
 
-
             <!-- Logo -->
-
-            <a
-                href="https://www.homeofcruise.de/"
-                target="_top"
-                class="hoc-logo-link"
-                aria-label="Zur Home of Cruise Startseite"
-            >
-                <img
-                    src="https://schifflefahrer.github.io/homeofcruise-ibe/images/head1-logo.PNG"
-                    alt="Home of Cruise"
-                    class="hoc-header-logo"
-                >
+            <a href="https://www.homeofcruise.de/" target="_top" class="hoc-logo-link" aria-label="Zur Home of Cruise Startseite">
+                <img src="https://schifflefahrer.github.io/homeofcruise-ibe/images/hoc-logo-header.png" alt="Home of Cruise" class="hoc-header-logo">
             </a>
 
-
-            <!-- Kontakt -->
-
-            <div class="hoc-header-contact">
-
+            <div class="hoc-header-right">
 
                 <!-- WhatsApp -->
-
-                <a
-                    href="https://wa.me/4915567639507"
-                    target="_blank"
-                    rel="noopener"
-                    class="hoc-contact-card hoc-whatsapp"
-                    aria-label="WhatsApp Beratung starten"
-                >
-
-                    <img
-                        src="https://schifflefahrer.github.io/homeofcruise-ibe/images/Digital_Stacked_Green_RGB_2026.png"
-                        alt="WhatsApp"
-                        class="hoc-whatsapp-logo"
-                    >
-
-                    <span class="hoc-contact-text hoc-whatsapp-text">
-
-                        <strong>
-                            Beratung starten
-                        </strong>
-
-                        <small>
-                            Wir sind für dich da
-                        </small>
-
-                    </span>
-
+                <a href="https://wa.me/4915567639507" target="_blank" rel="noopener" class="hoc-head-link hoc-head-wa" aria-label="Beratung per WhatsApp">
+                    <svg class="hoc-ico" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill="#25D366" d="M12 1.6A10.4 10.4 0 0 0 3.1 17.3L1.7 22.4l5.3-1.4A10.4 10.4 0 1 0 12 1.6z"/>
+                        <path fill="#fff" d="M8.4 6.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.6c.2-.1.4-.2.6-.1l1.9.9c.2.1.3.3.3.5 0 .5-.2 1.1-.6 1.5-.5.5-1.3.8-2.1.7-1.4-.2-2.8-.9-4.2-2.3s-2.1-2.8-2.3-4.2c-.1-.8.2-1.6.7-2.1z"/>
+                    </svg>
+                    <span class="hoc-head-text hoc-underline">Beratung per WhatsApp</span>
                 </a>
-
-
-                <span class="hoc-header-divider"></span>
-
 
                 <!-- Telefon -->
-
-                <a
-                    href="tel:+4915567639507"
-                    class="hoc-contact-card hoc-phone"
-                >
-
-                    <span class="hoc-contact-icon">
-                        ☎
-                    </span>
-
-                    <span class="hoc-contact-text">
-
-                        <strong>
-                            (+49) 015567639507
-                        </strong>
-
-                        <small>
-                            Jetzt anrufen
-                        </small>
-
-                    </span>
-
+                <a href="tel:+4915567639507" class="hoc-head-link hoc-head-phone" aria-label="Anrufen: +49 15567639507">
+                    <svg class="hoc-ico hoc-ico-line" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    <span class="hoc-head-text">+49 15567639507</span>
                 </a>
 
+                <!-- Menü (funktioniert ohne JavaScript) -->
+                <details class="hoc-menu">
+                    <summary class="hoc-burger" aria-label="Menü öffnen">
+                        <span></span><span></span><span></span>
+                    </summary>
 
-                <!-- Startseite -->
+                    <nav class="hoc-menu-panel" aria-label="Hauptmenü">
+                        <div class="hoc-menu-top">
+                            <div class="hoc-menu-social">
+                                <a href="https://www.instagram.com/homeofcruise.de" target="_blank" rel="noopener" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.4" cy="6.6" r="1" fill="currentColor" stroke="none"/></svg>
+                                </a>
+                                <a href="https://www.facebook.com/share/1CXHFWgFgM/" target="_blank" rel="noopener" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path fill="currentColor" stroke="none" d="M13.2 21.9v-7.6h2.3l.4-2.7h-2.7V9.9c0-.8.3-1.3 1.4-1.3H16V6.2c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v1.9H8.1v2.7h2.3v7.6z"/></svg>
+                                </a>
+                            </div>
+                            <button type="button" class="hoc-menu-close" aria-label="Menü schließen" onclick="this.closest('details').removeAttribute('open')">
+                                <span></span><span></span>
+                            </button>
+                        </div>
 
-                <a
-                    href="https://www.homeofcruise.de/"
-                    target="_top"
-                    class="hoc-home-button"
-                >
-
-                    <span class="hoc-home-icon">
-                        ⌂
-                    </span>
-
-                    <span>
-                        Startseite
-                    </span>
-
-                </a>
-
+                        <ul class="hoc-menu-list">
+                            <li><a href="https://www.homeofcruise.de/" target="_top">Startseite</a></li>
+                            <li class="is-active"><a href="https://buchen.homeofcruise.de/search" target="_top">Kreuzfahrt buchen</a></li>
+                            <li><a href="https://www.homeofcruise.de/" target="_top">Reederei-Finder</a></li>
+                            <li><a href="https://www.homeofcruise.de/kontakt" target="_top">Kontakt</a></li>
+                            <li><a href="https://www.homeofcruise.de/%C3%BCberuns" target="_top">Über uns</a></li>
+                        </ul>
+                    </nav>
+                </details>
 
             </div>
-
         </div>
-
     </header>
-
 
 
     <!-- =====================================================
@@ -145,118 +91,98 @@
          ===================================================== -->
 
     <main class="ibe-page">
-
         <!-- ibe::body -->
-
     </main>
 
 
-
     <!-- =====================================================
-         FOOTER
+         FOOTER – wie homeofcruise.de
          ===================================================== -->
 
     <footer class="hoc-footer">
-
         <div class="hoc-footer-inner">
 
-
-            <!-- Footer Logo -->
-
-            <div class="hoc-footer-brand">
-
-                <a
-                    href="https://www.homeofcruise.de/"
-                    target="_top"
-                    aria-label="Zur Home of Cruise Startseite"
-                >
-                    <img
-                        src="https://schifflefahrer.github.io/homeofcruise-ibe/images/logo-footer.png"
-                        alt="Home of Cruise"
-                        class="hoc-footer-logo"
-                    >
+            <!-- Logo -->
+            <div class="hoc-footer-col hoc-footer-brand">
+                <a href="https://www.homeofcruise.de/" target="_top" aria-label="Zur Home of Cruise Startseite">
+                    <img src="https://schifflefahrer.github.io/homeofcruise-ibe/images/hoc-logo-footer.png" alt="Home of Cruise" class="hoc-footer-logo">
                 </a>
-
             </div>
-
 
             <!-- Kontakt -->
-
-            <div class="hoc-footer-contact">
-
-                <a href="tel:+4915567639507">
-                    <span>☎</span>
-                    <span>(+49) 015567639507</span>
-                </a>
-
-                <span class="hoc-footer-divider"></span>
-
-                <a href="mailto:info@homeofcruise.de">
-                    <span>✉</span>
-                    <span>info@homeofcruise.de</span>
-                </a>
-
-                <span class="hoc-footer-divider"></span>
-
-                <a
-                    href="https://wa.me/4915567639507"
-                    target="_blank"
-                    rel="noopener"
-                >
-                    <span>◉</span>
-                    <span>WhatsApp schreiben</span>
-                </a>
-
+            <div class="hoc-footer-col">
+                <h3 class="hoc-footer-title">Kontakt</h3>
+                <ul class="hoc-footer-list">
+                    <li>
+                        <a href="tel:+4915567639507">
+                            <svg class="hoc-f-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <span>+49 15567639507</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mailto:info@homeofcruise.de">
+                            <svg class="hoc-f-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2"/><path d="m3 6 9 7 9-7"/></svg>
+                            <span>info@homeofcruise.de</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/4915567639507" target="_blank" rel="noopener">
+                            <svg class="hoc-f-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6z"/><path d="M9 8.3c.3-.6 1.1-.6 1.3 0l.6 1.5-.8 1c.7 1.3 1.6 2.2 2.9 2.9l1-.8 1.5.6c.6.2.6 1 0 1.3-1 .6-2.3.5-3.9-.5a9 9 0 0 1-3.1-3.1c-1-1.6-1.1-2.9-.5-3.9z"/></svg>
+                            <span class="hoc-underline">WhatsApp schreiben</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-
-            <div class="hoc-footer-line"></div>
-
-
-            <!-- Rechtliches -->
-
-            <div class="hoc-footer-legal">
-
-                <a
-                    href="https://www.homeofcruise.de/impressum"
-                    target="_top"
-                >
-                    Impressum
-                </a>
-
-                <span></span>
-
-                <a
-                    href="https://www.homeofcruise.de/datenschutz"
-                    target="_top"
-                >
-                    Datenschutz
-                </a>
-
-                <span></span>
-
-                <a
-                    href="https://www.homeofcruise.de/agb"
-                    target="_top"
-                >
-                    AGB
-                </a>
-
+            <!-- Service + Rechtliches -->
+            <div class="hoc-footer-col hoc-footer-service">
+                <div>
+                    <h3 class="hoc-footer-title">Service</h3>
+                    <ul class="hoc-footer-list">
+                        <li><a href="https://buchen.homeofcruise.de/search" target="_top"><span class="hoc-underline">Kreuzfahrt buchen</span></a></li>
+                    </ul>
+                </div>
+                <ul class="hoc-footer-list hoc-footer-legal">
+                    <li><a href="https://www.homeofcruise.de/impressum" target="_top"><span class="hoc-underline">Impressum</span></a></li>
+                    <li><a href="https://www.homeofcruise.de/datenschutz" target="_top"><span class="hoc-underline">Datenschutz</span></a></li>
+                    <li><a href="https://www.homeofcruise.de/agb" target="_top"><span class="hoc-underline">AGB</span></a></li>
+                </ul>
             </div>
 
+            <!-- Social -->
+            <div class="hoc-footer-col hoc-footer-social-col">
+                <h3 class="hoc-footer-title hoc-footer-title-sm">Du findest uns über</h3>
+                <div class="hoc-footer-social">
+                    <a href="https://www.instagram.com/homeofcruise.de" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <defs><linearGradient id="hocIg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#FEDA75"/><stop offset=".35" stop-color="#FA7E1E"/><stop offset=".6" stop-color="#D62976"/><stop offset=".85" stop-color="#962FBF"/><stop offset="1" stop-color="#4F5BD5"/></linearGradient></defs>
+                            <rect x="1" y="1" width="22" height="22" rx="6" fill="url(#hocIg)"/>
+                            <rect x="5.5" y="5.5" width="13" height="13" rx="4" fill="none" stroke="#fff" stroke-width="1.8"/>
+                            <circle cx="12" cy="12" r="3.2" fill="none" stroke="#fff" stroke-width="1.8"/>
+                            <circle cx="16.1" cy="7.9" r=".9" fill="#fff"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/share/1CXHFWgFgM/" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="11" fill="#1877F2"/>
+                            <path fill="#fff" d="M13.3 23v-8.3h2.6l.4-3H13.3V9.9c0-.9.3-1.5 1.5-1.5h1.6V5.7c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.6v3h2.6V23z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/4915567639507" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill="#25D366" d="M12 1.6A10.4 10.4 0 0 0 3.1 17.3L1.7 22.4l5.3-1.4A10.4 10.4 0 1 0 12 1.6z"/>
+                            <path fill="#fff" d="M8.4 6.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.6c.2-.1.4-.2.6-.1l1.9.9c.2.1.3.3.3.5 0 .5-.2 1.1-.6 1.5-.5.5-1.3.8-2.1.7-1.4-.2-2.8-.9-4.2-2.3s-2.1-2.8-2.3-4.2c-.1-.8.2-1.6.7-2.1z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
 
         </div>
-
     </footer>
 
 
-
     <!-- Dynamische Wix-Höhe -->
-
-    <script
-        src="https://schifflefahrer.github.io/homeofcruise-ibe/wix-resize.js?v=6">
-    </script>
-
+    <script src="https://schifflefahrer.github.io/homeofcruise-ibe/wix-resize.js?v=6"></script>
 
 </body>
 
