@@ -1,6 +1,7 @@
+
 /* ==========================================================
    HOME OF CRUISE – COMPASS IBE
-   v43 – Kopf-, Fußzeile und Buchungsstrecke wie www.homeofcruise.de
+   v44 – Kopf-, Fußzeile und Buchungsstrecke wie www.homeofcruise.de
    ========================================================== */
 
 
@@ -1357,5 +1358,412 @@ a.xtc-search-offer-button:hover {
 
     .ibe-page {
         padding: 6px 4px !important;
+    }
+}
+
+
+/* ==========================================================
+   KOMPATIBILITÄT: ALTE KOPF-/FUSSZEILEN-VORLAGE IM IBE-ADMIN
+   Die IBE liefert noch den alten HTML-Aufbau aus
+   (.hoc-header-contact, .hoc-footer-contact …).
+   Diese Regeln geben ihm denselben Look wie die neue Vorlage.
+   ========================================================== */
+
+/* ---------- Kopfzeile ---------- */
+
+.hoc-header-contact {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.hoc-header-divider {
+    display: none !important;
+}
+
+.hoc-contact-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #000000 !important;
+    text-decoration: none !important;
+}
+
+.hoc-contact-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.hoc-contact-text small {
+    display: none !important;
+}
+
+.hoc-contact-text strong {
+    color: #000000;
+    font-family: var(--hoc-font);
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.hoc-contact-card:hover .hoc-contact-text strong {
+    color: var(--hoc-teal-dark);
+}
+
+/* WhatsApp: großes Wortmarken-Bild aus, grünes Icon an */
+.hoc-whatsapp-logo {
+    display: none !important;
+}
+
+.hoc-whatsapp::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 23px;
+    height: 23px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2325D366' d='M12 1.6A10.4 10.4 0 0 0 3.1 17.3L1.7 22.4l5.3-1.4A10.4 10.4 0 1 0 12 1.6z'/%3E%3Cpath fill='%23fff' d='M8.4 6.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2.1.4 0 .6l-.5.7c-.1.2-.1.4 0 .6.6 1 1.4 1.8 2.4 2.4.2.1.4.1.6 0l.7-.6c.2-.1.4-.2.6-.1l1.9.9c.2.1.3.3.3.5 0 .5-.2 1.1-.6 1.5-.5.5-1.3.8-2.1.7-1.4-.2-2.8-.9-4.2-2.3s-2.1-2.8-2.3-4.2c-.1-.8.2-1.6.7-2.1z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+/* Text „Beratung starten“ → „Beratung per WhatsApp“, unterstrichen */
+.hoc-whatsapp-text strong {
+    font-size: 0 !important;
+}
+
+.hoc-whatsapp-text strong::after {
+    content: "Beratung per WhatsApp";
+    font-size: 17px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+}
+
+/* Telefon: ☎ durch türkises Linien-Icon ersetzen */
+.hoc-contact-icon {
+    display: block !important;
+    flex: 0 0 auto;
+    width: 23px !important;
+    min-width: 23px !important;
+    height: 23px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230094A9' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E") center / contain no-repeat !important;
+}
+
+.hoc-contact-icon::after {
+    display: none !important;
+}
+
+/* Startseite-Button: türkis wie der Menü-Kreis der Homepage */
+.hoc-home-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 46px;
+    padding: 0 22px;
+    background: var(--hoc-teal-menu) !important;
+    color: #ffffff !important;
+    border: 0;
+    border-radius: 999px;
+    font-family: var(--hoc-font);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none !important;
+}
+
+.hoc-home-button:hover {
+    background: var(--hoc-teal-dark) !important;
+}
+
+.hoc-home-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 0 !important;
+    color: transparent !important;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 10.5 12 3l9 7.5'/%3E%3Cpath d='M5 9.5V21h14V9.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+
+.hoc-home-icon::before,
+.hoc-home-icon::after {
+    display: none !important;
+}
+
+
+/* ---------- Fußzeile ---------- */
+
+.hoc-footer-inner:has(> .hoc-footer-contact) {
+    display: grid;
+    grid-template-columns: minmax(220px, 1.2fr) 1fr 1fr;
+    gap: 32px;
+    align-items: start;
+    text-align: left;
+}
+
+/* Logo-Datei hat viel leeren Rand → zuschneiden */
+.hoc-footer-brand {
+    margin: 0 !important;
+}
+
+.hoc-footer-brand .hoc-footer-logo {
+    width: 290px !important;
+    max-width: 100%;
+    height: 84px !important;
+    object-fit: cover;
+    object-position: center 42%;
+}
+
+.hoc-footer-line {
+    display: none !important;
+}
+
+/* Kontakt-Spalte */
+.hoc-footer-contact {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px !important;
+}
+
+.hoc-footer-contact::before,
+.hoc-footer-legal::before {
+    margin: 0 0 4px;
+    color: #ffffff;
+    font-family: var(--hoc-font);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.hoc-footer-contact::before {
+    content: "Kontakt";
+}
+
+.hoc-footer-legal::before {
+    content: "Service";
+}
+
+.hoc-footer-divider,
+.hoc-footer-legal > span {
+    display: none !important;
+}
+
+.hoc-footer-contact a,
+.hoc-footer-legal a {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff !important;
+    font-family: var(--hoc-font);
+    font-size: 15px;
+    line-height: 1.45;
+    text-decoration: none !important;
+}
+
+.hoc-footer-contact a:hover,
+.hoc-footer-legal a:hover {
+    color: #55cfdd !important;
+}
+
+.hoc-footer-legal a,
+.hoc-footer-contact a:last-child > span:last-child {
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+}
+
+/* Icons vor Telefon / E-Mail / WhatsApp */
+.hoc-footer-contact a > span:first-child {
+    display: inline-block !important;
+    flex: 0 0 auto;
+    width: 16px !important;
+    height: 16px !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.hoc-footer-contact a > span:first-child::before,
+.hoc-footer-contact a > span:first-child::after {
+    display: none !important;
+}
+
+.hoc-footer-contact a[href^="tel"] > span:first-child {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E");
+}
+
+.hoc-footer-contact a[href^="mailto"] > span:first-child {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='2.5' y='4.5' width='19' height='15' rx='2'/%3E%3Cpath d='m3 6 9 7 9-7'/%3E%3C/svg%3E");
+}
+
+.hoc-footer-contact a[href*="wa.me"] > span:first-child {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2.6a9.4 9.4 0 0 0-8.1 14.2L2.6 21.4l4.7-1.2A9.4 9.4 0 1 0 12 2.6z'/%3E%3Cpath d='M9 8.3c.3-.6 1.1-.6 1.3 0l.6 1.5-.8 1c.7 1.3 1.6 2.2 2.9 2.9l1-.8 1.5.6c.6.2.6 1 0 1.3-1 .6-2.3.5-3.9-.5a9 9 0 0 1-3.1-3.1c-1-1.6-1.1-2.9-.5-3.9z'/%3E%3C/svg%3E");
+}
+
+/* Rechtliches als Liste */
+.hoc-footer-legal {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px !important;
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width: 1100px) {
+
+    .hoc-header-contact {
+        gap: 22px;
+    }
+
+    .hoc-contact-text strong,
+    .hoc-whatsapp-text strong::after {
+        font-size: 15px;
+    }
+
+    .hoc-whatsapp-text strong {
+        font-size: 0 !important;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .hoc-phone .hoc-contact-text {
+        display: none !important;
+    }
+}
+
+
+/* ---------- Handy ---------- */
+
+@media (max-width: 767px) {
+
+    .hoc-header-inner {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        min-height: 70px;
+        padding: 8px 14px !important;
+    }
+
+    .hoc-logo-link {
+        width: auto !important;
+        justify-content: flex-start !important;
+        margin: 0 auto 0 0 !important;
+    }
+
+    .hoc-header-logo {
+        width: auto !important;
+        height: 42px !important;
+        max-width: 50vw !important;
+        margin: 0 !important;
+    }
+
+    .hoc-header-contact {
+        display: flex !important;
+        gap: 8px;
+        width: auto !important;
+        margin: 0 !important;
+        border: 0 !important;
+        background: transparent !important;
+        overflow: visible !important;
+    }
+
+    /* Nur noch runde Icon-Buttons */
+    .hoc-contact-text,
+    .hoc-home-button > span:last-child {
+        display: none !important;
+    }
+
+    .hoc-contact-card,
+    .hoc-home-button {
+        width: 42px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+        min-height: 42px !important;
+        padding: 0 !important;
+        justify-content: center;
+        border: 1px solid #dbe5e7 !important;
+        border-radius: 50% !important;
+        background: #ffffff;
+        flex-direction: row !important;
+    }
+
+    .hoc-home-button {
+        background: var(--hoc-teal-menu) !important;
+        border-color: var(--hoc-teal-menu) !important;
+    }
+
+    .hoc-whatsapp::before,
+    .hoc-contact-icon {
+        width: 21px !important;
+        height: 21px !important;
+    }
+
+    .hoc-home-icon {
+        display: inline-block !important;
+        position: static !important;
+        width: 19px !important;
+        height: 19px !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    /* Fußzeile einspaltig, zentriert */
+    .hoc-footer-inner:has(> .hoc-footer-contact) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 24px;
+        padding: 30px 20px 34px;
+    }
+
+    .hoc-footer-brand .hoc-footer-logo {
+        width: 230px !important;
+        height: 67px !important;
+    }
+
+    .hoc-footer-contact,
+    .hoc-footer-legal {
+        align-items: center;
+        flex-direction: column !important;
+    }
+}
+
+
+/* Altes Kopfzeilen-Logo (head1-logo.PNG) hat viel weißen Rand → zuschneiden */
+.hoc-header-logo[src*="head1-logo"] {
+    width: 233px !important;
+    height: 58px !important;
+    max-height: none !important;
+    object-fit: cover;
+    object-position: 50% 58%;
+    mix-blend-mode: multiply;   /* hellgrauer Bildhintergrund verschwindet auf Weiß */
+}
+
+@media (min-width: 1400px) {
+    .hoc-header-logo[src*="head1-logo"] {
+        width: 257px !important;
+        height: 64px !important;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hoc-header-logo[src*="head1-logo"] {
+        width: 209px !important;
+        height: 52px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .hoc-header-logo[src*="head1-logo"] {
+        width: 169px !important;
+        height: 42px !important;
+        max-width: 48vw !important;
     }
 }
